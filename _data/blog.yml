@@ -2,23 +2,5 @@
 - name: Blog
   href: '/blog/'
 
-- name: Python
-  href: '/python/'
-
-- name: Linux
-  href: '/linux/'
-
-- name: HTML
-  href: '/html/'
-
-- name: Database
-  href: '/database/'
-
-- name: Mac
-  href: '/mac/'
-
-- name: Life
-  href: '/life/'
-
-- name: Donate
-  href: '/donate/'
+- name: Test
+  href: '/test/'
