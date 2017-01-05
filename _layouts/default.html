@@ -29,10 +29,46 @@
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
     <script>
+		var foldableEvent = {
+			'click' : function(target){
+				if (target.className.indexOf('fold-by-click') == -1)
+				{
+					return;
+				}
+				
+				var subMenu = target.parentElement.querySelectorAll('a.sidebar-nav-item-sub');
+				if (subMenu.length < 1)
+				{
+					return;
+				}
+				
+				var display = subMenu[0].style.display;
+				subMenu.forEach(function(elem, index){
+					elem.style.display = (display != 'none')? 'none' : '';
+				});
+			}
+		};
+		
+		var activeEvent = {
+			'click' : function(target){
+				if (target.className.indexOf('sidebar-nav-item') == -1)
+				{
+					return;
+				}
+				
+				document.querySelectorAll('a.sidebar-nav-item').forEach(function(elem,index){
+					elem.className = elem.className.replace('active');
+				});
+				
+				target.className += ' active';
+			}
+		};
+		
       (function(document) {
         var toggle = document.querySelector('.sidebar-toggle');
         var sidebar = document.querySelector('#sidebar');
         var checkbox = document.querySelector('#sidebar-checkbox');
+		var foldable = document.querySelector('.foldable');
 
         document.addEventListener('click', function(e) {
           var target = e.target;
@@ -44,8 +80,32 @@
             /* click outside the sidebar when sidebar is open */
             checkbox.checked = false;
           }
+		  
+		  foldableEvent['click'](target);
+		  activeEvent['click'](target);
         }, false);
       })(document);
+	  
+	  var active = false;
+	  var homeElem = {};
+	  document.querySelectorAll('a.sidebar-nav-item').forEach(function(elem,index){
+		var href = elem.getAttribute('href');
+		if (href == '/') { homeElem = elem; return; }
+		if (document.URL.lastIndexOf(href) != -1 && document.URL.lastIndexOf(href) + href.length == document.URL.length)
+		{
+			elem.className += ' active';
+			active = true;
+		}
+	  });
+	  
+	  if (!active) 
+	  {
+		homeElem.className += ' active';
+	  }
+	  
+	  console.log('document.URL : ' + document.URL);
+	  console.log('document.baseURI : ' + document.baseURI);
+	  console.log('document.documentURI : ' + document.documentURI);
     </script>
     {% if site.google_analytics_token %}
     <script>

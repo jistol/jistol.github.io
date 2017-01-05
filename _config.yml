@@ -41,12 +41,15 @@ nav:
     - '/'
   Blog:           
     - '/blog/'
-    - { Categories: '/blog/categories/' }
-    - { Tags: '/blog/tags/' }
+  Categories: 
+    - '/blog/categories/'
+  Tags: 
+    - '/blog/tags/'
   About:          
     - '/about/'
   Github Project: 
     - 'https://jistol.github.io/'
+
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
