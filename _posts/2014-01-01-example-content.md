@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Example content
+category : Dev
+tags : [web]
 ---
 
 
