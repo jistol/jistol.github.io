@@ -87,8 +87,8 @@
 			<a class="sidebar-nav-item fold-by-click" href="javascript:;">
 			  {{ nav[0] }}
 			</a>
-			<a class="sidebar-nav-item sidebar-nav-item-sub" href="{{ url }}">
-				- all
+			<a class="sidebar-nav-item sidebar-nav-item-sub" href="{{ url | append: '#' }}">
+				- All
 			</a>
 			{% for category in site.categories %}
 			{% assign sub_url = category[0] | slugify | prepend:'#' | prepend: url %}

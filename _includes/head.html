@@ -26,6 +26,32 @@
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
+  <!-- init static value -->
+  <script type="text/javascript">
+  
+	
+	{% if page.categories[0] %}
+		{% assign category = page.categories[0] %}
+	{% else %}
+		{% assign category = '__null__' %}		
+	{% endif %}
+	var _page = {
+		category : '{{ category }}'
+	};
+	
+	var _site = {
+		baseurl : '{{ site.baseurl }}',
+		logo :  '{{ site.logo }}'
+	};
+	
+	var _nav = {};
+	
+	{% for nav in site.nav %}
+		_nav['{{ nav[0] }}'] = '{{ nav[1][0] }}';
+	{% endfor %}
+	
+	
+  </script>
   {% if site.mathjax %}
   <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_SVG"> </script>
   <script type="text/x-mathjax-config">
