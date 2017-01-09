@@ -20,11 +20,15 @@ tags : [jekyll,ruby,rbenv,docker,docker-toolbox,markdown]
 블로그 소스는 Git으로 관리하면 되긴하지만 혹시나 다른 곳에서 안올리고 이동했을때 편하게 쓰려고 저장소를 Dropbox에 위치 시켰습니다. 그리고 Markdown 안드로이드 앱이 Dropbox 저장소 연동을 지원하기 때문에 PC없이 모바일에서 작성하고 서버에 올릴 수 있는 장점도 있습니다.  
 
 # 설치 #  
+
 ## Dropbox 설치 ##  
+
 [Dropbox 바로가기](https://www.dropbox.com/)  
 
-Docker와의 공유설정을 쉽게 하려면 사용자 기본폴더 ("C:\User")하위에 공유폴더를 위치 시키면 좋습니다.
+Docker와의 공유설정을 쉽게 하려면 사용자 기본폴더 ("C:\User")하위에 공유폴더를 위치 시키면 좋습니다.  
+
 ## Docker toolbox 설치 ##  
+
 [Docker toolbox 바로가기](https://www.docker.com/products/docker-toolbox)  
 
 설치 후 공유폴더 설정을 진행합니다.  
