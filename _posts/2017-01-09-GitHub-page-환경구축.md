@@ -31,7 +31,8 @@ Docker와의 공유설정을 쉽게 하려면 사용자 기본폴더 ("C:\User")
 
 [Docker toolbox 바로가기](https://www.docker.com/products/docker-toolbox)  
 
-설치 후 공유폴더 설정을 진행합니다.  
+설치 후 공유폴더 설정을 진행합니다.      
+
 > docker-toolbox는 Oracle Virtual Box를 이용하기 때문에 공유폴더를 따로 설정해 두어야 Docker내/외부에서 파일 공유가 가능합니다.
 
 toolbox 설치시 "default" 이미지가 생성되며 VM관리자 화면에 접속하여 다음과 같이 공유폴더를 설정합니다.
