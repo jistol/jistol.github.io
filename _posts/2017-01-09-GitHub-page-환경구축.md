@@ -14,16 +14,17 @@ tags : [jekyll,ruby,rbenv,docker,docker-toolbox,markdown]
   + Ubuntu
   + Jekyll
 - Dropbox
+- Editor : Atom
 
 집 PC에 Linux를 설치 할 순 없고 Docker Windows용은 Windows 10 (Professional / Enterprise 64-bit) 부터 지원하기 때문에 하위 버전에서 사용 가능한 Docker-toolbox를 설치하고 Ubuntu를 띄워 Jekyll을 돌리기로 했습니다.  
 블로그 소스는 Git으로 관리하면 되긴하지만 혹시나 다른 곳에서 안올리고 이동했을때 편하게 쓰려고 저장소를 Dropbox에 위치 시켰습니다. 그리고 Markdown 안드로이드 앱이 Dropbox 저장소 연동을 지원하기 때문에 PC없이 모바일에서 작성하고 서버에 올릴 수 있는 장점도 있습니다.  
 
-# 설치 #
-## Dropbox 설치 ##
+# 설치 #  
+## Dropbox 설치 ##  
 [Dropbox 바로가기](https://www.dropbox.com/)  
 
 Docker와의 공유설정을 쉽게 하려면 사용자 기본폴더 ("C:\User")하위에 공유폴더를 위치 시키면 좋습니다.
-## Docker toolbox 설치 ##
+## Docker toolbox 설치 ##  
 [Docker toolbox 바로가기](https://www.docker.com/products/docker-toolbox)  
 
 설치 후 공유폴더 설정을 진행합니다.  
@@ -165,7 +166,7 @@ jekyll은 ruby로 작성된 프로그램입니다. jekyll을 띄우기 위해서
     $ cd myblog
     $ ifconfig  // local ip 확인
     $ jekyll serve -H [local-IP]
-    
+
 
 - jekyll 구동시 -H 으로 local IP를 지정하지 않을 경우 127.0.0.1로 구동하면서 외부 웹페이지에서 접근할 수 없습니다.
 - 외부 연결 포트를 다르게 지정했을 경우 -P 옵션으로 변경 가능합니다.
