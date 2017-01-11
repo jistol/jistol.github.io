@@ -1,8 +1,8 @@
 ---
-layout : default
+layout : post
 title : Bitnami를 이용한 Redmine + Agile 설치 (on Ubuntu)
+category : BugTracking
 tags : [bitnami,redmine,redmine-plugin,agile,ubuntu,deploy,bugtracking]
-categories : [BugTracking]
 ---
 
 여분 PC가 생겨 어떻게 쓸까 고민하던중 사내에서 쓰는 Jira 대신 사이트 구축 나가서 쓸 BugTracking 시스템을 설치해 연습삼아 써보기로 했습니다.    
