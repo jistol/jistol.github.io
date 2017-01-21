@@ -1,7 +1,7 @@
 ---
 layout: post
 title: (vi 명령어) 라인번호(줄번호) 보기, 라인이동, 맨위/맨밑 이동
-category : Vi
+category : Linux
 tags : [vi,vim,linux]
 ---
 
