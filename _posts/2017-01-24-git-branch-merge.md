@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Git branch + merge 사용하기
+title: Git branch + merge 사용하기 예제
 category : VCS
 tags : [git]
 ---
