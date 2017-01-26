@@ -23,9 +23,9 @@ git remote -v
     origin  D:/dropbox/Dropbox/jekyll/git-work/user1/../../git-source/test.git (fetch)
     origin  D:/dropbox/Dropbox/jekyll/git-work/user1/../../git-source/test.git (push)
 
-git remote add [리모트이름] [경로]
+git remote add (리모트이름) (경로)
 ----
-새 리모트를 추가합니다. [경로]영역에는 URL이나 파일경로를 넣을수 있습니다.
+새 리모트를 추가합니다. (경로)영역에는 URL이나 파일경로를 넣을수 있습니다.
 
     $ git remote add jistol https://github.com/jisto.github.io
     $ git remote add origin D:/dropbox/Dropbox/jekyll/git-source/test.git
@@ -35,7 +35,7 @@ git remote add [리모트이름] [경로]
     origin  D:/dropbox/Dropbox/jekyll/git-source/test.git (fetch)
     origin  D:/dropbox/Dropbox/jekyll/git-source/test.git (push)
 
-git remote show [리모트이름]
+git remote show (리모트이름)
 ----
 모든 리모트 경로의 branch와 정보를 표시합니다.
 
@@ -54,7 +54,7 @@ git remote show [리모트이름]
         master pushes to master (up to date)
         work1  pushes to work1  (up to date)
 
-git remote rm [리모트이름]
+git remote rm (리모트이름)
 ----
 리모트 경로를 제거합니다.
 
