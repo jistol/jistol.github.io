@@ -6,20 +6,17 @@ tags : [git]
 ---
 git을 사용하며 가장 기본적인 명령어들을 정리하였습니다.
 
-git init [--bare]
-----
-
-git clone [이름] (경로)
-----
-
 git add (경로|파일명)
 ----
 
-git commit [-a] [-m 커밋 메시지]
+git commit [-a|--all] [-m 커밋 메시지] [<file>...]
 ----
 
 `-m` :
 `-a` :
+
+git status
+----
 
 git checkout
 ----
