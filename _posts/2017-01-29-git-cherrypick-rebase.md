@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Git Cherry-pick, Rebase
+title: Git cherry-pick, rebase
 category : VCS
 tags : [git]
 ---
