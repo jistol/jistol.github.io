@@ -24,6 +24,7 @@ tags : [data-modeling]
 데이터 모델링의 구조와 독립성에 대한 여러가지 설명이 있지만 아래 두 그림으로 딱 설명이 되는것 같습니다.    
 ![데이터모델링 구조](/assets/img/database-data-modeling-base/1.jpg)    
 ※ 출처 : http://cfile28.uf.tistory.com/image/2119243556BD75431EB784    
+
 ![데이터모델링 예제](/assets/img/database-data-modeling-base/2.png)          
 ※ 출처 : http://cfile233.uf.daum.net/image/2056933C4F60B0312DC599    
 
@@ -32,9 +33,11 @@ tags : [data-modeling]
 - 내부스키마(내부적단계)는 물리적 장치에 데이터가 실제적으로 저장되는 방법을 표현합니다.  
 
 각 독립성은 각 스키마가 변경되더라도 서로 영향을 끼치지 않아야 한다는 의미입니다.
+
 - 논리적 독립성 : 개념스키마가 변해도 외부스키마는 변하지 않도록 지원해야함.   
 - 물리적 독립성 : 내부스키마가 변해도 개념스키마가 변하지 않도록 지원해야함.    
 
 사상은 Mapping이라고 부르는것이 더 이해하기 쉽습니다. 각 저장구조가 바뀐다면 Mapping정보가 바뀌어야 독립성이 유지됩니다.    
+
 - 논리적사상 : 외부뷰는 개념뷰에서 Mapping된 정보
 - 물리적사상 : 개념뷰는 내부뷰에서 Mapping된 정보
