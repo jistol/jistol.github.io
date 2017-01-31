@@ -8,7 +8,7 @@ tags : [iframe,hidden,html,javascript]
 웹 작업시 내부적인 통신을 위해 iframe 숨겨서 사용하는 경우가 있습니다.   
 이 때 iframe은 보여선 안되기 때문에 `width=0, height=0`으로 설정하는데 그럴 경우 크롬에서 아래 그림과 같이 여백으로 떠버리는 경우가 있습니다.     
 
-![iframe이 공백으로 보이는 현상](/assets/img/6.png)
+![iframe이 공백으로 보이는 현상](/assets/img/web/iframe-hidden/1.png)
 
 그래서 추가하는 방법이 style에 `display:none;`을 추가하게 되는데 이 역시 다른 브라우저에서 문제를 일으킬 소지가 있습니다.
 

@@ -17,7 +17,7 @@ tags : [bitnami,redmine,redmine-plugin,agile,ubuntu,deploy,bugtracking]
 기존에 복잡하게 설치해야만 했던 환경을 단번에 구성해 줍니다. 심지어 각 OS별로 설치 할 수 있도록 제공 할 뿐만 아니라, Docker Container 및 Bitnami에서 제공하는 cloud환경에서 사용할 수도 있는것 같습니다.   
 Applications메뉴를 눌러보면 다양한 설치할 수 있는 다양한 항목이 표시됩니다.
 
-![Bitnami Applications Page](/assets/img/4.png)    
+![Bitnami Applications Page](/assets/img/bugtraking/redmine-install-easy-ubuntu/4.png)    
 
 그 중에 설치할 항목인 "Redmine + Agile" 선택.
 
@@ -178,7 +178,7 @@ Redmine 기본 언어를 선택합니다.
 
 모든 설치가 끝나면 Redmine을 구동해주고 웹페이지에 접속하여 확인할 수 있습니다.
 
-![설치완료 화면](/assets/img/5.png)   
+![설치완료 화면](/assets/img/bugtraking/redmine-install-easy-ubuntu/5.png)   
 
 관리화면에 가면 위와 같이 Agile Plugin이 추가되어 있는것을 확인할 수 있습니다.   
 설치된 Agile버전은 무료버전인 Light버전으로 자세한 사항은 아래 링크에서 확인 가능합니다.

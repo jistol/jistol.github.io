@@ -22,7 +22,7 @@ Branch 생성
 
 SourceTree를 통해 그래프를 보면 master노드에 'v1' 내용을 담은 origin.txt 파일이 존재합니다.
 
-![step1](/assets/img/git-branch-merge-1.png)
+![step1](/assets/img/git/git-branch-merge-exam/git-branch-merge-1.png)
 
 신규기능인 feature.txt 개발을 위해 branch를 생성후 파일을 만들어 commit합니다.
 
@@ -32,7 +32,7 @@ SourceTree를 통해 그래프를 보면 master노드에 'v1' 내용을 담은 o
     $ git add .
     $ git commit -m 'f1'    
 
-![step2](/assets/img/git-branch-merge-2.png)    
+![step2](/assets/img/git/git-branch-merge-exam/git-branch-merge-2.png)    
 
 위와 같이 feature1이라는 branch가 생성되고 feature.txt가 'f1'내용으로 개발된 것을 볼 수 있습니다.   
 다시 master 노드로 돌아가 origin.txt를 'v2'로 변경해 봅니다.
@@ -41,7 +41,7 @@ SourceTree를 통해 그래프를 보면 master노드에 'v1' 내용을 담은 o
     $ echo 'v2' > origin.txt
     $ git commit -a -m 'v2'
 
-![step3](/assets/img/git-branch-merge-3.png)    
+![step3](/assets/img/git/git-branch-merge-exam/git-branch-merge-3.png)    
 
 이제 좀 더 branch 가지가 분명하게 보이기 시작했습니다.
 
@@ -53,7 +53,7 @@ master에 feature1 branch 내용을 가져올 예정이니 실행은 master 노�
     $ git checkout master
     $ git merge feature1 -m 'merge f1'   
 
-![step4](/assets/img/git-branch-merge-4.png)   
+![step4](/assets/img/git/git-branch-merge-exam/git-branch-merge-4.png)   
 
 위와 같이 master노드와 feature1 branch노드가 merge되었습니다.    
 
@@ -87,7 +87,7 @@ reset의 옵션은 아래와 같습니다.
 
 위와 같이 hard옵션으로 되돌리고 SourceTree를 확인해보면 다시 merge전으로 돌아온 것을 확인할 수 있습니다.    
 
-![step5](/assets/img/git-branch-merge-5.png)   
+![step5](/assets/img/git/git-branch-merge-exam/git-branch-merge-5.png)   
 
 Merge 충돌 해결하기
 ----
@@ -97,7 +97,7 @@ master노드와 feature1 branch노드간의 충돌을 만들기 위해 origin.tx
     $ echo 'v2-f1' > origin.txt
     $ git commit -a -m 'conflict origin.txt'
 
-![step6](/assets/img/git-branch-merge-6.png)   
+![step6](/assets/img/git/git-branch-merge-exam/git-branch-merge-6.png)   
 
 master노드와 feature1 branch노드의 origin.txt파일이 각각 달라졌습니다. 이제 merge를 합니다.
 
@@ -109,11 +109,11 @@ master노드와 feature1 branch노드의 origin.txt파일이 각각 달라졌습
 
 origin.txt파일의 내용을 merging하다가 충돌이 나있는 상태입니다.
 
-![step7](/assets/img/git-branch-merge-7.png)
+![step7](/assets/img/git/git-branch-merge-exam/git-branch-merge-7.png)
 
 충돌난 내용은 위와 같이 구분하여 표시되고 위 내용을 알맞는 값으로 변경한 후 다시 commit하면 merge가 완료됩니다.    
 
     $ git add .
     $ git commit -m 'finished merge'
 
-![step8](/assets/img/git-branch-merge-8.png)
+![step8](/assets/img/git/git-branch-merge-exam/git-branch-merge-8.png)
