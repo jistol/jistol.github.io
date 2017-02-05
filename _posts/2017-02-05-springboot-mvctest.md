@@ -2,7 +2,7 @@
 layout: post
 title: (SpringBoot) MVC 테스트 하기 - @WebMvcTest, @AutoConfigureMockMvc
 category : springboot
-tags : [springboot,webmvctest,junit,@WebMvcTest,@AutoConfigureMockMvc]
+tags : [springboot,webmvctest,junit,WebMvcTest,AutoConfigureMockMvc]
 ---
 [SpringBoot Reference](http://docs.spring.io/spring-boot/docs/2.0.0.BUILD-SNAPSHOT/reference/htmlsingle/)에 접속하여 목차를 보면 거의 끝쯤에 Testing관련 내용이 나옵니다.   
 이 중 SpringBoot의 Controller를 JUnit으로 테스트 하고 싶은 경우 [41.3.7 Auto-configured Spring MVC tests](http://docs.spring.io/spring-boot/docs/2.0.0.BUILD-SNAPSHOT/reference/htmlsingle/#boot-features-testing-spring-boot-applications-testing-autoconfigured-mvc-tests)를 보면 Http Connection을 별도 구현하지 않고도 MVC 테스트를 가능하게 하는 설명이 나옵니다.    
