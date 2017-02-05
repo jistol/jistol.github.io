@@ -12,7 +12,7 @@ tags : [springboot,webmvctest,junit,@WebMvcTest,@AutoConfigureMockMvc]
 @WebMvcTest
 ----
 일반적으로 사용하는 MVC테스트용 어노테이션입니다.   
-해당 어노테이션을 명시하고 그림과 같이 `MockMvc`를 `@Autowired`하면 해당 객체를 통해 MVC테스트가 가능합니다.
+해당 어노테이션을 명시하고 그림과 같이 `MockMvc`를 `@Autowired`하면 해당 객체를 통해 MVC테스트가 가능합니다.   
 
 ![@WebMvcTest사용시 주의사항 1](/assets/img/springboot/springboot-mvctest/2.png)
 
