@@ -32,3 +32,6 @@ _※ 파일 경로를 full로 적어줘야합니다._
 - Finish 버튼을 클릭하여 마무리.
 
 ![Create New Connect](/assets/img/springboot/springboot-h2db-servermode/3.png)
+
+위와 같이 설정해도 한쪽에서 붙어 있는 상황에선 다른쪽이 붙질 못하더군요.    
+그 방법까진 아직 못찾아봐서 패스.
