@@ -1,6 +1,6 @@
 ---
 layout: post
-title: (SpringBoot) MVC 테스트 하기 - @WebMvcTest, @AutoConfigureMockMvc
+title: (SpringBoot) MVC 테스트 하기 - "\@WebMvcTest", "\@AutoConfigureMockMvc"
 category : springboot
 tags : [springboot,webmvctest,junit,WebMvcTest,AutoConfigureMockMvc]
 ---
