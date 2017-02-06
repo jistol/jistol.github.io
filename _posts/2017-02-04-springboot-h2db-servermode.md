@@ -1,7 +1,7 @@
 ---
 layout: post
 title: (SpringBoot) H2 DB 서버모드로 띄워 외부 툴(DBeaver)로 접속하기
-category : springboot
+category : Springboot
 tags : [springboot,h2,dbeaver]
 ---
 SpringBoot에서 H2 DB Embedded를 사용하다보면 항상 console에 들어가 쿼리해야하는 불편함이 있어 외부 툴에서 접근하는 방법을 찾아 정리해 보았습니다.

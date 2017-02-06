@@ -59,6 +59,13 @@ git branch (이름)
 
     $ git checkout -b work2
 
+※ 원격에 있는 branch를 가져오려면 아래 명령어를 사용합니다.
+
+    [특정이름 지정시]
+    $ git checkout -b work2 origin/work2      
+    [원격 branch 이름을 그대로 사용할 경우]
+    $ git checkout -t origin/work2
+
 git branch (--merged | --no-merged)
 ----
 `--merged`는 이미 merge된 branch를 표시해주고 `--no-merged`는 아직 merge가 되지 않은 branch만 표시합니다.    

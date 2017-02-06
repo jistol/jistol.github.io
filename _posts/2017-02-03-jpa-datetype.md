@@ -1,8 +1,8 @@
 ---
 layout: post
-title: (JPA) Date타입 컬럼 - Date, Calendar, Timestamp
-category : jpa
-tags : [jpa,date,java,spring,springboot]
+title: (JPA,SpringData) Date타입 컬럼 - Date, Calendar, Timestamp
+category : JPA/SpringData
+tags : [jpa,date,java,spring,springboot,springdata]
 ---
 JPA를 사용할때 Date타입의 컬럼 사용시 어떤 Java Object를 사용해야하는지에 대한 글이 있어 옮겨 적어봅니다. [원본보기](http://www.developerscrappad.com/228/java/java-ee/ejb3-jpa-dealing-with-date-time-and-timestamp/)    
 

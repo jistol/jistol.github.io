@@ -1,7 +1,7 @@
 ---
 layout: post
 title: (SpringBoot) MVC 테스트 하기 - `@WebMvcTest`, `@AutoConfigureMockMvc`
-category : springboot
+category : Springboot
 tags : [springboot,webmvctest,junit,WebMvcTest,AutoConfigureMockMvc]
 ---
 [SpringBoot Reference](http://docs.spring.io/spring-boot/docs/2.0.0.BUILD-SNAPSHOT/reference/htmlsingle/)에 접속하여 목차를 보면 거의 끝쯤에 Testing관련 내용이 나옵니다.   
@@ -36,3 +36,4 @@ tags : [springboot,webmvctest,junit,WebMvcTest,AutoConfigureMockMvc]
 `@WebMvcTest`외에 MVC테스트를 할 수 있는 다른 방법입니다.   
 위 설정은 MVC테스트 외 모든 설정을 같이 올립니다. AOP도 되고 JPA Repository도 사용가능하네요.   
 실제적으로 동작하는 MVC테스트를 하려면 위 어노테이션을 사용해야 합니다.   
+`@AutoConfigureMockMvc`은 `@SpringBootTest`와 같이 사용 가능합니다.
