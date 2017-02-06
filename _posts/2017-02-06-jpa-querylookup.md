@@ -13,6 +13,7 @@ xml에 죽어라 SQL문 만들다가 이렇게 간단하게 해결되면 SpringD
 
 메소드 이름 안에서 지원되는 키워드들
 ----
+
 |Keyword|Sample|JPQL snippet|
 |:----:|:----|:----|
 |And|findByLastnameAndFirstname|… where x.lastname = ?1 and x.firstname = ?2|
