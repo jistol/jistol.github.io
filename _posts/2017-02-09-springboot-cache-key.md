@@ -71,4 +71,4 @@ _하지만 내부에 포함된 데이터가 native타입이 아닐 경우엔 Lis
 
 key값에 사용되는 문법은 sqEL 표현식으로 아래 링크에서 자세한 내용은 확인 가능합니다.
 
-[Spring Expression Language (SpEL)][https://docs.spring.io/spring/docs/current/spring-framework-reference/html/expressions.html]
+- (Spring Expression Language (SpEL))[https://docs.spring.io/spring/docs/current/spring-framework-reference/html/expressions.html]
