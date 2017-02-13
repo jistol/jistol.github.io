@@ -9,7 +9,7 @@ tags : [jpa,java,orm]
 ORM(Object-Relational Mapping)이란?
 ----
 - 객체(Object)와 관계형 데이터베이스(Relational)의 관계 설정을 자동으로 처리해줍니다.
-- 실제 데이터와 객체와의 개념적 일치하지 않는 부분을 자동으로 매핑해주는데 ResultSet을 받아 Bean에 열심히 넣어주던것을 대신해주는 것과 비슷합니다.
+- 실제 데이터와 객체와의 개념적 일치하지 않는 부분을 자동으로 매핑해주는데 ResultSet을 받아 Bean에 열심히 넣어주던것을 대신해주는 것과 비슷하게 생각하면 됩니다.
 - 관계형 데이터베이스의 데이터를 객체형 데이터처럼 사용할 수 있습니다.
 
 ORM의 장점
@@ -38,5 +38,5 @@ ORM에 적합하지 않은 모델
 
 참고
 ----
-[ORM (Object Relation Mapping)][http://lilymate.tistory.com/235]
-[ORM 의 장점과 단점][https://gs.saro.me/#!m=elec&jn=718]
+[ORM (Object Relation Mapping)][http://lilymate.tistory.com/235]    
+[ORM 의 장점과 단점][https://gs.saro.me/#!m=elec&jn=718]    
