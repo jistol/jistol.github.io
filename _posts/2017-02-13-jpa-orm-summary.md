@@ -38,5 +38,5 @@ ORM에 적합하지 않은 모델
 
 참고
 ----
-[ORM (Object Relation Mapping)][http://lilymate.tistory.com/235]    
-[ORM 의 장점과 단점][https://gs.saro.me/#!m=elec&jn=718]    
+[ORM (Object Relation Mapping)](http://lilymate.tistory.com/235)    
+[ORM 의 장점과 단점](https://gs.saro.me/#!m=elec&jn=718)    
