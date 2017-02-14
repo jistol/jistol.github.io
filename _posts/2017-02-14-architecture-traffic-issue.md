@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 병목 지점별 서비스 확장
+title: 대용량 처리를 위한 서비스 구성
 category : Architecture
 tags : [architecture]
 ---
