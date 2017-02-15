@@ -37,13 +37,15 @@ Gradle 이란?
 ![new project](/assets/img/buildtool/buildtool-gradle-setup/2.png)    
 
 - 필요한 선택항목을 선택 후 Next를 클릭합니다.
+
 ![new project](/assets/img/buildtool/buildtool-gradle-setup/3.png)      
+
   + Use auto-import : dependency 추가시 자동으로 import하는 옵션입니다.
   + Create directories for empty content roots automatically : 이 항목을 선택하면 자동으로 src폴더와 하위 구조가 생성됩니다.
   + Use default gradle wrapper : Gradle Wrapper를 생성해줍니다.(gradlew.bat ...)
   + Use gradle wrapper task configuration : Gradle Wrapper를 task를 통해 실행할 수 있도록 스크립트를 만듭니다.
 
-  ![new project](/assets/img/buildtool/buildtool-gradle-setup/6.png)      
+![new project](/assets/img/buildtool/buildtool-gradle-setup/6.png)      
 
   + Use local gradle distribution : 로컬에 설치한 gradle경로를 잡아줍니다.
 
@@ -52,7 +54,8 @@ Gradle 이란?
 
 ![new project](/assets/img/buildtool/buildtool-gradle-setup/4.png)   
 
-![new project](/assets/img/buildtool/buildtool-gradle-setup/5.png)     
+![new project](/assets/img/buildtool/buildtool-gradle-setup/5.png)    
+
 ※ 위 커맨드 명령어로 만들때도 같은 구조로 생성됩니다.
 
 그 외에 template을 기반으로 하는 프로젝트 생성 방법은 [Gradle 기반의 템플릿 프로젝트 생성](https://slipp.net/wiki/pages/viewpage.action?pageId=11632703#id-1.Gradle%EC%84%A4%EC%B9%98%EB%B0%8F%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%83%9D%EC%84%B1-Gradle%EA%B8%B0%EB%B0%98%EC%9D%98%ED%85%9C%ED%94%8C%EB%A6%BF%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%83%9D%EC%84%B1)을 참고하시기 바랍니다.
