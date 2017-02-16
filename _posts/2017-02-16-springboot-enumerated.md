@@ -4,7 +4,7 @@ title: (SpringBoot) Enum 사용하기 - `@Enumerated`
 category : Springboot
 tags : [springboot,jpa,enum,enumrated]
 ---
-[OKKY-Java Enum 활용하기](http://okky.kr/article/374496) 글을 보고 괜찮다 싶어서 제가 만들어 놨던 프로젝트에 적용해 보았습니다.     
+[OKKY-enum 활용에서 enum 공통모듈까지](http://okky.kr/article/374496) 글을 보고 괜찮다 싶어서 제가 만들어 놨던 프로젝트에 적용해 보았습니다.     
 
 우선 아래와 같이 `enum`을 선언했습니다.    
 
@@ -100,3 +100,8 @@ Controller에서도 자동 맵핑이 가능한데 `@InitBinder`를 이용할 수
     {% endhighlight %}
 
 위와 같이 설정하면 '/list?enumCode=L'과 같이 호출시 enumCode는 `@InitBinder`구문에 의해 자동으로 `enum`객체로 변경되어 파라메터 맵핑됩니다.
+
+참고
+----
+[OKKY-enum 활용에서 enum 공통모듈까지](http://okky.kr/article/374496)    
+[JPA and Enums via @Enumerated](http://tomee.apache.org/examples-trunk/jpa-enumerated/README.html)    
