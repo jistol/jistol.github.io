@@ -62,4 +62,5 @@ hero:
 # Puglins
 mathjax: true # whether support mathjax
 google_analytics_token: 'UA-89877408-1' # leave blank if you don't want google analytics
+naver_analytics_token: '1293c760f8c51'
 disqus_short_name: 'jistol-github-io' # leave blank if you don't want disqus

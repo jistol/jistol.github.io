@@ -29,7 +29,7 @@
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
     {% include init.html %}
-    
+
     {% if site.google_analytics_token %}
     <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
@@ -41,5 +41,13 @@ ga('send', 'pageview');
   </body>
   {% if site.disqus_short_name %}
   <script id="dsq-count-scr" src="//{{ site.disqus_short_name }}.disqus.com/count.js" async></script>
+  {% endif %}
+  {% if site.naver_analytics_token %}
+  <script type="text/javascript" src="http://wcs.naver.net/wcslog.js"></script>
+  <script type="text/javascript">
+  if(!wcs_add) var wcs_add = {};
+  wcs_add["wa"] = "{{ site.naver_analytics_token }}";
+  wcs_do();
+  </script>
   {% endif %}
 </html>
