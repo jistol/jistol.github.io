@@ -2,7 +2,7 @@
 layout: post
 title: (JPA,SpringData) ORM 기본 개념 정리
 category : Java
-tags : [jpa,java,orm]
+tags : [jpa,orm]
 ---
 여러 게시글들을 기반으로 정리해 보았습니다.
 
