@@ -1,7 +1,7 @@
 ---
 layout: post
 title: (SpringBoot) Enum 사용하기 - `@Enumerated`
-category : Springboot
+category : Java
 tags : [springboot,jpa,enum,enumrated]
 ---
 [OKKY-enum 활용에서 enum 공통모듈까지](http://okky.kr/article/374496) 글을 보고 괜찮다 싶어서 제가 만들어 놨던 프로젝트에 적용해 보았습니다.     

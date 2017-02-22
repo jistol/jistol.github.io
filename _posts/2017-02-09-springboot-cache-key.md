@@ -1,7 +1,7 @@
 ---
 layout: post
 title: (SpringBoot) @Cacheable key값 정하기
-category : Springboot
+category : Java
 tags : [springboot,springcache,spel,spring]
 ---
 Spring Cache는 `@Cacheable`어노테이션만 붙이면 알아서 인자값을 종류에 맞게 캐쉬된 데이터를 사용합니다.
@@ -30,7 +30,7 @@ Spring Cache는 `@Cacheable`어노테이션만 붙이면 알아서 인자값을 
 이유는 Spring 4.0 이전 버전에서 사용하는 기본 KeyGenerator인 `DefaultKeyGenerator`가 아래와 같은 방식으로 키를 생성하기 때문입니다.   
 
 [Spring Cache Abstraction Default Key Generation - 원문보기](https://docs.spring.io/spring/docs/current/spring-framework-reference/html/cache.html#cache-annotations-cacheable-default-key)     
-![Spring Cache Abstraction Default Key Generation](/assets/img/springboot/springboot-cache-key/1.png)    
+![Spring Cache Abstraction Default Key Generation](/assets/img/java/springboot-cache-key/1.png)    
 
 객체의 native값을 이용하거나 Object일 경우 `hashCode()`만을 사용하여 키 값을 생성하는데 Object의 hachCode는 객체에서 재정의 하지 않은 이상 무조건 다른 값이 들어가게 되기 때문입니다.    
 _Spring 4.0 이후 버전에서의 기본 KeyGenerator는 `SimpleKeyGenerator`를 사용하며 hashCode만이 아닌 복합키를 사용한다고 합니다._    

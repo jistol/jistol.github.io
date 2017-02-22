@@ -1,7 +1,7 @@
 ---
 layout: post
 title: (SpringBoot) 데이터베이스 초기화 (spring.jpa.hibernate.ddl-auto, import.sql, spring.datasource.data)
-category : Springboot
+category : Java
 tags : [springboot,jpa,springdata,spring]
 ---
 

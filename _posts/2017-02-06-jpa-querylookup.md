@@ -1,7 +1,7 @@
 ---
 layout: post
 title: (JPA,SpringData) 쿼리 메소드 정의하기
-category : JPA/SpringData
+category : Java
 tags : [jpa,spring,springboot,springdata]
 ---
 iBatis만 사용하다가 SpringData를 처음 접해보면 신세계를 느끼는 것 중 하나가 interface에 메소드 하나 정의 했는데 쿼리가 완성된다는 점이 아닐까 싶습니다.    
