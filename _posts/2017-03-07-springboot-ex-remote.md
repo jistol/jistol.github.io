@@ -2,7 +2,7 @@
 layout: post
 title: (SpringBoot) Remoting 예제 (RMI, HTTP)
 category : Java
-tags : [springboot,rmi,remote,http]
+tags : [springboot,rmi,remoting,remote,http]
 ---
 Spring에서 RMI사용 예제는 많은데 SpringBoot에서 XML없이 사용하는 예제는 찾기 힘들더군요.   
 [Annotation을 Customizing해서 사용하는 예제](https://earldouglas.com/posts/spring-remoting-annotation.html)를 찾았는데 조금 쓰기 편하게 고쳐봤습니다.   
@@ -178,9 +178,9 @@ Bean생성시 `BeanPostProcessor`를 이용하여 위 두 Remoting객체를 Serv
 
 `io.jistol.sample.remote.controller.HttpController`    
 `io.jistol.sample.remote.controller.RmiController`
-- http://127.0.0.1:${server.port}/${protocol}/service : DefaultServiceImpl을 직접 호출
-- http://127.0.0.1:${server.port}/${protocol}/bean : @Bean 어노테이션으로 구현한 객체를 이용하여 통신
-- http://127.0.0.1:${server.port}/${protocol}/extend : 커스터마이징 어노테이션으로 구현한 객체를 이용하여 통신
+- http://127.0.0.1:{server.port}/{protocol}/service : DefaultServiceImpl을 직접 호출
+- http://127.0.0.1:{server.port}/{protocol}/bean : @Bean 어노테이션으로 구현한 객체를 이용하여 통신
+- http://127.0.0.1:{server.port}/{protocol}/extend : 커스터마이징 어노테이션으로 구현한 객체를 이용하여 통신
 
 위 Controller를 호출하여 Test하는 단위테스트는 아래에 구현되어 있습니다.
 
