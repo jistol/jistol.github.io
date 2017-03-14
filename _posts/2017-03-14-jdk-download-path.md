@@ -10,7 +10,8 @@ tags : [jdk]
 
 찾아 찾아 갈 수 있긴 하지만 찾기 힘드니깐 링크를 적어 둡니다.
 
-[Oracle Java Archive](http://www.oracle.com/technetwork/java/javase/archive-139210.html)     
+[이전 JDK 다운받기 링크 ](http://www.oracle.com/technetwork/java/javase/archive-139210.html)     
+
 ![img](/assets/img/java/jdk-download-path/1.png)   
 
 추가로 최신 버전 JDK는 아래 링크에서 받을 수 있습니다.    
