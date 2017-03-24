@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Caused by: org.hibernate.AnnotationException: No identifier specified for entity
+title: "Caused by: org.hibernate.AnnotationException: No identifier specified for entity"
 category : Java
 tags : [jpa,troubleshooting]
 ---
