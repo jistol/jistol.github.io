@@ -12,8 +12,8 @@ SpringData REST는 SpringData프로젝트의 서브 프로젝트로 Repository�
 사용자는 Entity 클래스와 Repository 인터페이스만 작성하면 나머지 CRUD 작업은 모두 알아서 RESTful하게 생성됩니다.    
 
 SpringData REST의 주요 기능은 Data Repository로부터 Resource를 추출하는 것으로 핵심은 Repository 인터페이스입니다.    
-예를 들어 "OrderRepository"와 같은 Repository인터페이스가 있을 경우 소문자의 복수형 resource를 뽑아내어 /orders 를 만듭니다.
-그리고 /orders/{id} 하위에 각 item을 관리할 수 있는 resource를 추출해 냅니다.
+예를 들어 `OrderRepository`와 같은 Repository인터페이스가 있을 경우 소문자의 복수형 resource를 뽑아내어 `/orders` 를 만듭니다.
+그리고 `/orders/{id}` 하위에 각 item을 관리할 수 있는 resource를 추출해 냅니다.
 
 시작하기
 ----
