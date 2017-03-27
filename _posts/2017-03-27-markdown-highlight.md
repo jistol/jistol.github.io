@@ -22,12 +22,12 @@ public static void main(String... args)
 Atom Editor 미리보기에서도 하이라이팅된 코드를 보고 싶을 경우 아래와 같이 코드블럭을 통해 쓸 수 있습니다.
 
 <pre>
-```java    
+\```java    
 public static void main(String... args)     
 {     
   System.out.println("Hello World.")     
 }    
-```
+\```
 </pre>
 
 ![another style](/assets/img/etc/markdown-highlight/2.png)    
