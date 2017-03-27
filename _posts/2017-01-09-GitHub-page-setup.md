@@ -1,7 +1,7 @@
 ---
 layout: post
 title: GitHub Page 개발환경 구축하기
-category : Blog
+category : Etc
 tags : [jekyll,ruby,rbenv,docker,docker-toolbox,markdown]
 ---
 
@@ -37,7 +37,7 @@ Docker와의 공유설정을 쉽게 하려면 사용자 기본폴더 ("C:\User")
 
 toolbox 설치시 "default" 이미지가 생성되며 VM관리자 화면에 접속하여 다음과 같이 공유폴더를 설정합니다.
 
-![VM관리자 설정-공유폴더](/assets/img/blog/github-page-setup/1.png)
+![VM관리자 설정-공유폴더](/assets/img/etc/github-page-setup/1.png)
 
 docker-machine 명령어를 통해 접속하여 해당 공유폴더를 mount합니다.
 
@@ -138,7 +138,7 @@ jekyll은 ruby로 작성된 프로그램입니다. jekyll을 띄우기 위해서
 각 OS별 정확한 ruby 설치 방법은 GoRails에 친절하게 설명되어 있으니 참고 하시기 바랍니다.
 
 [Go Rails 바로가기](https://gorails.com/setup)  
-![Go Rails Setup Page](/assets/img/blog/github-page-setup/2.png)  
+![Go Rails Setup Page](/assets/img/etc/github-page-setup/2.png)  
 
 설치방법들중 권장 방법인 rbenv를 이용하여 설치하였습니다.  
 
@@ -187,4 +187,4 @@ CMD창을 열고 docker-machine이 떠 있는 IP를 확인합니다.
 
 
 확인된 IP로 접속하면 아래와 같이 정상적으로 서버가 구동하고 있는것을 확인 할 수 있습니다.  
-![Jekyll Server 구동화면](/assets/img/blog/github-page-setup/3.png)
+![Jekyll Server 구동화면](/assets/img/etc/github-page-setup/3.png)

@@ -4,7 +4,10 @@ title: (SpringBoot) SpringData REST 소개 및 샘플
 category : Java
 tags : [springboot,springdata,rest,jpa]
 ---
-다른 작업을 하려고 Spring Initializr에서 프로젝트 생성중 "Rest Repository"라는 Dependency항목이 있어 먼가 하고 보다가 서칭한 내용을 정리해보았습니다.    
+다른 작업을 하려고 Spring Initializr에서 프로젝트 생성중 "Rest Repository"라는 Dependency항목이 있어 먼가 하고 보다가 서칭한 내용을 정리해보았습니다.      
+아래 내용에 대한 샘플은 다음 주소에서 확인 할 수 있습니다.   
+
+[https://github.com/jistol/sample/tree/master/ex-springdata-rest-sample](https://github.com/jistol/sample/tree/master/ex-springdata-rest-sample)
 
 SpringData REST
 ----
