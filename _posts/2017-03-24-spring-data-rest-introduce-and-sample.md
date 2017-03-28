@@ -217,3 +217,7 @@ SpringData REST에서 설정 방식은 3가지가 있습니다. 단, Framework�
 |defaultMediaType|change default media type to use when none is specified|
 |returnBodyOnCreate|change if a body should be returned on creating a new entity|
 |returnBodyOnUpdate|change if a body should be returned on updating an entity|
+
+참고
+----
+[Spring Data REST - Reference Documentation 2.6.1.RELEASE](http://docs.spring.io/spring-data/rest/docs/2.6.1.RELEASE/reference/html/)
