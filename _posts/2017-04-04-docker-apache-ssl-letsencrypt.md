@@ -81,7 +81,7 @@ sudo docker stop [CONTAINER_NAME]
 ```shell
 [run-container.sh]
 #!/bin/bash
-sudo docker start [CONTAINER_NAME]
+nohup sudo docker start [CONTAINER_NAME] > /dev/null 2>&1
 sudo docker exec -d [CONTAINER_NAME] /bin/bash -c '/usr/sbin/apache2ctl -D FOREGROUND'
 ```    
 
