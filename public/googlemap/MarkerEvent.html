@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Marker Animations</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+      var marker;
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          zoomControl : false,
+          scrollwheel : false,
+          center: {lat: 37.49070,lng:127.00761},
+          draggable : false
+        });
+
+        marker = new google.maps.Marker({
+          map: map,
+          draggable: false,
+          animation: google.maps.Animation.DROP,
+          position : {lat: 37.49070,lng:127.00761},
+          optimized: false,
+          //icon : 'https://i1.daumcdn.net/thumb/R128x128/?fname=http://t1.daumcdn.net/brunch/static/img/sticker/jay-g/15.png'
+          icon : 'http://cfile10.uf.tistory.com/image/2531144557C111C327DE4A'
+        });
+        marker.addListener('click', onClineMarker);
+        marker.addListener('dragend', onDragendMarker);
+
+        // Geolocation API에 액세스할 수 있는지를 확인
+        if (navigator.geolocation) {
+            //위치 정보를 얻기
+            navigator.geolocation.watchPosition(function(pos) {
+                var lat = pos.coords.latitude;     // 위도
+                var lon = pos.coords.longitude; // 경도
+                var acc = pos.coords.accuracy; // 정확도
+                //alert( 'lat : ' + lat + '\nlon : ' + lon + '\nacc : ' + acc );
+                var darwin = new google.maps.LatLng(lat, lon);
+                map.setCenter(darwin);
+                marker.setPosition(darwin);
+            }, function(msg){ alert(msg); }, { maximumAge:600000, timeout:5000, enableHighAccuracy: true });
+        } else {
+            alert("이 브라우저에서는 Geolocation이 지원되지 않습니다.")
+        }
+      }
+
+      function onDragendMarker()
+      {
+        alert(this.position.lat() + ',' + this.position.lng());
+      }
+
+      function onClineMarker() {
+        if (marker.getAnimation() !== null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+      }
+    </script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB29edWOela2POZTB5sq3TLhgV9VT1jnt4&callback=initMap">
+</script>
+</body>
+</html>
