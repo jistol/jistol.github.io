@@ -23,6 +23,8 @@
 </div>
 <div id="map"></div>
 <script>
+    screen.orientation.lock();
+
       var map, marker;
       var init = false;
 
@@ -51,7 +53,7 @@
 
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 18,
+          zoom: 19,
           zoomControl : false,
           scrollwheel : false,
           center: {lat: 37.49070,lng:127.00761},
