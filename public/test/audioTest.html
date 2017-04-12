@@ -13,8 +13,8 @@
             window.URL = window.webkitURL;
         }
 
-        $('#camcorder').change(function(e){
-            $('#mov').attr('src', URL.createObjectURL(e.target.files[0]));
+        $('#audio').change(function(e){
+            $('#canvas').attr('src', URL.createObjectURL(e.target.files[0]));
             // iOS Safari에서는 autoplay가 안먹히므로 알림
             alert('동영상 재생버튼을 누르시오');
         });
@@ -22,9 +22,9 @@
     </script>
 </head>
 <body>
-    <input type="file" id="camcorder" name="camcorder" capture="camcorder" accept="video/*" />
+    <input type="file" id="audio" name="audio" capture="microphone" accept="audio/*" />
     <br />
-    <video id="mov" style="width:70%;height:70%" autoplay></video>
+    <canvas id="canvas" style="width:70%;height:70%"></canvas>
 </body>
 </html>
 
