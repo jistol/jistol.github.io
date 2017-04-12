@@ -1,0 +1,30 @@
+<!doctype html>
+
+
+<head>
+    <meta name="viewport" content="width=320; user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Camera</title>
+    <script src="/jquery/jquery.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        if (!('url' in window) && ('webkitURL' in window)) {
+            window.URL = window.webkitURL;
+        }
+
+        $('#camcorder').change(function(e){
+            $('#mov').attr('src', URL.createObjectURL(e.target.files[0]));
+            // iOS Safari에서는 autoplay가 안먹히므로 알림
+            alert('동영상 재생버튼을 누르시오');
+        });
+    });
+    </script>
+</head>
+<body>
+    <input type="file" id="camcorder" name="camcorder" capture="camcorder" accept="video/*" />
+    <br />
+    <video id="mov"></video>
+</body>
+</html>
+
