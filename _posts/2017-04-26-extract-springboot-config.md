@@ -1,6 +1,6 @@
 ---
 layout: post
-title: (Springboot) 설정을 외부 파일로 빼기
+title: (SpringBoot) 설정을 외부 파일로 빼기
 category : Java
 tags : [springboot,ehcache,logback,yaml,yml,ConfigurationProperties]
 ---
