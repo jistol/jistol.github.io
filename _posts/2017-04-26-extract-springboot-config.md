@@ -2,7 +2,7 @@
 layout: post
 title: (SpringBoot) 설정을 외부 파일로 빼기
 category : Java
-tags : [springboot,ehcache,logback,yaml,yml,ConfigurationProperties]
+tags : [springboot,ehcache,logback,yaml,yml,configurationProperties]
 ---
 Springboot는 개발속도를 향상 시켜주는 많은 장점을 가지고 있습니다.     
 application.yml 수정만으로 간단하게 설정할 수 있고 Embeded된 WAS(Tomcat/Jetty...)를 이용하기 때문에 별도의 WAS 설치가 필요없으며 WAR파일을 바로 실행 할 수도 있습니다.    
