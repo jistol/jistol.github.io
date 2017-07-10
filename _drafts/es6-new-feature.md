@@ -15,5 +15,9 @@ tags : [ecmascript2015,es6,javascript,typescript]
 Arrow Functions
 ----
 Scala나  Java Lamda식에서 사용하는 형식을 Javascript에서도 사용 할 수 있습니다.
+`function`이라는 키워드를 생략하고 화살표로 간결하게 표시 할 수 있으며 실행 명령이 한 줄일 경우 return 문도 생략 가능합니다.    
+중괄호 {} 를 사용했을 경우에는 반드시 return을 표시해야합니다.
+
+<script async src="//jsfiddle.net/jistol/qazc792s/3/embed/js/dark/"></script>
 
 
