@@ -20,4 +20,7 @@ Scala나  Java Lamda식에서 사용하는 형식을 Javascript에서도 사용 
 
 <script async src="//jsfiddle.net/jistol/qazc792s/3/embed/js/dark/"></script>
 
+Classes
+----
+기존 prototype을 통해 객체지향의 클래스를 흉내내던 부분을 실제로 만들수 있게 되었습니다.
 
