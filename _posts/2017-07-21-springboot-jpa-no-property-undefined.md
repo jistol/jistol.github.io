@@ -1,6 +1,6 @@
 ---
 layout: post
-title: (SpringBoot) org.springframework.data.mapping.PropertyReferenceException: No property undefined found for type 
+title: org.springframework.data.mapping.PropertyReferenceException: No property undefined found for type 
 category : Java
 tags : [springboot,jpa,troubleshooting]
 ---
