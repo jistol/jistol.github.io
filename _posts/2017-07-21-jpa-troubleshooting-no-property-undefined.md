@@ -25,7 +25,7 @@ JPA 작업을 하기 전까지는 오류가 안나길래 JPA설정 문제인가 
 ----
 Controller에서 인자값으로 `Pageable` 정보를 받아와 JPA Repository에 넘겨 조회를 하는데 아래와 같이 넘기는 값중에 `undefined`가 있었습니다.
  
-```url
+```
 http://localhost/api?page=0&size=15&sort=undefined%2Casc
 ```
 
