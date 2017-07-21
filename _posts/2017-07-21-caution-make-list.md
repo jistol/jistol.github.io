@@ -19,11 +19,13 @@ list.add(2);
 `List`객체를 만드는 또 다른 방법은 아래와 같이 생성시 enclosing scope에서 초기화를 같이 해주는 방법입니다.
 
 ```java
-List list = new ArrayList(){{
-  add(1); 
-  add(2);
-  add(3);
-}};
+List list = new ArrayList(){
+  {
+      add(1); 
+      add(2);
+      add(3);
+  }
+};
 ```
 
 방법 3
