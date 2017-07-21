@@ -12,8 +12,8 @@ tags : [java,lombok,log]
 ```java
 // source
 @Slf4j
- public class LogExample {
- }
+public class LogExample {
+}
 ```
 
 ```java
@@ -22,3 +22,7 @@ public class LogExample {
      private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(LogExample.class);
 }
 ```
+
+참고
+----
+[Annotation Type Slf4j](https://projectlombok.org/api/lombok/extern/slf4j/Slf4j.html)
