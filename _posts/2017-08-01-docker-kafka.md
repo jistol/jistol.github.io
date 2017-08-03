@@ -64,6 +64,10 @@ docker-compose 실행
 ```console
 $ docker-compose up -d
 ```
+> 위 명령어의 경우 kafka cluster를 구성하는 케이스로 단일 Broker를 사용할 경우에는 아래와 같이 사용 할 수 있습니다.
+>     $ docker-compose -f docker-compose-single-broker.yml up -d     
+
+
 실행하면 자동으로 이미지를 다운받고 컨테이너를 만들어 kafka와 zookeeper를 실행해줍니다.
 ```console
 $ docker-compose up -d
@@ -82,6 +86,10 @@ CONTAINER ID        IMAGE                     COMMAND                  CREATED  
 380d9569c130        kafkadockergit_kafka      "start-kafka.sh"         3 minutes ago       Up 3 minutes                 0.0.0.0:32769->9092/tcp                              kafkadockergit_kafka_1
 b573f7d7c39b        wurstmeister/zookeeper    "/bin/sh -c '/usr/..."   3 minutes ago       Up 3 minutes                 22/tcp, 2888/tcp, 3888/tcp, 0.0.0.0:2181->2181/tcp   kafkadockergit_zookeeper_1
 ```
+
+> 제가 테스트 했을 때는 위 docker-compose명령어로 올릴 경우 가끔 zookeeper나 kafka모듈이 하나 죽거나 잘못 뜰떄가 있었습니다.   
+> 원인은 알지 모르겠고 각 모듈을 재시작 할 경우 정상작동함을 확인했습니다. 원인 아시는분은 댓글 부탁드려요 :) 
+
 
 참고
 ----
