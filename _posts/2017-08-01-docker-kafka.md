@@ -64,7 +64,7 @@ docker-compose 실행
 ```console
 $ docker-compose up -d
 ```
-> 위 명령어의 경우 kafka cluster를 구성하는 케이스로 단일 Broker를 사용할 경우에는 아래와 같이 사용 할 수 있습니다.
+> 위 명령어의 경우 kafka cluster를 구성하는 케이스로 단일 Broker를 사용할 경우에는 아래와 같이 사용 할 수 있습니다.     
 >     $ docker-compose -f docker-compose-single-broker.yml up -d     
 
 
