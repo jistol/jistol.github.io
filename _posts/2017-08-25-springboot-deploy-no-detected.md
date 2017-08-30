@@ -17,13 +17,15 @@ WAS가 SpringBoot의 WAR파일을 인식하긴 했지만 WebApplicationInitializ
 원인을 찾으려 또 별의 별 삽질을 하며 직접 main-class도 지정하고 구글링하니 Java Version 체크해보라고도 하고    
 거의 반나절을 헤메다가 원인을 찾았습니다.    
 
-```groovy
-// build.gradle
-dependencies {
-    providedCompile("org.springframework.boot:spring-boot-devtools")
-}
-```
-
 SpringBoot Devtools을 사용하기 위해 dependencies에 걸어 두었는데 외부 WAS에 배포할때는 해당 설정을 다 빼고 배포하면 참조 안하겠다 싶어 `providedCompile`로 설정하고 application.yml에서 관련 설정을 빼고 배포했으나 이게 WAR로 배포되면서 오류를 발생시켰던 모양입니다.    
 해당 설정만 `compile`로 변경하였더니 잘 동작합니다.    
 
+```groovy
+// build.gradle
+dependencies {
+    providedCompile("org.springframework.boot:spring-boot-devtools")  // ( X )
+    compile("org.springframework.boot:spring-boot-devtools")          // ( O )
+}
+```
+
+외부 WAS에서 오류 없이 SpringBoot Container가 올라오지 않는다면 `provided`로 설정한 값 중 문제가 있는건 없는지 확인부터 해 보면 좋습니다. 
