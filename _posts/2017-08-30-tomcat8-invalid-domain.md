@@ -21,7 +21,7 @@ java.lang.IllegalArgumentException: An invalid domain [.xxxx.com] was specified 
 
 원인
 ----
-tomcat 8버전 이상에서는 Cookie Header를 파싱하는 기본 CookieProcessor가 RFC6265를 기반으로 합니다. (`org.apache.tomcat.util.http.Rfc6265CookieProcessor`) 
+tomcat 8버전 이상에서는 Cookie Header를 파싱하는 기본 CookieProcessor가 RFC6265를 기반으로 합니다. (`org.apache.tomcat.util.http.Rfc6265CookieProcessor`)       
 RFC6265의 속성중 하나는 아래와 같은데
 
 ```text
