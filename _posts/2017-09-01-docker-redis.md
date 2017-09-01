@@ -53,21 +53,21 @@ $ docker run --name some-redis -d --volumes-from some-volume-container redis red
 ----
 외부에서 Redis 컨테이너를 접근하는 방법은 3가지 입니다.
 
-## 1. 외부 서버에서 접근하기 ##    
+### 1. 외부 서버에서 접근하기 ###    
 위에 명시한 것과 같이 `-p` 옵션을 통해 port를 뚫어 직접 접근 할 수 있습니다.
 
 ```console
 $ docker run --name some-redis -d -p 6379:6379 redis
 ```
 
-## 2. 다른 컨테이너에서 접근하기 ##
+### 2. 다른 컨테이너에서 접근하기 ###
 `--link`나 `-network`옵션을 통해 접근 가능합니다. (참고:[Docker container networking](https://docs.docker.com/engine/userguide/networking/#the-docker_gwbridge-network))     
 
 ```console
 $ docker run --name some-app --link some-redis:redis -d application-that-uses-redis
 ```
 
-## 3. redis-cli로 접근하기 ##
+### 3. redis-cli로 접근하기 ###
 아래와 같은 명령으로 접근할 수 있습니다.
 
 ```console
