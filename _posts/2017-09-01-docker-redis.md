@@ -46,8 +46,7 @@ $ docker run --name some-redis -d --volumes-from some-volume-container redis red
 > See https://docs.docker.com/docker-for-mac/osxfs/#namespaces for more info.       
 >      
 > 위와 같은 오류 발생시 메시지에 나온데로 `Docker -> Preferences -> File Sharing` 설정에서 공유할 폴더를 추가해 주면 됩니다.     
-
-![file sharing](/asset/img/docker/docker-redis/1.png) 
+> ![file sharing](/assets/img/docker/docker-redis/1.png)      
 
 외부에서 접근하기
 ----
