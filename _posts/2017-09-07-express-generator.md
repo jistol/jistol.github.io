@@ -48,7 +48,7 @@ $ npm start
 ```
 
 기본적으로 package.json에 `start`커맨드를 통해 서버를 올릴 수 있도록 script를 만들어주며 실행시 [http://localhost:3000](http://localhost:3000)으로 접속하여 동작 화면을 확인 할 수 있습니다.         
-![run-server](/assets/img/express-generator/1.png)      
+![run-server](/assets/img/nodejs/express-generator/1.png)      
 
 app.js 파일을 열면 다음과 같이 template/css engine이 설정 되어 있는 것을 확인 할 수 있습니다.     
 
@@ -116,7 +116,7 @@ app.use(sassMiddleware({
 적용이 완료되고 `npm start`명령을 통해 서버를 실행하고 [http://localhost:3000](http://localhost:3000)을 호출하여 다운받은 style.css파일을 확인하면 다음과 같이 변경된 것을 확인 할 수 있습니다.    
 > css/template파일을 변경시 바로 적용되나 app.js파일 수정시에는 반드시 express server를 재시작해야 합니다.      
 
-![compressed-scss-file](/assets/img/express-generator/2.png)          
+![compressed-scss-file](/assets/img/nodejs/express-generator/2.png)          
 
 참고
 ----
