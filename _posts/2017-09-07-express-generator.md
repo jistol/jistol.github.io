@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "express-generator - Node.js + Express 프로젝트 생성하기"
-category : "Node.js"
+category : nodejs
 tags : [nodejs,express,expressgenerator]
 ---
 처음 Node.js 개발환경을 구성 할 때 이것저것 설정할게 많은데 간단하게 "Node.js + Express"구조의 뼈대를 만들어주는 `express-generator`라는 도구가 있습니다.     
