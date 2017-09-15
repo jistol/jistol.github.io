@@ -144,6 +144,9 @@ DeltaManager를 사용할 경우 Manager는 ClusterSessionListener를 통해 메
 
 참고:[The ClusterListener object](http://tomcat.apache.org/tomcat-8.5-doc/config/cluster-listener.html)
 
+기타
+----
+AWS를 포함한 모든 클라우드 서비스는 multicast를 지원하지 않고 있어 tomcat clustering 방식을 사용할 수 없습니다.    
 
 
 참고
