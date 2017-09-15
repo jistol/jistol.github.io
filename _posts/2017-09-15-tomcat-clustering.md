@@ -83,7 +83,68 @@ Manager
 Primary Node와 Backup Node로 분리되어 모든 노드에 복제하지 않고 단 Backup Node에만 복제합니다. 하나의 노드에만 복제하기 때문에 DeltaManager의 단점을 커버할 수 있고 failover도 지원한다고 합니다.    
 
 3. PersistentManager
-DB나 파일시스템을 이용하여 세션을 저장합니다. IO문제가 생기기 떄문에 실시간성이 떨어집니다.
+DB나 파일시스템을 이용하여 세션을 저장합니다. IO문제가 생기기 떄문에 실시간성이 떨어집니다.   
+
+참고 : [The ClusterManager object](http://tomcat.apache.org/tomcat-8.5-doc/config/cluster-manager.html)
+
+Channel
+----
+서로 다른 tomcat간의 메시지 송수신에 관련된 하위 Component를 그룹핑합니다.    
+하위 Component로는 `Membership`, `Sender`, `Sender/Transport`, `Receiver`, `Interceptor`가 있고 현재 Channel구현체는 `org.apache.catalina.tribes.group.GroupChannel`가 유일합니다.    
+
+참고 : [The Cluster Channel object](http://tomcat.apache.org/tomcat-8.5-doc/config/cluster-channel.html)     
+
+Channel/Membership
+----
+Cluster안의 노드들을 동적으로 분별하는데 multicast IP/PORT를 통해 `frequency`에 설정된 간격으로 각 노드들이 UDP packet을 날려 heartbeat 확인합니다.    
+`dropTime`에 설정된 시간동안 heartbeat가 없을 경우 장애로 판단하고 각 노드에 알리게 됩니다.     
+
+참고 : [The Cluster Membership object](http://tomcat.apache.org/tomcat-8.5-doc/config/cluster-membership.html)
+
+Channel/Sender, Channel/Sender/Transport
+----
+Sender는 노드에서 Cluster로 메시지를 보내는 역활을 합니다. 사실상 빈 껍데기로 상세 역확을 Transport에서 정의됩니다.     
+Transport는 기본적으로 `org.apache.catalina.tribes.transport.nio.PooledParallelSender`를 사용하는데 non-blocking 방식으로 동시에 여러 노드로 메시지를 보낼수도, 하나의 노드에 여러 메시지를 동시에 보낼수도 있습니다.
+`org.apache.catalina.tribes.transport.bio.PooledMultiSender`는 blocking 방식을 사용합니다.      
+
+참고 : [The Cluster Sender object](http://tomcat.apache.org/tomcat-8.5-doc/config/cluster-sender.html)
+
+Channel/Receiver
+----
+Cluster로부터 메시지를 수신하는 역활을 하며 blocking방식 `org.apache.catalina.tribes.transport.bio.BioReceiver`와 non-blocking방식인 `org.apache.catalina.tribes.transport.nio.NioReceiver`을 지원합니다.     
+tomcat에서는 non-blocking방식을 추천하며 노드수가 많아져서 제한된 thread를 통해 많은 메시지를 받아들일 수 있다고 합니다. 기본적으로 노드당 1개의 thread를 할당합니다.    
+
+참고 : [The Cluster Receiver object](http://tomcat.apache.org/tomcat-8.5-doc/config/cluster-receiver.html)
+
+Channel/Interceptor
+----
+Membership 알림 또는 메시지를 가로챌수 있고, documentation에도 각 interceptor에 대한 자세한 설명은 안나왔지만 각 클래스 명으로 역활 구분이 가능한 수준인것 같습니다.    
+
+참고 : [The Channel Interceptor object](http://tomcat.apache.org/tomcat-8.5-doc/config/cluster-interceptor.html)   
+
+
+Valve
+----
+`org.apache.catalina.ha.ClusterValve`를 구현한 객체로 일반적인 [Tomcat Valve](http://tomcat.apache.org/tomcat-8.5-doc/config/valve.html)처럼 HTTP Request processing에 관여하는 역활을 하는데 clustering시 중간 interceptor역활을 합니다.    
+예를 들어 `org.apache.catalina.ha.tcp.ReplicationValve`의 경우 HTTP Request가 끝나는 시점에 다른 복제를 해야할지 말아야 할지 cluster에 알리는 역활을 합니다.    
+`org.apache.catalina.ha.session.JvmRouteBinderValve`의 경우 mod_jk를 사용중 failover시 session에 저장한 jvmWorker속성을 변경하여 다음 request부터는 해당 노드에 고정시킵니다.     
+
+참고 : [The Cluster Valve object](http://tomcat.apache.org/tomcat-8.5-doc/config/cluster-valve.html)
+
+Deployer
+----
+WAR배포시 cluster안의 다른 노드에도 같이 배포해줍니다.     
+
+참고:[The Cluster Deployer object](http://tomcat.apache.org/tomcat-8.5-doc/config/cluster-deployer.html)
+
+ClusterListener
+----
+Cluster내 다른 노드의 메시지를 받습니다.
+DeltaManager를 사용할 경우 Manager는 ClusterSessionListener를 통해 메시지를 받게 됩니다.    
+
+참고:[The ClusterListener object](http://tomcat.apache.org/tomcat-8.5-doc/config/cluster-listener.html)
+
+
 
 참고
 ----
