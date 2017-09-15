@@ -56,7 +56,7 @@ WAS간 세션 공유해야하는 일이 생겨서 Tomcat Clustering을 한 내�
         <Interceptor className="org.apache.catalina.tribes.group.interceptors.MessageDispatchInterceptor"/>
     </Channel>
 
-    <Valve className="org.apache.catalina.ha.tcp.ReplicationValve"filter=""/>
+    <Valve className="org.apache.catalina.ha.tcp.ReplicationValve" filter=""/>
     <Valve className="org.apache.catalina.ha.session.JvmRouteBinderValve"/>
 
     <Deployer className="org.apache.catalina.ha.deploy.FarmWarDeployer"
@@ -71,30 +71,19 @@ WAS간 세션 공유해야하는 일이 생겨서 Tomcat Clustering을 한 내�
 
 Manager
 ----
-세션을 어떻게 복제할지를 책임지는 객체입니다.
+세션을 어떻게 복제할지를 책임지는 객체로 Clustering시 사용되는 매니저는 아래와 같이 3가지 입니다.
 
 1. DeltaManager      
 모든 노드에 동일한 세션을 복제합니다. 정보가 변경될때마다 복제하기 때문에 노드 개수가 많을 수록 네트워크 트래픽이 높아지고 메모리 소모가 심해집니다.    
 
+- notifyListenersOnReplication : 다른 tomcat에서 세션이 생성/소멸시 알림을 받을지 여부입니다.
+- expireSessionsOnShutdown : tomcat서버가 shutdown될 때 모든 노드의 모든 세션들을 expire할지 여부로 default는 false입니다. 
+
 2. BackupManager      
 Primary Node와 Backup Node로 분리되어 모든 노드에 복제하지 않고 단 Backup Node에만 복제합니다. 하나의 노드에만 복제하기 때문에 DeltaManager의 단점을 커버할 수 있고 failover도 지원한다고 합니다.    
-동작 방식은 아래 예를 참고하세요.   
-
-- tomcat을 3대, 앞단 loadbalancer를 둔 상태로 session1이 접근합니다.
-- session1이 tomcat1로 접속
-- tomcat1은 정보저장(primary node)후 tomcat2에 정보전달(backup node)
-- session1이 tomcat3으로 접속
-- tomcat3은 session1의 정보가 없으므로 tomcat2에 정보 요청
-- tomcat2는 tomcat3에게 정보 전달
 
 3. PersistentManager
 DB나 파일시스템을 이용하여 세션을 저장합니다. IO문제가 생기기 떄문에 실시간성이 떨어집니다.
-
-4. StandardManager
-tomcat에서 기본적으로 사용하는 Manager로 메모리에 세션을 가지고 있다가 tomcat이 중지될때 SESSIONS.ser라는 파일에 세션을 저장하고 재기동시 해당 파일의 내용을 메모리에 올리고 파일을 지웁니다.    
-conf/context.xml의 pathname에 지정된 이름을 사용하며 파일을 생성하지 않으려면 `pathname=""`로 설정하면 됩니다.    
-
- 
 
 참고
 ----

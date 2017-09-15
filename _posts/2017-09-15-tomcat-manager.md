@@ -36,8 +36,12 @@ PersistentManager
 ----
 DB나 파일시스템을 이용하여 세션을 저장합니다. IO문제가 생기기 떄문에 실시간성이 떨어집니다.
 
+
+각 Manager의 상세 옵션은 [Apache Tomcat 8 Configuration Reference - The Cluster object](http://tomcat.apache.org/tomcat-8.5-doc/config/cluster.html)에서 확인하세요.
+
+
 참고
-----
+---
 [Apache Tomcat 8 Configuration Reference - The Cluster object](http://tomcat.apache.org/tomcat-8.5-doc/config/cluster.html)  
 [Tomcat Clustering Series Part 4 : Session Replication using Backup Manager](http://www.ramkitech.com/2012/12/tomcat-clustering-series-part-4-session.html)    
 [Tomcat Session StandardManager](http://sarc.io/index.php/tomcat/249-tomcat-session-standardmanager)
