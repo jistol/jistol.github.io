@@ -277,3 +277,21 @@ Creating tomcatdocker1_nginx_1
 Creating tomcatdocker1_tomcat1_1
 Creating tomcatdocker1_tomcat1_1 ... done
 ```
+
+docker 프로세스를 확인해보면 다음과 같이 3개의 컨테이너가 올라간 것을 확인 할 수 있습니다.
+
+```console
+$ docker ps -a
+CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS                     PORTS                                                NAMES
+1e2240de4a77        tomcatdocker1_tomcat1    "catalina.sh run"        4 minutes ago       Up 4 minutes               8080/tcp                                             tomcatdocker1_tomcat1_1
+9706f7d0f85a        tomcatdocker1_tomcat2    "catalina.sh run"        4 minutes ago       Up 4 minutes               8080/tcp                                             tomcatdocker1_tomcat2_1
+20aa7abec733        tomcatdocker1_nginx      "nginx -g 'daemon ..."   4 minutes ago       Up 4 minutes               80/tcp, 0.0.0.0:8080->8080/tcp                       tomcatdocker1_nginx_1
+```
+
+중지
+----
+아래 명령어를 통해 중지할 수 있습니다.
+
+```console
+$ docker-compose down
+```
