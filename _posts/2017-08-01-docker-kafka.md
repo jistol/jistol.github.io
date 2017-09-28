@@ -22,7 +22,7 @@ confluent/kafka                                                                 
 
 기본 설치
 ----
-1. docker, docker-compose
+### 1. docker, docker-compose ###     
 Windows나 Mac에서 Docker, Docker Toolbox를 설치했을 경우 기본적으로 docker-compose도 같이 설치 됩니다.    
 특정 버전에서는 docker-compose가 설치되어 있지 않을수 있으니 [Install Docker Compose](https://docs.docker.com/compose/install/)를 참고하세요.
 
@@ -31,7 +31,7 @@ $ docker --version          // docker version check
 $ docker-compose --version  // docker-compose version check
 ```
 
-2. git
+### 2. git ###        
 git저장소에 쓰기 쉽게 만들어놓은 compose 설정파일을 다운로드 받기 위해 설치합니다. [Git download](https://git-scm.com/downloads)
 
 설정 다운로드
