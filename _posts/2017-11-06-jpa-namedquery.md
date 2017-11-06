@@ -24,8 +24,8 @@ Post라는 Entity를 조회하기 위한 쿼리를 만들어보겠습니다.
 spring.jpa.orm:
   path: queries
   queries:
-  - ${spring.jpa.orm}/post.xml
-  - ${spring.jpa.orm}/user.xml
+  - ${spring.jpa.orm.path}/post.xml
+  - ${spring.jpa.orm.path}/user.xml
   ...
 ```
 
@@ -59,7 +59,7 @@ public class JpaConfig extends HibernateJpaAutoConfiguration {
 
 쿼리문만 따로 모으고 싶어서 아래와 같이 배치하였습니다.
 
-![query files under resource folder](/img/jpa-namedquery/1.png)     
+![query files under resource folder](/assets/img/java/jpa-namedquery/1.png)     
 
 `@Query`어노테이션에 있던 쿼리문은 xml하위에 아래와 같이 정의합니다.    
 
