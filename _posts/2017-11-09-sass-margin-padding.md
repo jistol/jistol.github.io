@@ -19,7 +19,8 @@ Bootstrap 으로 자주 썼던 class중 하나가 margin/padding 사이즈를 �
 <div class="px-mb-10 px-mt-10"/>
 ```
 
-- scss 코드
+- scss 코드     
+
 ```sass
 /**
   px값 List를 만들어주는 함수입니다.
