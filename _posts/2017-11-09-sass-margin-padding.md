@@ -88,6 +88,7 @@ $nameMap : ('px-m':'margin', 'px-p':'padding');
 
 
 @include generate($nameMap, $position, $size);
+
 ```
 
 node-sass를 이용하여 scss파일을 css로 빌드해보면 아래와 같이 만들어집니다.
