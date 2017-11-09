@@ -1,7 +1,7 @@
 ---
 layout: post
 title: IFrame을 숨기는 방법
-category : Web
+category : Frontend
 tags : [iframe,hidden,html,javascript]
 ---
 
