@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tomcat 8 error - java.lang.IllegalArgumentException: An invalid domain [.xxxx.com] was specified for this cookie" 
-category : Web
+category : Java
 tags : [tomcat,cookie,rfc6265,troubleshooting]
 ---
 증상

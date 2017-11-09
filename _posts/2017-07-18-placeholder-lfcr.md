@@ -1,6 +1,6 @@
 ---
 layout: post
-title: placeholder 줄바꿈 방법 (in thymeleaf)
+title: (Thymeleaf)placeholder 줄바꿈 방법 
 category : Web
 tags : [html,placeholder,thymeleaf,lfcr]
 ---
