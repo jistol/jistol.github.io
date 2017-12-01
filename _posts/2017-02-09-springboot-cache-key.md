@@ -1,6 +1,6 @@
 ---
 layout: post
-title: (SpringBoot) @Cacheable key값 정하기
+title: (Spring Cache) @Cacheable key값 정하기
 category : Java
 tags : [springboot,springcache,spel,spring]
 ---
