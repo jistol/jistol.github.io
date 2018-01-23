@@ -13,6 +13,7 @@ SVN은 지원해주는거 같은데 Git만 안되는거 같네요.
 
 1. 외부 저장소를 `--mirror` 옵션을 사용하여 Redmine서버에 clone 받음.
 2. crontab을 이용하여 분 단위로 Redmine서버의 소스를 동기화 시킴. `git remote update`
+3. Redmine에서 Git 저장소를 사용할 수 있도록 설정 변
 
 Redmine 저장소 만들기
 ----
@@ -29,7 +30,8 @@ Crontab 설정
 ----
 crontab으로 실행할 sh파일을 만들고 주기적으로 실행하도록 설정하겠습니다.
 
-- update.sh
+update.sh 작성     
+
 ```vim
 #!/bin/bash
 cd ~/your-git-src-path
@@ -37,6 +39,7 @@ git remote update
 ```
 
 `crontab -e` 명령어를 통해 crontab 편집이 가능합니다.
+
 ```vim
 * * * * * ~/update.sh >> ~/cron.log 2>&1
 # crontab script end
@@ -58,7 +61,10 @@ Redmine 설정
 
 참고
 ----
-![git clone 의 두가지 옵션 --bare / --mirror 의 차이점][http://pinocc.tistory.com/138]
+![git clone 의 두가지 옵션 --bare / --mirror 의 차이점][http://pinocc.tistory.com/138]     
+![git credential 저장소][https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Credential-%EC%A0%80%EC%9E%A5%EC%86%8C]       
+![Redmine - git repository 연결하기][http://www.whatwant.com/450]        
+
 
 
 
