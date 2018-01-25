@@ -5,12 +5,12 @@ category : ITS
 tags : [docker,redmine,mysql,plugin]
 ---
 ITS로 Redmine을 사용하려 간단히 세팅해보려 Docker기반으로 설정해보았습니다.     
-DockerHub에 있는 ![library/redmine - Docker Hub][https://hub.docker.com/_/redmine/]를 이용하고 DB는 Mysql을 사용하도록 세팅하는 과정을 적었습니다.    
+DockerHub에 있는 [library/redmine - Docker Hub](https://hub.docker.com/_/redmine/)를 이용하고 DB는 Mysql을 사용하도록 세팅하는 과정을 적었습니다.    
 ### 과정을 정리하긴 하였지만 bundler 오류가 발생하면 Container가 다운되고 다시 올라오지 못하는 현상을 해결하지 못해 실 사용은 하지 않기로 하였습니다. ###        
 
 docker 생성
 ----
-Link : https://hub.docker.com/_/redmine/
+Link : <https://hub.docker.com/_/redmine/>
 
 아래와 같이 image를 다운 받습니다.     
 
@@ -85,13 +85,13 @@ docker:redmine$ apt-get update
 docker:redmine$ apt-get install -y unzip vim
 ```
 
-Redmine 플러그인 설치 가이드는 ![Redmine - Plugins][http://www.redmine.org/projects/redmine/wiki/Plugins]를 참고하시면 됩니다.
+Redmine 플러그인 설치 가이드는 [Redmine - Plugins](http://www.redmine.org/projects/redmine/wiki/Plugins)를 참고하시면 됩니다.
 
 ## Issue Template Plugin ##     
 
 Issue등록시 기본 템플릿을 지정할 수 있는 Plugin입니다. 공식 링크는 아래와 같습니다.     
 
-Link : ![https://github.com/akiko-pusu/redmine_issue_templates][https://github.com/akiko-pusu/redmine_issue_templates]
+Link : <https://github.com/akiko-pusu/redmine_issue_templates>
 
 설치방법은 아래와 같습니다.     
 
@@ -105,7 +105,7 @@ docker:redmine$ rake redmine:plugins:migrate RAILS_ENV=production
 
 Issue등록시 체크해야하는 사항이 있을때 같이 등록할 수 있는 Plugin입니다. 공식 링크는 아래와 같습니다.     
 
-Link : ![https://www.redmineup.com/pages/plugins/checklists][https://www.redmineup.com/pages/plugins/checklists] 
+Link : <https://www.redmineup.com/pages/plugins/checklists> 
 
 redmineup의 plugin은 직접 파일을 다운로드 받아 Redmine 컨테이너에 복사하고 unzip을 이용하여 plugin하위에 풀어야 합니다.    
 
@@ -126,7 +126,7 @@ docker:redmine$ rake redmine:plugins:migrate RAILS_ENV=production
 
 가장 범용적으로 많이 쓰는 애자일 Plugin입니다. 공식 링크는 아래와 같습니다.    
 
-Link : ![https://www.redmineup.com/pages/plugins/agile][https://www.redmineup.com/pages/plugins/agile]
+Link : <https://www.redmineup.com/pages/plugins/agile>
 
 파일을 다운로드 받아 Redmine 컨테이너에 복사하고 unzip을 이용하여 plugin하위에 풀어야 합니다.   
 
@@ -152,7 +152,7 @@ classic 테마는 식상하니 심플한 테마를 하나 설치하도록 하겠
 ## Redmine gitmike theme ##
 무료 테마중 인기있는 gitmike를 설치해보겠습니다. 공식 링크는 아래와 같습니다.     
 
-Link : ![https://github.com/makotokw/redmine-theme-gitmike][https://github.com/makotokw/redmine-theme-gitmike]    
+Link : <https://github.com/makotokw/redmine-theme-gitmike>    
 
 설치 방법은 아래와 같습니다.    
 
@@ -169,7 +169,7 @@ docker:redmine$ git clone https://github.com/makotokw/redmine-theme-gitmike.git 
 Git 저장소연결
 ----
 SVN연결은 간편하게 되는 반면 GIT연결은 Local에 bare저장소가 같이 존재해야한다는 단점이 있습니다.    
-설정할 내용이 간단하지 않아 ![Redmine + Git Remote 연동][https://jistol.github.io/its/2018/01/23/redmine-git/] 링크를 참고하여 연결하면 됩니다.    
+설정할 내용이 간단하지 않아 [Redmine + Git Remote 연동](https://jistol.github.io/its/2018/01/23/redmine-git/) 링크를 참고하여 연결하면 됩니다.    
 
 
 그 외 설정
@@ -183,6 +183,6 @@ Issue등록시 일반 Text로는 너무 딱딱하고 Richable Editor를 설치�
 
 참고  
 ----
-![Allow setting CHARACTER SET for the database][https://github.com/docker-library/mysql/pull/14]
-![Redmine - Plugins][http://www.redmine.org/projects/redmine/wiki/Plugins]     
-![Redmine 시작/중지/재시작][https://zetawiki.com/wiki/%EB%A0%88%EB%93%9C%EB%A7%88%EC%9D%B8_%EC%8B%9C%EC%9E%91/%EC%A4%91%EC%A7%80/%EC%9E%AC%EC%8B%9C%EC%9E%91]
+Allow setting CHARACTER SET for the database : <https://github.com/docker-library/mysql/pull/14>       
+Redmine - Plugins : <http://www.redmine.org/projects/redmine/wiki/Plugins>          
+Redmine 시작/중지/재시작 : <https://zetawiki.com/wiki/%EB%A0%88%EB%93%9C%EB%A7%88%EC%9D%B8_%EC%8B%9C%EC%9E%91/%EC%A4%91%EC%A7%80/%EC%9E%AC%EC%8B%9C%EC%9E%91>     

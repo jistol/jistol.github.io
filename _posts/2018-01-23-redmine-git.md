@@ -61,9 +61,9 @@ Redmine 설정
 
 참고
 ----
-![git clone 의 두가지 옵션 --bare / --mirror 의 차이점][http://pinocc.tistory.com/138]     
-![git credential 저장소][https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Credential-%EC%A0%80%EC%9E%A5%EC%86%8C]       
-![Redmine - git repository 연결하기][http://www.whatwant.com/450]        
+git clone 의 두가지 옵션 --bare / --mirror 의 차이점 : <http://pinocc.tistory.com/138>     
+git credential 저장소 : <https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Credential-%EC%A0%80%EC%9E%A5%EC%86%8C>       
+Redmine - git repository 연결하기 : <http://www.whatwant.com/450>        
 
 
 
