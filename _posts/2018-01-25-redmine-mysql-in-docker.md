@@ -6,7 +6,7 @@ tags : [docker,redmine,mysql,plugin]
 ---
 ITS로 Redmine을 사용하려 간단히 세팅해보려 Docker기반으로 설정해보았습니다.     
 DockerHub에 있는 [library/redmine - Docker Hub](https://hub.docker.com/_/redmine/)를 이용하고 DB는 Mysql을 사용하도록 세팅하는 과정을 적었습니다.    
-### 과정을 정리하긴 하였지만 bundler 오류가 발생하면 Container가 다운되고 다시 올라오지 못하는 현상을 해결하지 못해 실 사용은 하지 않기로 하였습니다. ###        
+### 과정을 정리하긴 하였지만 bundler 오류가 발생하면 Container가 다운되고 다시 올라오지 못하는 현상이 종종 발생하오니 백업을 잘 하시기 바랍니다. ###        
 
 docker 생성
 ----
@@ -85,7 +85,8 @@ docker:redmine$ apt-get update
 docker:redmine$ apt-get install -y unzip vim
 ```
 
-Redmine 플러그인 설치 가이드는 [Redmine - Plugins](http://www.redmine.org/projects/redmine/wiki/Plugins)를 참고하시면 됩니다.
+Redmine 플러그인 설치 가이드는 [Redmine - Plugins](http://www.redmine.org/projects/redmine/wiki/Plugins)를 참고하시면 됩니다.    
+각 플러그인 설치후 Redmine을 재시작해야 반영됩니다.    
 
 ## Issue Template Plugin ##     
 
@@ -143,6 +144,20 @@ docker:redmine$ bundle install
 docker:redmine$ rake redmine:plugins:migrate RAILS_ENV=production
 ```
 
+## Issue Charts Plugin ##
+
+이슈별 통계치를 그래프로 보여주는 플러그인입니다.    
+
+Link : <https://github.com/masweetman/issue_charts>    
+
+설치 방법은 아래와 같습니다.    
+
+```vim
+docker:redmine$ cd ${REDMINE_ROOT}
+docker:redmine$ git clone https://github.com/masweetman/issue_charts.git plugins/issue_charts
+docker:redmine$ bundle install
+docker:redmine$ rake redmine:plugins:migrate RAILS_ENV=production
+```
 
 Redmine 테마 설치
 ----
