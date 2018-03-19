@@ -13,14 +13,14 @@ GitHub URL : <https://github.com/jistol/boilerplate-boot-es6>
 
 Specification
 ----
-1. Spring Boot 2.0.0.RELEASE
-- Spring MVC, Embedded Tomcat, Thymeleaf
+1. Backend
+- SpringBoot 2.0.0.RELEASE (Spring MVC, Embedded Tomcat, Thymeleaf)
 
-2. ECMA Script 6
+2. Frontend Builder
 - Package manager : npm
-- Bundler : webpack 
+- Bundler : webpack
 
-3. ES6 Package 구성
+3. ES6 Package
 - babel
 - react
 - jquery
@@ -28,9 +28,9 @@ Specification
 - sass
 - webpack-dev-server
 
-Setup
+Setup & Run
 ----
-1. Git 설치 및 소스 다운로드
+### Git 설치 및 소스 다운로드 ###
 
 Git 설치주소 : <https://git-scm.com/downloads>     
 
@@ -40,7 +40,7 @@ Git 설치주소 : <https://git-scm.com/downloads>
 $ git clone "https://github.com/jistol/boilerplate-boot-es6.git" boilerplate-boot-es6.git
 ```
 
-2. npm 설치 및 초기화    
+### npm 설치 및 초기화 ###    
 npm은 Node.js를 설치시 같이 설치 가능합니다.
 
 Node.js 설치주소 : <https://nodejs.org/en/>    
@@ -53,7 +53,7 @@ $ npm install
 
 위 명령어를 실행하면 `node_modules` 폴더가 생기면서 `package.json`에 포함된 라이브러리들이 다운로드 됩니다.    
 
-3. Backend 서버 실행
+### Backend 서버 실행 ###
 Gradle 빌드를 통해 WAR파일을 생성하여 직접 실행 가능하나 SpringBoot를 실행 할 수 있는 Gradle Task 명령어를 실행하여 서버를 기동할 수 있습니다.    
 Gradle Wrapper가 소스에 포함되어 있으므로 별도의 설치 과정없이 아래와 같이 실행 가능합니다.        
 
@@ -63,7 +63,7 @@ $ ./gradlew bootRun
 
 서버는 기본적으로 8080 포트로 접근 가능합니다.    
 
-4. ES6 소스 변환 및 Frontend Dev서버 실행       
+### ES6 소스 변환 및 Frontend Dev서버 실행 ###       
 일반적으로 ES6를 지원하는 브라우저에서 실행하거나 babel을 통해 호환 가능한 소스로 빌드 후 실행할 수 있는데, 본 소스는 후자의 케이스로 실행하도록 샘플이 작성되어 있습니다.    
 변환은 아래와 같이 `package.json`에 npm 명령을 통해 실행 할 수 있도록 정의되어 있습니다.    
 
