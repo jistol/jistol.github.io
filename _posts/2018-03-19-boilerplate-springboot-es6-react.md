@@ -54,7 +54,7 @@ $ npm install
 위 명령어를 실행하면 `node_modules` 폴더가 생기면서 `package.json`에 포함된 라이브러리들이 다운로드 됩니다.    
 
 ### Backend 서버 실행 ###
-Gradle 빌드를 통해 WAR파일을 생성하여 직접 실행 가능하나 SpringBoot를 실행 할 수 있는 Gradle Task 명령어를 실행하여 서버를 기동할 수 있습니다.    
+Gradle 빌드를 통해 WAR파일을 생성하여 직접 실행 가능하나 SpringBoot를 실행 할 수 있는 Gradle Task 명령으로 실행하여 서버를 기동할 수 있습니다.    
 Gradle Wrapper가 소스에 포함되어 있으므로 별도의 설치 과정없이 아래와 같이 실행 가능합니다.        
 
 ```vim
@@ -131,3 +131,8 @@ $ npm run dev
 ```
 
 `webpack-dev-server`를 사용하기 위해서는 8090 포트로 접근하여야 합니다.    
+
+<http://localhost:8090> 으로 접속하면 아래와 같이 index 페이지를 볼 수 있으며 링크 클릭시 간단한 React 샘플 예제를 확인 할 수 있습니다.   
+
+![index page](/assets/img/java/boilerplate-springboot-es6-react/1.png)      
+![react sample](/assets/img/java/boilerplate-springboot-es6-react/2.png)      
