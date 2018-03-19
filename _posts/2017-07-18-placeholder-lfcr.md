@@ -1,7 +1,7 @@
 ---
 layout: post
 title: (Thymeleaf)placeholder 줄바꿈 방법 
-category : Web
+category : Java
 tags : [html,placeholder,thymeleaf,lfcr]
 ---
 
