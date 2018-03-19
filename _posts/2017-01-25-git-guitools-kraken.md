@@ -2,7 +2,7 @@
 layout: post
 title: Git GUI 툴 추천 - GitKraken
 category : VCS
-tags : [git,tools,gitkaraken]
+tags : [git,tools,gitkraken]
 ---
 
 Git에 대해 공부하면서 대부분 bash에서 실행했으나 전체 commit tree를 보기 위해서는 GUI툴의 도움을 받아야 했는데 처음 사용한 툴이 JetBrain의 SourceTree였습니다.
