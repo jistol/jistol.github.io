@@ -124,4 +124,10 @@ $ npm run build
 ...    
 ```
 
+아래 명령을 통해 실행 할 수 있습니다.    
+
+```vim
+$ npm run dev
+```
+
 `webpack-dev-server`를 사용하기 위해서는 8090 포트로 접근하여야 합니다.    
