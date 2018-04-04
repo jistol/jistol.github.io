@@ -50,7 +50,7 @@ HTML 소스에서는 아래와 같이 호출합니다.
 1. 위 방식은 Progressive Download방식으로 서버에서는 요청시마다 전체 파일을 보내주고 video 태그에서는 점진적으로 필요한 만큼씩 OutputStream에서 읽어가게 됩니다.    
 실제로 `readAndWrite` 메소드의 while구문에서 로그를 찍어보면 동영상을 재생하지 않을 경우 write를 중간에 멈춰 있는 것을 볼 수 있습니다.    
 
-2. `StreamingResponseBody` 클래스는 `TaskExecution`을 이용하여 비동기 서블릿 실행을 지원해줍니다. Spring API 문서를 보면 아래와 같이 설명이 되어 있습니다.    
+2. `StreamingResponseBody` 클래스는 `TaskExecutor`을 이용하여 비동기 서블릿 실행을 지원해줍니다. Spring API 문서를 보면 아래와 같이 설명이 되어 있습니다.    
 
 ```text
 A controller method return value type for asynchronous request processing where the application can write directly to the response OutputStream without holding up the Servlet container thread.
