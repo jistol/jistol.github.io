@@ -19,7 +19,7 @@ Deleted branch feature-47 (was 8b6cd3b).
 Remote Branch Remove
 ----
 
-- $ git push pd [remote_name] [branch_nane]
+- $ git push -d [remote_name] [branch_nane]
 
 ```vim
 $ git push -d origin feature-54
