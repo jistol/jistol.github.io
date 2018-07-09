@@ -110,19 +110,19 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ### WAS 1 + Memcached 3 : Consistent Hashing 테스트 ###    
 
-1. gradle 명령을 이용하여 Tomcat 기동합니다.        
+- gradle 명령을 이용하여 Tomcat 기동합니다.        
 
 ```vim
 $ gradle clean build -x bootRun    
 ```
 
-2. 아래 URL을 통해 캐시를 주입합니다.    
+- 아래 URL을 통해 캐시를 주입합니다.    
 
 ```text
 POST : http://localhost:8080/{key}/{value}
 ```
 
-3. telnet으로 Memcached에 접속, 값이 들어갔는지 확인합니다.   
+- telnet으로 Memcached에 접속, 값이 들어갔는지 확인합니다.   
 
 ```vim
 $ telnet localhost 11211
@@ -145,7 +145,7 @@ Escape character is '^]'.
 get {key}
 ```
 
-2~3 과정을 반복하면 입력한 KEY값이 동일한 노드의 Memcached에 들어가는것을 볼 수 있습니다.    
+위 과정을 반복하면 입력한 KEY값이 동일한 노드의 Memcached에 들어가는것을 볼 수 있습니다.    
 
 ### WAS 3 + Memcached 3 : 서버등록 순서 오류에 의한 키배분 오류 테스트 ###  
 
@@ -168,7 +168,7 @@ mem-server: localhost:11213 localhost:11211 localhost:11212
 
 이와 같이 설정시 인입된 서버 port에 따라 동일한 key에 대해 ssm이 다르게 분배하는 것을 확인 하는 테스트입니다.    
  
-1. gradle 명령을 이용하여 각 profile별로 Tomcat 3대를 기동합니다.        
+- gradle 명령을 이용하여 각 profile별로 Tomcat 3대를 기동합니다.        
 
 ```vim
 $ gradle clean build -x bootRun    
@@ -176,7 +176,7 @@ $ gradle clean build -x bootRun -Dspring.profiles.active=local1
 $ gradle clean build -x bootRun -Dspring.profiles.active=local2   
 ```
 
-2. 아래 URL을 통해 캐시를 주입합니다.    
+- 아래 URL을 통해 캐시를 주입합니다.    
 
 ```text
 POST : http://localhost:8080/{key}/{value}
@@ -184,7 +184,7 @@ POST : http://localhost:8081/{key}/{value}
 POST : http://localhost:8082/{key}/{value}
 ```
 
-3. telnet으로 Memcached에 접속, 값이 들어갔는지 확인합니다.   
+- telnet으로 Memcached에 접속, 값이 들어갔는지 확인합니다.   
 
 ```vim
 $ telnet localhost 11211
@@ -207,4 +207,4 @@ Escape character is '^]'.
 get {key}
 ```
 
-2~3번 과정을 반복하면 동일한 key를 넣더라도 어느 port에 접근하여 넣었느냐에 따라 위치가 뒤 섞여있는 것을 확인할 수 있습니다.    
+위 과정을 반복하면 동일한 key를 넣더라도 어느 port에 접근하여 넣었느냐에 따라 위치가 뒤 섞여있는 것을 확인할 수 있습니다.    
