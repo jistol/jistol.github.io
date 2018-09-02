@@ -140,8 +140,8 @@ greenColorArray.length : 1
 
 참고
 ----
-![Oracle JDK Doc - Annotation Type Repeatable](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Repeatable.html)      
-![Java 8 Repeating Annotations Tutorial using @Repeatable with examples](https://www.javabrahman.com/java-8/java-8-repeating-annotations-tutorial/)
+[Oracle JDK Doc - Annotation Type Repeatable](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Repeatable.html)      
+[Java 8 Repeating Annotations Tutorial using @Repeatable with examples](https://www.javabrahman.com/java-8/java-8-repeating-annotations-tutorial/)
 
 
 
