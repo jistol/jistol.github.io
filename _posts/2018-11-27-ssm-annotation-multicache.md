@@ -5,7 +5,7 @@ category : Java
 tags : [simplespringmemcached,ssm,memcached,google,cache,readthroughmulticache]
 ---
 "Spring + Memcached" 조합일때 [simple-spring-memcached](https://github.com/ragnor/simple-spring-memcached)(이하 ssm)이 많이 사용되는데 인터넷에 보면 대부분 ```@ReadThroughSingleCache```나 ```@ReadThroughAssignCache```에 대한 설명이나 예제는 많은데 ```@ReadThroughMultiCache```관련된 예제는 유독 찾아보기 힘들었습니다.    
-심지어 공식 가이드에도 간략하게만 써있어서 실제 동작 방식에 대해 알아보기 위해 xmemcached기반으로 직접 POC 프로젝트를 만들어보고 테스트 해본 내용에 대한 포스팅입니다.      
+심지어 공식 가이드에도 간략하게만 써있어서 실제 동작 방식에 대해 알아보기 위해 xmemcached기반으로 직접 테스트 프로젝트를 만들어보고 테스트 해본 내용에 대한 포스팅입니다.      
    
 Basic 
 ----
