@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "simple-spring-memcached MultiCache 사용하기 (@ReadThroughMultiCache, @UpdateMultiCache, @InvalidateMultiCache)"
+title: "SSM(simple-spring-memcached) MultiCache 사용하기 (@ReadThroughMultiCache, @UpdateMultiCache, @InvalidateMultiCache)"
 category : Java
 tags : [simplespringmemcached,ssm,memcached,google,cache,readthroughmulticache]
 ---
