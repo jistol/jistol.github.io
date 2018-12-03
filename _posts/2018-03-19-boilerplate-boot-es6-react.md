@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  SpringBoot + ES6 + React 기반 보일러플레이트 소스
-category : Web
+category : React
 tags : [es6,springboot,react,boilerplate]
 ---
 SpringBoot/ES6/React 기반으로 개발시 기반 소스로 바로 사용할 수 있는 보일러플레이트입니다.    

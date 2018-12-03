@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Error creating Node.js Express App. Cannot find - WebStorm에서 Node.js프로젝트 생성시 오류"
-category : nodejs
+category : Nodejs
 tags : [nodejs,express,troubleshooting,webstorm,expressgenerator]
 ---
 Node.js로 개발해보려고 WebStorm에서 Node.js 프로젝트를 생성하다가 아래와 같은 오류를 만났습니다.
