@@ -9,7 +9,7 @@ React v15.5부터 다른 패키지로 변경되었는데 'prop-types'라이브�
 
 사용방법
 ----
-```javascript 1.6
+```javascript
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -28,7 +28,7 @@ class Foo extends Component {
 
 또한 propTypes은 아래와 같이 class 밖에서도 설정 가능합니다.    
 
-```javascript 1.6
+```javascript
 class Foo extends Component {
   ...
 }
