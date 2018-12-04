@@ -42,16 +42,24 @@ PropTypes의 종류
 ----
 PropTypes으로 설정할 수 있는 종류는 아래와 같습니다.    
 
-|kind|description|kind|description|
-|:---|:---|:---|:---|
-|array|배열|bool|true/false|
-|func|함수|number|숫자|
-|object|객체|string|문자열|
-|symbol|심벌 개체(ES6)|node|렌더링 가능한 모든것(number, string, element, 또는 그것들이 포함된 array/fragment)|
-|element|React element|instanceOf(ClassName)|JS에서 instanceof로 정의 가능한 클래스 인스턴스|
-|oneOf([...Value])|포함된 값들중 하나.(ex: oneOf(['남자','여자']))|oneOfType([...PropTypes])|포함된 PropTypes들중 하나. (ex: oneOfType([PropTypes.string, PropTypes.instanceOf(MyClass)]))|
-|arrayOf(PropTypes)|해당 PropTypes으로 구성된 배열|objectOf(PropTypes)|주어진 종류의 값을 가진 객체|
-|shape({key:PropTypes})|해당 스키마를 가진 객체.(ex:shape({name:PropTypes.string,age:PropTypes.number}))|exact({key:PropTypes})|명확하게 해당 스키마만 존재해야함.|
+|kind|description|
+|:---|:---|
+|array|배열|
+|bool|true/false|
+|func|함수|
+|number|숫자|
+|object|객체|
+|string|문자열|
+|symbol|심벌 개체(ES6)|
+|node|렌더링 가능한 모든것(number, string, element, 또는 그것들이 포함된 array/fragment)|
+|element|React element|
+|instanceOf(ClassName)|JS에서 instanceof로 정의 가능한 클래스 인스턴스|
+|oneOf([...Value])|포함된 값들중 하나.(ex: oneOf(['남자','여자']))|
+|oneOfType([...PropTypes])|포함된 PropTypes들중 하나. (ex: oneOfType([PropTypes.string, PropTypes.instanceOf(MyClass)]))|
+|arrayOf(PropTypes)|해당 PropTypes으로 구성된 배열|
+|objectOf(PropTypes)|주어진 종류의 값을 가진 객체|
+|shape({key:PropTypes})|해당 스키마를 가진 객체.(ex:shape({name:PropTypes.string,age:PropTypes.number}))|
+|exact({key:PropTypes})|명확하게 해당 스키마만 존재해야함.|
 
 
 Reference
