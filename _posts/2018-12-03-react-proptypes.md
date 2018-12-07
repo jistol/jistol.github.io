@@ -1,7 +1,7 @@
 ---
 layout: post
 title: (React) PropTypes 사용방법과 종류    
-category : React
+category : Frontend
 tags : [es6,react,javascript]
 ---
 React Component의 prop값을 검증하기 위해 PropTypes를 이용하여 값을 지정할 수 있습니다.   
