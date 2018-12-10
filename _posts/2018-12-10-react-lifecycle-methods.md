@@ -217,6 +217,7 @@ componentWillUnmount()
 ----
 Component가 DOM에서 제거되고 파기 되기 직전에 호출 됩니다. 본 Component에서 구독한 이벤트나 트리거등을 제거할때 사용되며 Component가 리렌더링 되지 않기 때문에 setState()를 호출 할 수 업습니다. 
  
+ 
 # 2. Rarely Used Lifecycle Methods #     
 
 shouldComponentUpdate(nextProps, nextState)
