@@ -21,6 +21,8 @@ React v16.4 : <https://medium.com/@nancydo7/understanding-react-16-4-component-l
 
 ## react-lifecycle-methods-diagram : <http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/> ##
 
+
+
 # 1. Commonly Used Lifecycle Methods #    
 
 render()
@@ -42,6 +44,7 @@ Uncaught Error: Maximum update depth exceeded. This can happen when a component 
 ### 1. React Element ### 
 - JSX타입의 요소를 반환할 수 있습니다. 
 - 반환시 최상위 DOM은 단일노드여야 합니다.      
+
 ```javascript
 render() {
   return <div> ... </div>;
@@ -63,6 +66,7 @@ render() {
 ### 2. Fragment ###
 - 특정 태그로 묶고 싶지 않다면 <React.Fragment>태그로 묶어 반환할 수 있습니다.       
 - 해당 태그로 묶을 경우 렌더링시 Fragment태그는 제거됩니다.     
+
 ```javascript
 render() {
   return (
@@ -102,7 +106,8 @@ render() {
 ### 3. Portal ###
 - ReactDOM.createPortal 메서드를 이용하여 다른 DOM의 서브트리로 만들수 있습니다.    
 - 반드시 리턴 할 경우에만 적용됩니다.
-- 일반 렌더링값과는 달리 해당 DOM의 하위 노드를 제거후 렌더링하는것이 아니라 서브 노드로 추가가 됩니다.
+- 일반 렌더링값과는 달리 해당 DOM의 하위 노드를 제거후 렌더링하는것이 아니라 서브 노드로 추가가 됩니다.    
+
 ```javascript
 // 본 컴포넌트가 속한 부모 노드 하위가 아닌 #portal 노드 하위에 그려집니다. 
 render() {
@@ -127,7 +132,8 @@ render() {
 > 자세한 가이드는 [React Portals](https://reactjs.org/docs/portals.html) 문서를 참고하세요.    
 
 ### 4. String, Number ###
-- 문자열이나 숫자를 반환 할 수 있으며 TextNode로 렌더링 됩니다.          
+- 문자열이나 숫자를 반환 할 수 있으며 TextNode로 렌더링 됩니다.       
+   
 ```javascript
 render() {
   return 'Text';
@@ -146,7 +152,8 @@ render() {
 ### 6. Array ###
 - 배열을 반환할 수 있습니다.
 - 배열 요소들은 렌더링 가능한 모든 타입이 가능합니다. (function은 불가능합니다.)    
-- 컴포넌트 배열을 렌더링 할 경우 어떤 원소에 변동이 있는지 알아내기 위해 각 원소에 고유 key가 포함되어야 합니다.
+- 컴포넌트 배열을 렌더링 할 경우 어떤 원소에 변동이 있는지 알아내기 위해 각 원소에 고유 key가 포함되어야 합니다.       
+
 ```javascript
 render() {
   return [
@@ -166,6 +173,7 @@ render() {
 
 constructor(props)
 ----
+
 ```javascript
 constructor(props) {
   super(props);
@@ -174,6 +182,7 @@ constructor(props) {
   this.handleClick = this.handleClick.bind(this);
 }
 ```
+
 컴포넌트 생성자로 생성시 맨 처음에 실행하게 되는데 props를 인자로 받는데 React.Component를 상속했을 경우 반드시 ```super(props);```를 호출해야합니다.    
 그리고 constructor는 유일하게 this.state 를 직접 할당하는 메서드입니다. 이 메서드 안에서는 setState()를 호출하지 말아야 합니다. 호출시 아래와 같은 오류가 발생합니다.    
 그 외 이벤트를 해당 인스턴스로 바인드 하는 등의 작업을 할 수 있습니다.        
@@ -238,6 +247,7 @@ constructor(props) {
 ```
 위 예제는 props값을 직접 참조함으로써 props값이 변할 때 마다 state에 영향을 미치길 바라지만 실제로는 변경되지 않습니다.     
 하지만 아래와 같이 getDerivedStateFromProps 메서드를 이용하면 props값이 변경시마다 getDerivedStateFromProps 메서드를 호출하기 때문에 state값을 변경 가능합니다.       
+
 ```javascript
 static getDerivedStateFromProps(nextProps, prevState) {
   if (nextProps.status != prevState.status) {
