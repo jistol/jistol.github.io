@@ -5,10 +5,8 @@ category : VCS
 tags : [git,tools,gitkraken]
 ---
 
-Git에 대해 공부하면서 대부분 bash에서 실행했으나 전체 commit tree를 보기 위해서는 GUI툴의 도움을 받아야 했는데 처음 사용한 툴이 JetBrain의 SourceTree였습니다.
-
-IntelliJ의 좋은 인상 때문에 사용했는데 무한 로딩에 짜증나고 종종 먹통이 되며 특히 reset명령을 하면 갱신이 멈춰버렸습니다.    
-_(JetBrain이 무료툴은 대충 만드는건지 내 컴퓨터가 이상한건지...)_    
+Git에 대해 공부하면서 대부분 bash에서 실행했으나 전체 commit tree를 보기 위해서는 GUI툴의 도움을 받아야 했는데 처음 사용한 툴이 Atlassian의 SourceTree였습니다.
+사용하다보니 무한 로딩에 짜증나고 종종 먹통이 되며 특히 reset명령을 하면 갱신이 멈춰버렸습니다.    
 그런 와중에 다른 무료툴을 살펴보다 발견한것이 GitKraken입니다.
 
 ![capture1](/assets/img/git/git-guitools-kraken/git-guitools-kraken-1.png)    
