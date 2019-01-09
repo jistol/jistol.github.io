@@ -282,7 +282,7 @@ getSnapshotBeforeUpdate(prevProps, prevState) {
 
 위 생명주기를 테스트 해 볼수 있는 샘플 코드입니다.    
 
-<script async src="//jsfiddle.net/jistol/xhz20k16/41/embed/js,html,css,result/dark/"></script>    
+<script async src="//jsfiddle.net/jistol/0c8xr6ug/embed/js,html,css,result/dark/"></script>   
 
 # 4. 그 외... #
  Error Handling : <https://reactjs.org/docs/error-boundaries.html>     
