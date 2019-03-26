@@ -7,12 +7,15 @@ tags : [docker,elasticsearch,es,dockercompose]
 개발을 하다보면 공용장비가 아닌 로컬장비에서 DB나 캐시, 검색엔진등을 실행해야하는 경우가 있는데 이 때 Docker를 사용하면 필요할 때만 올려 사용할 수 있어 자원 관리가 편하고 docker-compose를 이용하면 여러 프로그램을 동시에 실행하고 종료 할 수 있어 편하게 사용할 수 있습니다.   
 본 글은 docker-compose를 이용하여 ElasticSearch 6.5.3 버전 기반으로 Cluster 환경을 구성하며 Kibana까지 같이 올리는 방법에 관한 글로 이미 [elstic reference에 docker를 이용하여 설치하는 방법](https://www.elastic.co/guide/en/elasticsearch/reference/6.5/docker.html)이 친절하게 설명되어 있으나 실제 설치하면서 추가로 필요했던 부분에 대해 보충하였습니다.    
 
-docker-compose.yml
+구성
 ----
 구성은 master-node 1대, data-node 1대, kibana 1대 입니다.    
 ElasticSearch(이하 ES)와 함께 Celebro를 모니터링 툴로 쓰는 경우가 있는데 Kibana 최신 버전은 xpack을 통해 모니터링하는 기능이 있어 구지 필요가 없어 제외했습니다.    
 
 ![kibana-Monitoring](/assets/img/docker/docker-compose-elasticsearch-cluster/1.png)     
+
+docker-compose.yml
+----
 
 ```yaml
 version: '2.2'
@@ -95,7 +98,9 @@ volumes:
 networks:
   esnet:
 ```
- 
+
+실행 / 종료
+---- 
 위와 같이 설정파일을 작성 후 docker-compose를 실행하면 아래와 같이 ES가 기동하는것을 볼 수 있습니다.    
 
 ```bash
