@@ -55,6 +55,8 @@ services:
 # 컨테이너에 bash로 붙고 싶을경우 아래 두 옵션을 추가해주면 됩니다.
     stdin_open: true
     tty: true
+# data-node의 Docker 서비스입니다.
+# 대부분의 내용이 master-node와 동일하나 몇가지 차이점이 있습니다.
   elasticsearch2:
     container_name: elasticsearch2
     image: elasticsearch:6.5.3
@@ -71,6 +73,7 @@ services:
         hard: -1
     volumes:
       - es2:/usr/share/elasticsearch/data
+# 외부 연결포트가 master-node와 겹치기 때문에 다르게 설정했습니다.
     ports:
       - 9301:9300
     networks:
@@ -80,6 +83,7 @@ services:
 # 각 서비스를 순차적으로 실행하기 위해 설정해주었습니다. (필수아님) 
     depends_on:
       - elasticsearch
+# Kibana 설정입니다.
   kibana:
     container_name: kibana
     image: kibana:6.5.3
