@@ -60,7 +60,7 @@ services:
     image: elasticsearch:6.5.3
     environment:
       - cluster.name=docker-cluster
-      - node.name=data-node-1
+      - node.name=data-node1
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
 # 다른 Cluster내 노드를 발견하기 위한 설정입니다.
