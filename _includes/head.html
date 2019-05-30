@@ -15,13 +15,21 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} &middot; {{ site.tagline }}
-    {% else %}
-      {{ page.title }} &middot; {{ site.title }}
-    {% endif %}
-  </title>
+  {% if page.title == "Home" %}
+  <title>{{ site.title }} &middot; {{ site.tagline }}</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:description" content="{{ site.description}}">
+  <meta property="og:image" content="{{ site.logo }}">
+  <meta property="og:url" content="{{ site.url }}">
+  {% else %}
+  <title>{{ page.title }} &middot; {{ site.title }}</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:image" content="{{ site.url }}{{ page.metaimg }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  {% endif %}
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}/public/css/main.css">
