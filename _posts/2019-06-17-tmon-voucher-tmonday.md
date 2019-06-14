@@ -17,7 +17,7 @@ description : "617원 ~ 50000원까지 티몬적립금이 랜덤 지급되는 �
 
 # 쿠폰 번호 #
 
-|  |  |  |  |        
+| 쿠폰번호 | 쿠폰번호 | 쿠폰번호 | 쿠폰번호 |        
 |:----:|:----:|:----:|:----:|        
 |ADTDP9RR9VCUN2YX|ND9AWP2NV6ER6ACX|MUUVMANE5QHH45VJ|93M25Q5U65NF939U|       
 |Y3TC7VUVNVV92DTY|ZREVH8D4J5R8X4JJ|TYG2KHJRQTENPD4Y|92KT3GJJ3FCCU2TH|       
