@@ -24,7 +24,7 @@ version: 1.0.0
 
 # About/contact
 author:
-  name: 김지환
+  name: Jistol
   description: 열심히 공부하는 개발자.
   img: /public/img/profile.jpg
   gravatar: 034519c72194a93612b79ac8dc273424 # md5 hash of your email address
