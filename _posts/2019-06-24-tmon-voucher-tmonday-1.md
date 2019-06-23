@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "티몬데이 적립금 바우처 (6월 24일 사용가능)"
+title: "(추가)티몬데이 적립금 바우처 (6월 24일 사용가능)"
 category : 나눔
 tags : [티몬,tmon,ticketmoster,쿠폰,적립금,바우처]
 metaimg : /assets/img/nanum/20190624_tmonday.png
