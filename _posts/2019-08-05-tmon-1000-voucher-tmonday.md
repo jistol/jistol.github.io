@@ -19,14 +19,14 @@ description : "1000원 티몬적립금이 지급되는 바우처입니다. (8월
 
 | 순번 | 쿠폰번호 |     
 |:----:|:----:|       
-|1|darp4t7934vhuvjp|           
-|2|dgum3a9qqe33hx98|     
-|3|dp9tmhkpanv88kxr|     
-|4|dvahr8ptqkhx46f5|      
-|5|dzk7nt59vcr6mggr|      
-|6|auvj3txf8f26qfda|      
-|7|aytq3th8vpgc3r7n|      
-|8|c6xqjxhnc574mmm4|      
+|1|DARP4T7934VHUVJP|           
+|2|DGUM3A9QQE33HX98|     
+|3|DP9TMHKPANV88KXR|     
+|4|DVAHR8PTQKHX46F5|      
+|5|DZK7NT59VCR6MGGR|      
+|6|AUVJ3TXF8F26QFDA|      
+|7|AYTQ3TH8VPGC3R7N|      
+|8|C6XQJXHNC574MMM4|      
 
 # 바우처 등록방법 #
 - 티몬(www.tmon.co.kr) 로그인 > 마이티몬 > 티몬캐시/적립금 > 적립금쿠폰 등록 ('-'표시는 제외)
