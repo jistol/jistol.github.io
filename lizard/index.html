@@ -1,45 +1,20 @@
-<html>
-<head>
-  <title>WEB GAME - Lizard Flight</title>
-  <meta charset="utf-8"/>
-  <!-- google adsense -->
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-4893116840196955",
-      enable_page_level_ads: true
-    });
-  </script>
-  <!-- google adsense -->
-</head>
-<body>
-    <div style="font-size:20px;color:#0E0E0E;font-weight:bold;">
-      Lizard Flight
-    </div>
-    <div>
-      <ul>
-        <li>크롬 브라우저에서 개발 및 테스트 되었습니다. 그 외 브라우저에서는 비정상 동작 할 수 있습니다.</li>
-      </ul>
-    </div>
-    <div>
-      <canvas id="mainCanvase" width="400" height="520" style="background-color:#111520;"></canvas>
-      <script type="text/javascript" src="/lizard/main.js"></script>
-      <script type="text/javascript">
-        let body = document.getElementsByTagName('body')[0];
-        body.addEventListener('unload', onunloadEvent);
-        onloadEvent();
-      </script>
-      {% if site.google_analytics_token %}
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', '{{ site.google_analytics_token }}', 'auto');
-        ga('send', 'pageview');
-      </script>
-      {% endif %}
-    </div>
-</body>
-{% if site.disqus_short_name %}
-<script id="dsq-count-scr" src="//{{ site.disqus_short_name }}.disqus.com/count.js" async></script>
-{% endif %}
-</html>
+---
+layout: simple
+title: Lizard Flight
+---
+<div style="font-size:20px;color:#0E0E0E;font-weight:bold;">
+  도마뱀 플라이트
+</div>
+<div>
+  <ul>
+    <li>크롬 브라우저에서 개발 및 테스트 되었습니다. 그 외 브라우저에서는 비정상 동작 할 수 있습니다.</li>
+  </ul>
+</div>
+<div>
+<canvas id="mainCanvase" width="400" height="520" style="background-color:#111520;"></canvas>
+<script type="text/javascript" src="/lizard/main.js"></script>
+<script type="text/javascript">
+    let body = document.getElementsByTagName('body')[0];
+    body.addEventListener('unload', onunloadEvent);
+    onloadEvent();
+</script>
