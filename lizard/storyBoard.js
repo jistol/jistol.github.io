@@ -6,20 +6,16 @@ const enemyAbility = {
         hp : 100,
         score : 5,
         bodyStyle : '#989898',
-        bodyStrokeStyle : '#767676',
-        outerEyesStyle : '#FEFEFE',
-        innerEyesStyle : '#090909'
+        bodyStrokeStyle : '#909090'
     },
     YELLOW : {
         r : 25,
         y : -25,
-        s : 3.5,
-        hp : 100,
+        s : 3,
+        hp : 150,
         score : 7,
         bodyStyle : '#e9de12',
-        bodyStrokeStyle : '#dbd018',
-        outerEyesStyle : '#aafefc',
-        innerEyesStyle : '#0d01da'
+        bodyStrokeStyle : '#dbd018'
     },
     RED : {
         r : 25,
@@ -28,9 +24,7 @@ const enemyAbility = {
         hp : 200,
         score : 10,
         bodyStyle : '#981a1e',
-        bodyStrokeStyle : '#76514f',
-        outerEyesStyle : '#FEFEFE',
-        innerEyesStyle : '#c80000'
+        bodyStrokeStyle : '#76514f'
     },
     SKY : {
         r : 25,
@@ -39,9 +33,7 @@ const enemyAbility = {
         hp : 150,
         score : 15,
         bodyStyle : '#09bac3',
-        bodyStrokeStyle : '#557376',
-        outerEyesStyle : '#feb1c2',
-        innerEyesStyle : '#c83f3a'
+        bodyStrokeStyle : '#557376'
     },
     GOLD : {
         r : 25,
@@ -50,9 +42,7 @@ const enemyAbility = {
         hp : 300,
         score : 17,
         bodyStyle : '#c39834',
-        bodyStrokeStyle : '#764e21',
-        outerEyesStyle : '#feb1c2',
-        innerEyesStyle : '#c83f3a'
+        bodyStrokeStyle : '#764e21'
     },
     WHITE : {
         r : 25,
@@ -61,9 +51,7 @@ const enemyAbility = {
         hp : 100,
         score : 15,
         bodyStyle : '#beaec3',
-        bodyStrokeStyle : '#f7f6ff',
-        outerEyesStyle : '#feb1c2',
-        innerEyesStyle : '#c83f3a'
+        bodyStrokeStyle : '#f7f6ff'
     }
 };
 

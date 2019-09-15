@@ -60,7 +60,8 @@ class PlayManager {
 
         let { y, r } = this.currentEnemy.option;
         let top = y - r, bottom = y + r;
-        let collisionList = bulletList.filter(b => b.y - b.r <= bottom || b.y + b.r >= top);
+        let collisionList = bulletList.filter(b => b.status == 'fire')
+            .filter(b => b.y - b.r <= bottom || b.y + b.r >= top);
         if (!collisionList || collisionList.length < 1) {
             return {};
         }
@@ -78,15 +79,13 @@ class EnemyRow {
             s : 2.5,
             hp : 100,
             bodyStyle : '#989898',
-            bodyStrokeStyle : '#767676',
-            outerEyesStyle : '#FEFEFE',
-            innerEyesStyle : '#090909'
+            bodyStrokeStyle : '#767676'
         }, option);
         this.enemyList = [];
         let x = 40;
         for (let i=0 ; i < 5 ; i++) {
-            let option = Object.assign({}, this.option, { x : x + (i * 80) });
-            this.enemyList[i] = new clazz(canvas, option);
+            let opt = Object.assign({}, this.option, { x : x + (i * 80) });
+            this.enemyList[i] = new clazz(canvas, opt);
         }
         this.outOfView = false;
     }
@@ -125,7 +124,7 @@ class EnemyRow {
 }
 
 class BasicEnemy {
-    constructor(canvas, { x, y, r, hp, score, bodyStyle, bodyStrokeStyle, outerEyesStyle, innerEyesStyle }) {
+    constructor(canvas, { x, y, r, hp, score, bodyStyle, bodyStrokeStyle }) {
         this.x = x;
         this.y = y;
         this.r = r;
@@ -133,8 +132,6 @@ class BasicEnemy {
         this.score = score;
         this.bodyStyle = bodyStyle;
         this.bodyStrokeStyle = bodyStrokeStyle;
-        this.outerEyesStyle = outerEyesStyle;
-        this.innerEyesStyle = innerEyesStyle;
         this.canvas = canvas;
         this.context = canvas.getContext('2d');
         this.isLive = true;
@@ -145,31 +142,40 @@ class BasicEnemy {
         this.isLive = this.hp > 0;
     };
 
-    render = () => {
-        let { x, y, r, bodyStyle, bodyStrokeStyle, outerEyesStyle, innerEyesStyle } = this;
-        // body
-        this.context.beginPath();
-        this.context.arc(x, y, r, 0, Math.PI*2, false);
-        this.context.fillStyle = bodyStyle;
-        this.context.fill();
+    drawBody = ({context, x, y, r, bodyStyle, bodyStrokeStyle}) => {
+        context.beginPath();
+        context.arc(x, y, r, 0, Math.PI * 2, false);
+        context.fillStyle = bodyStyle;
+        context.fill();
 
-        this.context.strokeStyle = bodyStrokeStyle;
-        this.context.stroke();
-        this.context.closePath();
+        context.strokeStyle = bodyStrokeStyle;
+        context.stroke();
+        context.closePath();
+    };
+
+    drawEyes = ({ context, x, y }, outerEyesStyle, innerEyesStyle) => {
+        context.beginPath();
+        context.arc(x-10, y+10, 7, 0, Math.PI*2, false);
+        context.arc(x+10, y+10, 7, 0, Math.PI*2, false);
+        context.fillStyle = outerEyesStyle;
+        context.fill();
+        context.closePath();
+
+        context.beginPath();
+        context.arc(x-10, y+13, 2, 0, Math.PI*2, false);
+        context.arc(x+10, y+13, 2, 0, Math.PI*2, false);
+        context.fillStyle = innerEyesStyle;
+        context.fill();
+        context.closePath();
+    };
+
+    render = () => {
+        // body
+        this.drawBody(this);
 
         // eyes
-        this.context.beginPath();
-        this.context.arc(x-10, y+10, 7, 0, Math.PI*2, false);
-        this.context.arc(x+10, y+10, 7, 0, Math.PI*2, false);
-        this.context.fillStyle = outerEyesStyle;
-        this.context.fill();
-        this.context.closePath();
-
-        this.context.beginPath();
-        this.context.arc(x-10, y+13, 2, 0, Math.PI*2, false);
-        this.context.arc(x+10, y+13, 2, 0, Math.PI*2, false);
-        this.context.fillStyle = innerEyesStyle;
-        this.context.fill();
-        this.context.closePath();
+        let outerEyesStyle = '#FEFEFE';
+        let innerEyesStyle = '#090909';
+        this.drawEyes(this, outerEyesStyle, innerEyesStyle);
     }
 }

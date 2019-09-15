@@ -4,9 +4,10 @@ class BasicBullet {
         this.context = canvas.getContext('2d');
         this.seq = 0;
         this.s = 5;
-        this.r = 8;
+        this.r = 4;
         this.c = 70;
         this.damage = 50;
+        this.animateTime = 10;
         this.outOfView = false;
         this.bulletList = [];
     };
@@ -20,11 +21,13 @@ class BasicBullet {
         }
 
         this.bulletList.push({
+            status : 'fire',
             seq : this.seq++,
             x : initX,
             y : y,
             r : this.r,
             damage : this.damage,
+            animateTime : 7,
             outOfView : false
         });
         this.outOfView = false;
@@ -32,12 +35,13 @@ class BasicBullet {
 
     calPosition = () => {
         let tmpList = this.bulletList.map(bullet => {
-                if (!bullet.outOfView) {
+                if (bullet.status == 'fire' && !bullet.outOfView) {
                     bullet.y -= this.s;
                     bullet.outOfView = bullet.y - bullet.r <= 0;
                 }
                 return bullet;
             })
+            .filter(bullet => bullet.status != 'destroy')
             .filter(bullet => !bullet.outOfView);
 
         if (tmpList.length < 1) {
@@ -53,14 +57,33 @@ class BasicBullet {
         }
 
         this.bulletList.forEach(bullet => {
-            this.context.beginPath();
-            this.context.arc(bullet.x, bullet.y, bullet.r, 0, Math.PI*2, false);
-            this.context.fillStyle = '#dffca4';
-            this.context.fill();
-            this.context.strokeStyle = "#fafe09";
-            this.context.lineWidth = 3;
-            this.context.stroke();
-            this.context.closePath();
+            switch (bullet.status) {
+                case 'fire' :
+                    this.renderFire(bullet); break;
+                case 'collision' :
+                    this.renderCollision(bullet); break;
+            }
         });
+    };
+
+    renderFire = ({ x, y, r }) => {
+        this.context.beginPath();
+        this.context.arc(x, y, r, 0, Math.PI*2, false);
+        this.context.fillStyle = '#dffca4';
+        this.context.fill();
+        this.context.strokeStyle = "#fafe09";
+        this.context.lineWidth = 3;
+        this.context.stroke();
+        this.context.closePath();
+    };
+
+    renderCollision = (bullet) => {
+        let { x, y, r } = bullet;
+        renderBoom(this.context, '#fc7f84', x, y, r * 1.2);
+        renderBoom(this.context, '#c89e65', x, y, r * 0.8);
+        renderBoom(this.context, '#c8c476', x, y, r * 0.4);
+        if (bullet.animateTime-- <= 0) {
+            bullet.status = 'destroy';
+        }
     };
 }

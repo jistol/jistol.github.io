@@ -13,7 +13,6 @@ class Viewer {
     };
 
     playing = () => {
-        console.log(`Viewer.playing`);
         this.score = 0;
         this.story = storyBoard.story.concat();
         this.status = 'playing';
@@ -87,7 +86,12 @@ class Viewer {
         let tmpList = this.lizard.bulletItemList.map(bulletItem => {
             let result = this.playManager.judgeCollision(bulletItem.bulletList);
             if (result && result.seqList && result.seqList.length > 0) {
-                bulletItem.bulletList = bulletItem.bulletList.filter(b => !result.seqList.some(seq => seq == b.seq));
+                bulletItem.bulletList = bulletItem.bulletList.map(b => {
+                        if (result.seqList.some(seq => seq == b.seq)) {
+                            b.status = 'collision';
+                        }
+                        return b;
+                    });
                 this.score += result.score;
             }
             return bulletItem;

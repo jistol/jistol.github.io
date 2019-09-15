@@ -51,3 +51,21 @@ const renderTxtView = (canvas, txtData) => {
     }
     context.closePath();
 };
+
+const renderBoom = (context, fillStyle, x, y, r) => {
+    let h = r / 2;
+    context.beginPath();
+    context.moveTo(x - r, y);
+    context.arcTo(x, y, x - h, y + h, r);
+    context.arcTo(x, y, x, y + r, r);
+    context.arcTo(x, y, x + h, y + h, r);
+    context.arcTo(x, y, x + r, y, r);
+
+    context.arcTo(x, y, x + h, y - h, r);
+    context.arcTo(x, y, x, y - r, r);
+    context.arcTo(x, y, x - h, y - h, r);
+    context.arcTo(x, y, x - r, y, r);
+    context.fillStyle = fillStyle;
+    context.fill();
+    context.closePath();
+};
