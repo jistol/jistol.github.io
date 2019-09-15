@@ -42,12 +42,4 @@ ga('send', 'pageview');
   {% if site.disqus_short_name %}
   <script id="dsq-count-scr" src="//{{ site.disqus_short_name }}.disqus.com/count.js" async></script>
   {% endif %}
-  {% if site.naver_analytics_token %}
-  <script type="text/javascript" src="http://wcs.naver.net/wcslog.js"></script>
-  <script type="text/javascript">
-  if(!wcs_add) var wcs_add = {};
-  wcs_add["wa"] = "{{ site.naver_analytics_token }}";
-  wcs_do();
-  </script>
-  {% endif %}
 </html>
