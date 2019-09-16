@@ -1,13 +1,14 @@
 class Lizard {
     constructor(canvas, bulletClazz) {
         this.canvas = canvas;
-        this.context = canvas.getContext('2d');
+        this.context = getContext(canvas);
         this.s = 3;
         this.r = 25;
-        this.x = this.canvas.width / 2;
-        this.y = this.canvas.height - this.r - 5;
+        this.x = rWidth / 2;
+        this.y = rHeight - this.r - 5;
         this.isDirectKeyPress = false;
         this.directKey = undefined;
+        this.moveX = undefined;
         this.isInputKeyPress = false;
         this.inputKey = undefined;
         this.bulletClazz = bulletClazz;
@@ -21,21 +22,44 @@ class Lizard {
     };
 
     onKeyInputEvent = (eventName, key) => {
-        if (key != 'space') {
+        if (key != 'w') {
             return;
         }
         this.isInputKeyPress = eventName == 'keydown';
         this.inputKey = this.isInputKeyPress ? key : undefined;
     };
 
+    onTouchEvent = (eventName, x) => {
+        switch (eventName) {
+            case 'touchstart' :
+                this.isInputKeyPress = true;
+                this.inputKey = 'w';
+                break;
+            case 'touchmove' :
+                this.isDirectKeyPress = true;
+                this.moveX = x;
+                break;
+            default :
+                this.isInputKeyPress = false;
+                this.inputKey = undefined;
+                this.isDirectKeyPress = false;
+                this.moveX = undefined;
+                break;
+        }
+    };
+
     calPosition = () => {
         let { x, s, r } = this;
-        let { width } = this.canvas;
-        if (this.isDirectKeyPress && this.directKey) {
-            this.x = (this.directKey == 'left' ? Math.max(x-s, r) : Math.min(x+s, width - r));
+        if (this.isDirectKeyPress) {
+            if (this.directKey) {
+                this.x = (this.directKey == 'left' ? Math.max(x-s, r) : Math.min(x+s, rWidth - r));
+            } else if (this.moveX) {
+                console.log(`moveX : ${this.moveX}`);
+                this.x = Math.max(r, Math.min(rWidth - r, x + this.moveX));
+            }
         }
 
-        if (this.bulletItemList.length > 0 && this.isInputKeyPress && this.inputKey == 'space') {
+        if (this.bulletItemList.length > 0 && this.isInputKeyPress && this.inputKey == 'w') {
             this.bulletItemList[0].registOne(this.x, this.y - this.r - 0.5);
         }
 

@@ -22,7 +22,7 @@ const isCollisionArc = (arc1, arc2) => {
 };
 
 const renderTxtView = (canvas, txtData) => {
-    let context = canvas.getContext('2d');
+    let context = getContext(canvas);
     let data = Object.assign({
         bg : {
             rgb : '0,0,0',
@@ -37,10 +37,10 @@ const renderTxtView = (canvas, txtData) => {
         pressMessage : 'press enter key to restart'
     }, txtData);
 
-    let x = canvas.width/2, y = canvas.height/2;
+    let x = rWidth/2, y = rHeight/2;
     context.beginPath();
     context.fillStyle = data.bgStyle || `rgba(${data.bg.rgb},${data.bg.alpha})`;
-    context.fillRect(0, 0, canvas.width, canvas.height);
+    context.fillRect(0, 0, rWidth, rHeight);
     context.fillStyle = data.fontStyle || `rgba(${data.font.rgb},${data.font.alpha})`;
     context.textAlign = "center";
     context.font = "38px Sans MS";
@@ -68,4 +68,20 @@ const renderBoom = (context, fillStyle, x, y, r) => {
     context.fillStyle = fillStyle;
     context.fill();
     context.closePath();
+};
+
+const rWidth = 400;
+const rHeight = 400 * 1.5;
+
+const contextScale = (canvas) => {
+    let context = canvas.getContext('2d');
+    let ratioX = canvas.width / rWidth;
+    let ratioY = canvas.height / rHeight;
+    context.scale(ratioX, ratioY);
+};
+
+const getContext = (canvas) => canvas.getContext('2d');
+
+const clear = (context) => {
+    context.clearRect(0, 0, rWidth, rHeight);
 };

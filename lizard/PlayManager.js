@@ -92,7 +92,7 @@ class EnemyRow {
 
     calPosition = () => {
         this.option.y += this.option.s;
-        this.outOfView = this.canvas.height <= this.option.y - this.option.r;
+        this.outOfView = rHeight <= this.option.y - this.option.r;
         this.enemyList.forEach(enemy => enemy.y = this.option.y);
     };
 
@@ -133,7 +133,7 @@ class BasicEnemy {
         this.bodyStyle = bodyStyle;
         this.bodyStrokeStyle = bodyStrokeStyle;
         this.canvas = canvas;
-        this.context = canvas.getContext('2d');
+        this.context = getContext(canvas);
         this.isLive = true;
     }
 

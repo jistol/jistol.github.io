@@ -1,3 +1,9 @@
+importScripts('./storyBoard.js');
+importScripts('./Lizard.js');
+importScripts('./BgCosmos.js');
+importScripts('./PlayManager.js');
+importScripts('./BasicBullet.js');
+importScripts('./Util.js');
 importScripts('./Viewer.js');
 
 const viewer = new Viewer();
@@ -14,12 +20,14 @@ const render = time => {
 };
 const __events = {
     init : event => {
-        viewer.initialize(event.data.canvas);
+        let canvas = event.data.canvas;
+        contextScale(canvas);
+        viewer.initialize(canvas);
         requestAnimationFrame(render);
     },
     keyDirect : event => {
         let { eventName, key } = event.data;
-        viewer.onKeyDirectEvent(eventName, key);
+        (viewer.onKeyDirectEvent||function(){})(eventName, key);
     },
     keyInput : event => {
         let { eventName, key } = event.data;
@@ -27,6 +35,14 @@ const __events = {
             viewer.playing();
         } else {
             (viewer.onKeyInputEvent || function(){})(eventName, key);
+        }
+    },
+    touchEvent : event => {
+        let { eventName, x } = event.data;
+        if (eventName == 'touchend' && viewer.status != 'playing') {
+            viewer.playing();
+        } else {
+            (viewer.onTouchEvent || function(){})(eventName, x);
         }
     }
 };
