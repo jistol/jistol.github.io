@@ -29,8 +29,10 @@ class Lizard {
     };
 
     calPosition = () => {
+        let { x, s, r } = this;
+        let { width } = this.canvas;
         if (this.isDirectKeyPress && this.directKey) {
-            this.x += (this.directKey == 'left' ? -this.s : this.s);
+            this.x = (this.directKey == 'left' ? Math.max(x-s, r) : Math.min(x+s, width - r));
         }
 
         if (this.bulletItemList.length > 0 && this.isInputKeyPress && this.inputKey == 'space') {
