@@ -30,6 +30,7 @@ const renderTxtView = (canvas, txtData) => {
         bg : { rgb : '256,256,256', alpha : 1 },
         font : { rgb : '0,0,0', alpha : 1 },
         message : '',
+        bottomMessage : undefined,
         usePressKey : false,
         pressMessage : 'press enter key to restart'
     }, txtData);
@@ -41,10 +42,15 @@ const renderTxtView = (canvas, txtData) => {
     context.fillStyle = data.fontStyle || `rgba(${data.font.rgb},${data.font.alpha})`;
     context.textAlign = "center";
     context.font = "38px Sans MS";
-    context.fillText(data.message, x, y - (data.usePressKey ? 22 : 0));
+    context.fillText(data.message, x, y - (data.usePressKey ? 30 : 0));
     if (data.usePressKey) {
         context.font = "20px Sans MS";
-        context.fillText(data.pressMessage, x, y + 40);
+        context.fillText(data.pressMessage, x, y + 30);
+    }
+    if (data.bottomMessage) {
+        context.textAlign = "right";
+        context.font = "15px Sans MS";
+        context.fillText(data.bottomMessage, rWidth - 30, rHeight - 20);
     }
     context.closePath();
 };

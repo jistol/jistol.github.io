@@ -311,6 +311,7 @@ const storyBoard = {
     txt : {
         opening : {
             message : 'Lizard Flight',
+            bottomMessage : 'Created by jistol',
             fontStyle : '#71ff7d',
             bgStyle : 'rgba(0,128,0,0.2)',
             usePressKey : true
