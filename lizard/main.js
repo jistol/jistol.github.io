@@ -12,10 +12,10 @@ const onloadEvent = () => {
     document.addEventListener('keydown', onKeyEvent('keydown'), false);
     document.addEventListener('keyup', onKeyEvent('keyup'), false);
 
-    document.addEventListener("touchstart", onTouchEvent('touchstart'), { capture : false, passive : false });
-    document.addEventListener("touchend", onTouchEvent('touchend'), false);
-    document.addEventListener("touchcancel", onTouchEvent('touchcancel'), false);
-    document.addEventListener("touchmove", onTouchEvent('touchmove'), false);
+    canvas.addEventListener("touchstart", onTouchEvent('touchstart'), { capture : false, passive : false });
+    canvas.addEventListener("touchend", onTouchEvent('touchend'), false);
+    canvas.addEventListener("touchcancel", onTouchEvent('touchcancel'), false);
+    canvas.addEventListener("touchmove", onTouchEvent('touchmove'), false);
 
     const offscreen = canvas.transferControlToOffscreen();
     worker.postMessage({ type : 'init', canvas : offscreen }, [offscreen]);

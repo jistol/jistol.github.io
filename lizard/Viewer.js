@@ -1,21 +1,29 @@
+const ViewerStatus = {
+    opening : Symbol('opening'),
+    playing : Symbol('playing'),
+    ending : Symbol('ending'),
+    dead : Symbol('dead')
+};
 
 class Viewer {
     initialize = canvas => {
-        this.status = 'opening';
+        this.status = ViewerStatus.opening;
         this.canvas = canvas;
         this.context = getContext(this.canvas);
         this.background = new BgCosmos(this.canvas, this.context);
+        this.itemManager = new ItemManager(this.canvas);
     };
 
     playing = () => {
         this.score = 0;
         this.story = storyBoard.story.concat();
-        this.status = 'playing';
-        this.lizard = new Lizard(this.canvas, BasicBullet);
+        this.status = ViewerStatus.playing;
+        this.lizard = new Lizard(this.canvas);
         this.onKeyDirectEvent = this.lizard.onKeyDirectEvent;
         this.onKeyInputEvent = this.lizard.onKeyInputEvent;
         this.onTouchEvent = this.lizard.onTouchEvent;
-        this.playManager = new PlayManager(this.canvas, this.story.shift());
+
+        this.toNextStory();
     };
 
     opening = () => {
@@ -33,11 +41,13 @@ class Viewer {
         this.background.render();
         this.playManager.render();
         this.lizard.render();
+        this.itemManager.render();
         this.renderScore();
 
         this.calPosition();
         this.judgeCollisionWithBullet();
         this.judgeCollisionWithLizard();
+        this.itemManager.judgeCollision(this.lizard);
         this.judgeToNext();
     };
 
@@ -52,47 +62,50 @@ class Viewer {
 
     calPosition = () => {
         this.lizard.calPosition();
-        this.playManager.calPosition();
+        this.playManager.calPosition(this.lizard);
+    };
+
+    toNextStory = () => {
+        let story = this.story.shift();
+        if (!story) {
+            this.status = ViewerStatus.ending;
+            return;
+        }
+        this.playManager = new PlayManager(this.canvas, story);
+        this.itemManager.itemRule = story.itemRule;
     };
 
     judgeToNext = () => {
-        if (this.playManager.status == 'exit') {
-            let story = this.story.shift();
-            if (!story) {
-                this.status = 'ending';
-                return;
-            }
-            this.playManager = new PlayManager(this.canvas, story);
+        if (this.playManager.status == PlayStatus.exit) {
+            this.toNextStory();
         }
     };
 
     judgeCollisionWithLizard = () => {
-        if (!this.playManager.currentEnemy) {
+        if (!this.playManager.currentWave) {
             return;
         }
 
-        this.lizard.judgeCollision(this.playManager.currentEnemy);
+        this.lizard.judgeCollision(this.playManager.currentWave);
         if (!this.lizard.isLive) {
-            this.status = 'dead';
+            this.status = ViewerStatus.dead;
             renderTxtView(this.canvas, storyBoard.txt.dead);
         }
     };
 
     judgeCollisionWithBullet = () => {
-        let tmpList = this.lizard.bulletItemList.map(bulletItem => {
-            let result = this.playManager.judgeCollision(bulletItem.bulletList);
+        this.lizard.bulletItemList.forEach(bulletItem => {
+            let result = this.playManager.judgeCollision(bulletItem.bulletList.filter(b => b.status == BulletStatus.fire));
             if (result && result.seqList && result.seqList.length > 0) {
-                bulletItem.bulletList = bulletItem.bulletList.map(b => {
-                        if (result.seqList.some(seq => seq == b.seq)) {
-                            b.status = 'collision';
-                        }
-                        return b;
-                    });
-                this.score += result.score;
+                bulletItem.setupCollision(result.seqList);
+                this.addScore(result.score);
             }
-            return bulletItem;
         });
-
-        this.lizard.bulletItemList = tmpList;
     };
+
+    addScore = score => {
+        let bScore = this.score, aScore = this.score + score;
+        this.score = aScore;
+        this.itemManager.changeScore(bScore, aScore);
+    }
 }

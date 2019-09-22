@@ -1,3 +1,6 @@
+const rWidth = 400;
+const rHeight = 400 * 1.5;
+
 const randomInt = (min, max) => {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -24,14 +27,8 @@ const isCollisionArc = (arc1, arc2) => {
 const renderTxtView = (canvas, txtData) => {
     let context = getContext(canvas);
     let data = Object.assign({
-        bg : {
-            rgb : '0,0,0',
-            alpha : 1
-        },
-        font : {
-            rgb : '0,0,0',
-            alpha : 1
-        },
+        bg : { rgb : '256,256,256', alpha : 1 },
+        font : { rgb : '0,0,0', alpha : 1 },
         message : '',
         usePressKey : false,
         pressMessage : 'press enter key to restart'
@@ -69,9 +66,6 @@ const renderBoom = (context, fillStyle, x, y, r) => {
     context.fill();
     context.closePath();
 };
-
-const rWidth = 400;
-const rHeight = 400 * 1.5;
 
 const contextScale = (canvas) => {
     let context = canvas.getContext('2d');
