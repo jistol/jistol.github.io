@@ -3,7 +3,7 @@ layout: post
 title: "Canvas + Javascript(ES6)로 웹 게임 만들기 - 캐릭터 그리기"
 category : Frontend 
 tags : [html5,es6,javascript,game,web]
-metaimg : /assets/img/frontend/create-webgame-1/1.png
+metaimg : /assets/img/frontend/create-webgame-1/1.jpg
 description : "비게임 업종 서버개발자가 HTML5의 <canvas>와 Javascript(ES6)를 이용하여 취미로 개발해 본 웹게임에 대한 글입니다."
 ---
 비게임 업종 서버개발자가 HTML5의 `<canvas>`와 Javascript(ES6)를 이용하여 취미로 개발해 본 웹게임에 대한 글입니다.    
@@ -12,12 +12,7 @@ description : "비게임 업종 서버개발자가 HTML5의 <canvas>와 Javascri
 GAME : <https://jistol.github.io/lizard/>    
 SOURCE : <https://github.com/jistol/lizard-flight>     
 
-![game capture](/assets/img/frontend/create-webgame-1/1.png) 
-![game capture](/assets/img/frontend/create-webgame-1/2.png) 
-![game capture](/assets/img/frontend/create-webgame-1/3.png) 
-![game capture](/assets/img/frontend/create-webgame-1/4.png) 
-![game capture](/assets/img/frontend/create-webgame-1/5.png) 
-![game capture](/assets/img/frontend/create-webgame-1/6.png) 
+![game capture](/assets/img/frontend/create-webgame-1/1.jpg) 
 
 canvas에 캐릭터 그리기
 ----
