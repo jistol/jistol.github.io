@@ -12,7 +12,12 @@ description : "비게임 업종 서버개발자가 HTML5의 <canvas>와 Javascri
 GAME : <https://jistol.github.io/lizard/>    
 SOURCE : <https://github.com/jistol/lizard-flight>     
 
-![game capture](/assets/img/frontend/create-webgame-1/1.png)     
+![game capture](/assets/img/frontend/create-webgame-1/1.png) 
+![game capture](/assets/img/frontend/create-webgame-1/2.png) 
+![game capture](/assets/img/frontend/create-webgame-1/3.png) 
+![game capture](/assets/img/frontend/create-webgame-1/4.png) 
+![game capture](/assets/img/frontend/create-webgame-1/5.png) 
+![game capture](/assets/img/frontend/create-webgame-1/6.png) 
 
 canvas에 캐릭터 그리기
 ----
@@ -26,7 +31,7 @@ let context = canvas.getContext('2d');
 위와 같이 컨텍스트를 노출하여 그리게 되는데 조종 할 게임 캐릭터를 그려보도록 하겠습니다.    
 (디자이너도 없고 하니 간단하게 원으로 생긴 캐릭터입니다.)
 
-<script async src="//jsfiddle.net/jistol/cs6oL23r/14/embed/js,html,result/dark/"></script>    
+<script async src="//jsfiddle.net/jistol/cs6oL23r/16/embed/js,html,result/dark/"></script>    
 
 조종할 캐릭터를 그렸습니다. `beginPath`는 선을 그릴때 시작하는, `closePath`는 그리는 선을 닫아 시작점과 이어주는 역활을 합니다.    
 `fill`함수 사용시 열린 도형이 자동으로 닫히게 되어 `closePath`를 명시 할 필요가 없으나 코딩상 명확하게 열고 닫는것이 실수의 여지를 줄여줍니다.    
