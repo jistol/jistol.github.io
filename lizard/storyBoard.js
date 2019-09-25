@@ -312,9 +312,21 @@ const storyBoard = {
         opening : {
             message : 'Lizard Flight',
             bottomMessage : 'Created by jistol',
-            fontStyle : '#71ff7d',
+            fontStyle : '#10ff25',
             bgStyle : 'rgba(0,128,0,0.2)',
             usePressKey : true
+        },
+        guide : {
+            messageList : [
+                'KEY GUIDE',
+                'shout bullet : press "w" key or touch',
+                'move : press "<-", "->" key or slide',
+                ''
+            ],
+            fontStyle : '#dcffe9',
+            bgStyle : 'rgba(0,128,0,0.2)',
+            usePressKey : true,
+            pressMessage : 'press enter key or touch to continue'
         },
         dead : {
             message : 'YOU DIED',
@@ -324,7 +336,7 @@ const storyBoard = {
         },
         ending : {
             message : 'THE END',
-            fontStyle : '#113dff',
+            fontStyle : '#5d8ff9',
             bgStyle : 'rgba(20,20,20,0.2)',
             usePressKey : true
         }

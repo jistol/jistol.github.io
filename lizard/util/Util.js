@@ -55,6 +55,34 @@ const renderTxtView = (canvas, txtData) => {
     context.closePath();
 };
 
+const renderMultiTxtView = (canvas, txtData) => {
+    let context = getContext(canvas);
+    let data = Object.assign({
+        bg : { rgb : '256,256,256', alpha : 1 },
+        font : { rgb : '0,0,0', alpha : 1, size : 20 },
+        messageList : [''],
+        usePressKey : false,
+        pressMessage : 'press enter key or touch to start'
+    }, txtData);
+
+    let lineSize = data.font.size + 10, x = rWidth/2, y = (rHeight/2) - (lineSize * data.messageList.length / 2);
+    context.beginPath();
+    context.fillStyle = data.bgStyle || `rgba(${data.bg.rgb},${data.bg.alpha})`;
+    context.fillRect(0, 0, rWidth, rHeight);
+    context.fillStyle = data.fontStyle || `rgba(${data.font.rgb},${data.font.alpha})`;
+    context.textAlign = "center";
+    context.font = `${data.font.size}px Sans MS`;
+    for (let msg of data.messageList) {
+        context.fillText(msg, x, y);
+        y += lineSize;
+    }
+
+    if (data.usePressKey) {
+        context.fillText(data.pressMessage, x, y);
+    }
+    context.closePath();
+};
+
 const renderBoom = (context, fillStyle, x, y, r) => {
     let h = r / 2;
     context.beginPath();

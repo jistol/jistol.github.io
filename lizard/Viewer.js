@@ -1,5 +1,6 @@
 const ViewerStatus = {
     opening : Symbol('opening'),
+    guide : Symbol('guide'),
     playing : Symbol('playing'),
     ending : Symbol('ending'),
     dead : Symbol('dead')
@@ -30,6 +31,13 @@ class Viewer {
         clear(this.context);
         this.background.render();
         renderTxtView(this.canvas, storyBoard.txt.opening);
+    };
+
+    guide = () => {
+        this.status = ViewerStatus.guide;
+        clear(this.context);
+        this.background.render();
+        renderMultiTxtView(this.canvas, storyBoard.txt.guide);
     };
 
     ending = () => {

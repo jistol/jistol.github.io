@@ -24,6 +24,8 @@ const render = time => {
             viewer.render(); break;
         case ViewerStatus.opening :
             viewer.opening(); break;
+        case ViewerStatus.guide :
+            viewer.guide(); break;
         case ViewerStatus.ending :
             viewer.ending(); break;
     }
@@ -44,7 +46,7 @@ const __events = {
     keyInput : event => {
         let { eventName, key } = event.data;
         if (key == 'enter' && viewer.status != ViewerStatus.playing) {
-            viewer.playing();
+            __events.nextEvent(viewer);
         } else {
             (viewer.onKeyInputEvent || function(){})(eventName, key);
         }
@@ -52,9 +54,15 @@ const __events = {
     touchEvent : event => {
         let { eventName, x } = event.data;
         if (eventName == 'touchend' && viewer.status != ViewerStatus.playing) {
-            viewer.playing();
+            __events.nextEvent(viewer);
         } else {
             (viewer.onTouchEvent || function(){})(eventName, x);
+        }
+    },
+    nextEvent : (viewer) => {
+        switch (viewer.status) {
+            case ViewerStatus.opening : viewer.guide(); break;
+            case ViewerStatus.guide : viewer.playing(); break;
         }
     }
 };
