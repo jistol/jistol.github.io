@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Canvas + Javascript(ES6)로 웹 게임 만들기 - 캐릭터 그리기"
+title: "(ES6) Canvas + Javascript로 웹 게임 만들기 - 캐릭터 그리기"
 category : Frontend 
 tags : [html5,es6,javascript,game,web]
 metaimg : /assets/img/frontend/create-webgame-1/1.jpg
@@ -30,9 +30,7 @@ let context = canvas.getContext('2d');
 
 조종할 캐릭터를 그렸습니다. `beginPath`는 선을 그릴때 시작하는, `closePath`는 그리는 선을 닫아 시작점과 이어주는 역활을 합니다.    
 `fill`함수 사용시 열린 도형이 자동으로 닫히게 되어 `closePath`를 명시 할 필요가 없으나 코딩상 명확하게 열고 닫는것이 실수의 여지를 줄여줍니다.    
-`arc`함수를 사용하여 몸통,양쪽눈을 그렸습니다. `arc`함수에 대한 자세한 사용법은 아래 링크를 참고하세요.     
-
-CanvasRenderingContext2D.arc() : <https://developer.mozilla.org/ko/docs/Web/API/CanvasRenderingContext2D/arc>    
+`arc`함수를 사용하여 몸통,양쪽눈을 그렸습니다. `arc`함수에 대한 자세한 사용법은 [MDN - CanvasRenderingContext2D.arc()](https://developer.mozilla.org/ko/docs/Web/API/CanvasRenderingContext2D/arc)를 참고하세요.     
 
 canvas 스케일 적용
 ----
