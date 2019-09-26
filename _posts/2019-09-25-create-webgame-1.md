@@ -34,4 +34,55 @@ let context = canvas.getContext('2d');
 
 CanvasRenderingContext2D.arc() : <https://developer.mozilla.org/ko/docs/Web/API/CanvasRenderingContext2D/arc>    
 
+canvas 스케일 적용
+----
+위 예제에서 간단히 캐릭터를 그려보았습니다. 하지만 요즘 웹은 모바일 환경에서 많이 노출되며 각 폰마다 크기가 다르기 때문에 우리가 그린 캐릭터는 폰마다 다른 크기로 나올 수 있습니다.
+이를 방지하기 위해 크기와 비율을 고정해 보도록 하겠습니다.    
+우선 모바일 디바이스 크기에 스케일을 맞추기 위해 HTML head에 아래와 같이 viewport를 추가합니다.
+
+```html
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  </head>
+  <body>
+    <canvas id="mainCanvas"></canvas> 
+    <script type="text/javascript">
+      ...
+    </script>
+  </body>
+</html>
+```    
+
+viweport에 대한 자세한 설명은 [모바일 화면을 위해 Viewport 사용하기](https://jongmin92.github.io/2017/02/09/HTML/viewport/) 글을 참고하세요.     
+첫번째 예제에서는 canvas에 대한 width/height 값을 직접 입력했지만 화면 크기에 맞게 비율을 확대하려고 합니다.         
+
+```javascript
+// 전체 화면을 사용하기 위해 body의 속성을 정의해줍니다.
+let body = document.body;
+body.style.width = '100%';
+body.style.height = '100%';
+body.style.margin = '0';
+body.style.padding = '0';
+
+// canvas의 크기는 width=100%, height는 width의 1.5 비율로 사용할 예정입니다.
+let canvas = document.getElementById('mainCanvas');
+canvas.width = body.clientWidth;
+canvas.height = Math.min(body.clientWidth * 1.5, body.clientHeight);
+canvas.style.backgroundColor = '#000000';
+
+// 실제 화면을 그릴 비율입니다.
+// context를 이용하여 그림을 그릴 때 화면 넓이가 400, 높이는 넓이*1.5배라는 계산하에 작업할 예정입니다.
+const rWidth = 400;
+const rHeight = 400 * 1.5; // 600
+
+// 실제 canvas 넓이와 그림 비율이 맞지 않기 때문에 scale을 변경해줍니다.
+let context = canvas.getContext('2d');
+let ratioX = canvas.width / rWidth;
+let ratioY = canvas.height / rHeight;
+context.scale(ratioX, ratioY);
+```
+
+위와 같이 화면 스케일을 자동으로 조절하게 만들어 두면 게임 화면을 그리기가 훨씬 수월해집니다.    
+디바이스 크기에 상관없이 화면 넓이가 400이란 전제하에 계산하여 캐릭터 크기를 조절 할 수 있게 됩니다.    
 
