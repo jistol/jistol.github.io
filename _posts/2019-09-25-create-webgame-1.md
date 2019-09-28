@@ -3,16 +3,19 @@ layout: post
 title: "(ES6) Canvas + Javascript로 웹 게임 만들기 - 캐릭터 그리기"
 category : Frontend 
 tags : [html5,es6,javascript,game,web]
-metaimg : /assets/img/frontend/create-webgame-1/1.jpg
+metaimg : /assets/img/frontend/create-webgame/1.jpg
 description : "비게임 업종 서버개발자가 HTML5의 <canvas>와 Javascript(ES6)를 이용하여 취미로 개발해 본 웹게임에 대한 글입니다."
 ---
-비게임 업종 서버개발자가 HTML5의 `<canvas>`와 Javascript(ES6)를 이용하여 취미로 개발해 본 웹게임에 대한 글입니다.    
+비게임 업종 서버개발자가 HTML5의 `<canvas>`와 Javascript(ES6)를 이용하여 취미로 개발해 본 웹게임에 대한 글로 개발 코드 자체에 대한 설명보다는 어떤 원리와 방식으로 개발하였는지에 대한 내용을 기술하고 있습니다.   
+
+# 1. 캐릭터 그리기 : <https://jistol.github.io/frontend/2019/09/25/create-webgame-1/>  #    
+# 2. 캐릭터 움직이기 : <https://jistol.github.io/frontend/2019/09/28/create-webgame-2/>   #
+
 게임명은 "도마뱀플라이트"로 앱게임 "드래곤플라이트"를 모방하여 일부 기능을 따라 구현하였으며 실제 게임은 아래 링크에서 실행 해 볼 수 있습니다.    
 
-GAME : <https://jistol.github.io/lizard/>    
-SOURCE : <https://github.com/jistol/lizard-flight>     
+# GAME : <https://jistol.github.io/lizard/>    SOURCE : <https://github.com/jistol/lizard-flight> #     
 
-![game capture](/assets/img/frontend/create-webgame-1/1.jpg) 
+![game capture](/assets/img/frontend/create-webgame/1.jpg) 
 
 canvas에 캐릭터 그리기
 ----
