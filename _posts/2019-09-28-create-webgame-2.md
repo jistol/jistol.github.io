@@ -8,13 +8,16 @@ description : "비게임 업종 서버개발자가 HTML5의 <canvas>와 Javascri
 ---
 비게임 업종 서버개발자가 HTML5의 `<canvas>`와 Javascript(ES6)를 이용하여 취미로 개발해 본 웹게임에 대한 글로 개발 코드 자체에 대한 설명보다는 어떤 원리와 방식으로 개발하였는지에 대한 내용을 기술하고 있습니다.   
 
-### 1. 캐릭터 그리기 : <https://jistol.github.io/frontend/2019/09/25/create-webgame-1/>  ###
-### 2. 캐릭터 움직이기 : <https://jistol.github.io/frontend/2019/09/28/create-webgame-2/>   ###
+|순서|제목|링크|
+|:---:|:---:|:---|
+|1|캐릭터 그리기|<https://jistol.github.io/frontend/2019/09/25/create-webgame-1/> |
+|2|캐릭터 움직이기|<https://jistol.github.io/frontend/2019/09/28/create-webgame-2/>|
+|3|이벤트 만들기|<https://jistol.github.io/frontend/2019/09/29/create-webgame-3/>|
 
 게임명은 "도마뱀플라이트"로 앱게임 "드래곤플라이트"를 모방하여 일부 기능을 따라 구현하였으며 실제 게임은 아래 링크에서 실행 해 볼 수 있습니다.    
 
 ### GAME : <https://jistol.github.io/lizard/> ### 
-### SOURCE : <https://github.com/jistol/lizard-flight> ###     
+### SOURCE : <https://github.com/jistol/lizard-flight> ###    
 
 ![game capture](/assets/img/frontend/create-webgame/1.jpg) 
 
@@ -53,5 +56,5 @@ Worker는 직접 DOM 제어를 할 수 없기 때문에 canvas에 렌더링 하�
 다행히도 canvas는 위 인터페이스를 구현한 객체를 제공하는데 `OffscreenCanvas`객체로 `HTMLCanvasElement.transferControlToOffscreen()`함수를 통해 얻을 수 있습니다.    
 아직 모든 브라우저에서 제공하고 있진 않습니다.    
 
-<script async src="//jsfiddle.net/jistol/e74axmon/27/embed/js,html,result/dark/"></script>
+<script async src="//jsfiddle.net/jistol/e74axmon/30/embed/js,html,result/dark/"></script>
  
