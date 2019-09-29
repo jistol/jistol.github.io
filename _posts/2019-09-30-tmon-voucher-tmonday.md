@@ -20,80 +20,80 @@ description : "500원 ~ 50000원까지 티몬적립금이 랜덤 지급되는 �
 
 | 순번 | 쿠폰번호 |     
 |:----:|:----:|       
-|1|cunz5efy998k5xym|           
-|2|qz6dexdk6nxg4u8y|     
-|3|rur992wvuga3qpc8|     
-|4|qvukcramtnn9kprk|      
-|5|vq8jhf2vthk49qy3|      
-|6|te5jwhvjpd4fgdhr|      
-|7|afpx7xn5e3c5upge|      
-|8|k543xh62h23wvg54|      
-|9|nfqv6j37nh6tv3k2|       
-|10|mex6tq785hdmqyjp|      
+|1|CUNZ5EFY998K5XYM|           
+|2|QZ6DEXDK6NXG4U8Y|     
+|3|RUR992WVUGA3QPC8|     
+|4|QVUKCRAMTNN9KPRK|      
+|5|VQ8JHF2VTHK49QY3|      
+|6|TE5JWHVJPD4FGDHR|      
+|7|AFPX7XN5E3C5UPGE|      
+|8|K543XH62H23WVG54|      
+|9|NFQV6J37NH6TV3K2|       
+|10|MEX6TQ785HDMQYJP|      
 
 
 | 순번 | 쿠폰번호 |     
 |:----:|:----:|       
-|11|uujxtgqdpxv69dct|           
-|12|kpddnrm7t3pawznc|     
-|13|n4datxkuz5j5adf5|     
-|14|mgz3d5jckd2v4nev|      
-|15|hgx27k54ugpvwzez|      
-|16|v4cc9k7jyp5h38kh|      
-|17|wa2pk6xqymy93a9t|      
-|18|998urnyg86d57j92|      
-|19|26rg7gjktpjgyhxq|       
-|20|mmzya3kepvecgydv|     
+|11|UUJXTGQDPXV69DCT|           
+|12|KPDDNRM7T3PAWZNC|     
+|13|N4DATXKUZ5J5ADF5|     
+|14|MGZ3D5JCKD2V4NEV|      
+|15|HGX27K54UGPVWZEZ|      
+|16|V4CC9K7JYP5H38KH|      
+|17|WA2PK6XQYMY93A9T|      
+|18|998URNYG86D57J92|      
+|19|26RG7GJKTPJGYHXQ|       
+|20|MMZYA3KEPVECGYDV|     
 
 
 | 순번 | 쿠폰번호 |     
 |:----:|:----:|       
-|21|3phh4quucencemgn|           
-|22|txkdwx8hxyrhud4j|     
-|23|ap3jpew8apn4r6m5|     
-|24|w6e8ewmgkyc5j9ey|      
-|25|54jr49p75wgc8ecz|      
-|26|adcku7f5cyxpe872|      
-|27|nnfhj2zvvcthf5w5|      
-|28|9uzvzy8ng39ujq7v|
-|29|a5q7hragjt5apgy2|             
-|30|thjuyeuugx99nnzc|     
+|21|3PHH4QUUCENCEMGN|           
+|22|TXKDWX8HXYRHUD4J|     
+|23|AP3JPEW8APN4R6M5|     
+|24|W6E8EWMGKYC5J9EY|      
+|25|54JR49P75WGC8ECZ|      
+|26|ADCKU7F5CYXPE872|      
+|27|NNFHJ2ZVVCTHF5W5|      
+|28|9UZVZY8NG39UJQ7V|
+|29|A5Q7HRAGJT5APGY2|             
+|30|THJUYEUUGX99NNZC|     
 
 | 순번 | 쿠폰번호 |     
 |:----:|:----:|       
-|31|tf4g4d7rtnyqj2j3|           
-|32|er6v5djmaetzvn37|     
-|33|q8cwueqxjg9nacu9|     
-|34|jqvm4zh3k5acm7xy|      
-|35|m99gezg4yfpmtedd|      
-|36|xmjmdkn2k5z3tqnj|      
-|37|hgwx3qrn89q654um|      
-|38|6c5jwpt2hun3d4yj|      
-|39|ge8c5dcjayv7zcrh|       
-|40|e92vee2ygkvj7eew|       
+|31|TF4G4D7RTNYQJ2J3|           
+|32|ER6V5DJMAETZVN37|     
+|33|Q8CWUEQXJG9NACU9|     
+|34|JQVM4ZH3K5ACM7XY|      
+|35|M99GEZG4YFPMTEDD|      
+|36|XMJMDKN2K5Z3TQNJ|      
+|37|HGWX3QRN89Q654UM|      
+|38|6C5JWPT2HUN3D4YJ|      
+|39|GE8C5DCJAYV7ZCRH|       
+|40|E92VEE2YGKVJ7EEW|       
 
 | 순번 | 쿠폰번호 |     
 |:----:|:----:|       
-|41|yjf8kmy2zxafxfq8|           
-|42|4wjweh2jnrex336k|     
-|43|hz72h47zrmde34zx|     
-|44|5zp5x8cnpnam4gkd|      
-|45|atca3h2pz7a3w35r|      
-|46|gjx8gaj5ewgyw5nq|      
-|47|5a5tugd424vuv2hn|      
-|48|uxft5q3hzg9zwzdt|      
-|49|a236v2zh8z264kq7|       
-|50|3jwkmq6hgnn989r9|       
+|41|YJF8KMY2ZXAFXFQ8|           
+|42|4WJWEH2JNREX336K|     
+|43|HZ72H47ZRMDE34ZX|     
+|44|5ZP5X8CNPNAM4GKD|      
+|45|ATCA3H2PZ7A3W35R|      
+|46|GJX8GAJ5EWGYW5NQ|      
+|47|5A5TUGD424VUV2HN|      
+|48|UXFT5Q3HZG9ZWZDT|      
+|49|A236V2ZH8Z264KQ7|       
+|50|3JWKMQ6HGNN989R9|       
  
 
 | 순번 | 쿠폰번호 |     
 |:----:|:----:|       
-|51|2j2km4uqtc9zjk6q|           
-|52|vgrfnxcvqtarrqca|     
-|53|fdzq482jqcmcc4j7|     
-|54|9zkmunev36t7d5tx|      
-|55|xwpatz9ehhe6r8n8|      
-|56|xvrz8eccwk9ugrhu|      
+|51|2J2KM4UQTC9ZJK6Q|           
+|52|VGRFNXCVQTARRQCA|     
+|53|FDZQ482JQCMCC4J7|     
+|54|9ZKMUNEV36T7D5TX|      
+|55|XWPATZ9EHHE6R8N8|      
+|56|XVRZ8ECCWK9UGRHU|      
 
 
 # 바우처 등록방법 #
