@@ -11,6 +11,11 @@ layout: null
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
+    <image>
+        <url>{{ site.baseurl }}{{ site.author.img }}</url>
+        <title>{{ site.title | xml_escape }}</title>
+        <link>{{ site.url }}{{ site.baseurl }}</link>
+    </image>
     {% for post in site.posts %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
