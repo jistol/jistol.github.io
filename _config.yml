@@ -3,7 +3,8 @@ title: Jistol Github Page
 tagline: ''
 description: ''
 baseurl: ""
-url: https://jistol.github.io
+url: https://github.com/jistol
+blog-url: https://jistol.github.io
 logo: '/public/logo.png'
 
 # Site configurations
