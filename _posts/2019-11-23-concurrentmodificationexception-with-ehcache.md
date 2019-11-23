@@ -26,7 +26,7 @@ while(iter.hasNext()) {
 }
 ```    
 
-for-loop 구문을 class 컴파일 하면 아래와 같은 코드로 변환되는데 ArrayList가 Iterator를 생성할 때 내부 클래스인 ArrayList.Iter 클래스로 생성하여 반환되며 Iter 클래스는 생성시 ArrayList의 상위클래스인 AbstractList의 modCount 변수를 자신의 지역변수인 expectedModCount에 할당합니다. modCount는 ArrayList의 변경사항이 생길 때 마다 변경된 카운트를 기록하는 변수로 add / remove / trimToSize 등등 다수의 메서드에서 증가됩니다.       
+for-loop 구문을 class 컴파일 하면 위와 같은 코드로 변환되는데 ArrayList가 Iterator를 생성할 때 내부 클래스인 ArrayList.Iter 클래스로 생성하여 반환되며 Iter 클래스는 생성시 ArrayList의 상위클래스인 AbstractList의 modCount 변수를 자신의 지역변수인 expectedModCount에 할당합니다. modCount는 ArrayList의 변경사항이 생길 때 마다 변경된 카운트를 기록하는 변수로 add / remove / trimToSize 등등 다수의 메서드에서 증가됩니다.       
 
 ```java
 private class Itr implements Iterator<E> {
