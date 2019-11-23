@@ -12,7 +12,7 @@ layout: null
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
     <image>
-        <url>{{ site.baseurl }}{{ site.author.img }}</url>
+        <url>{{ site.url }}{{ site.baseurl }}{{ site.author.img }}</url>
         <title>{{ site.title | xml_escape }}</title>
         <link>{{ site.url }}{{ site.baseurl }}</link>
     </image>
