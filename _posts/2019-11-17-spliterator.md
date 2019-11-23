@@ -3,7 +3,7 @@ layout: post
 title: "Spliterator의 소개 및 활용 (in JDK 1.8)"
 category : Java
 tags : [stream,spliterator]
-metaimg : {{ site.baseurl }}{{ site.author.img }}
+metaimg : /public/img/profile.jpg
 description : "JDK 1.8 에서 추가된 Stream API 중 Spliterator 인터페이스를 학습한 내용에 대해 정리한 글입니다."
 ---    
 

@@ -3,7 +3,7 @@ layout: post
 title: "java.util.ConcurrentModificationException null (with ehcache)"
 category : Java
 tags : [exception,troubleshooting,ehcache,cache,concurrentmodificationexception]
-metaimg : {{ site.baseurl }}{{ site.author.img }}
+metaimg : /public/img/profile.jpg
 description : "병렬 프로그래밍을 하다 보면 만나게 되는 흔한 오류 중 하나가 `java.util.ConcurrentModificationException`입니다."
 ---   
 Triggering a ConcurrentModificationException
