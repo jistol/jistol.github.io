@@ -1,14 +1,14 @@
 ---
 layout: post
 title: (JPA,SpringData) 쿼리 메소드 정의하기
-category : Java
+category : Spring
 tags : [jpa,spring,springboot,springdata]
 ---
-iBatis만 사용하다가 SpringData를 처음 접해보면 신세계를 느끼는 것 중 하나가 interface에 메소드 하나 정의 했는데 쿼리가 완성된다는 점이 아닐까 싶습니다.    
-xml에 죽어라 SQL문 만들다가 이렇게 간단하게 해결되면 SpringData를 안쓸수가 없죠._(반대로 더 불편해지거나 힘든점도 있긴 합니다.)_    
+iBatis만 사용하다가 SpringData를 처음 접해보면 신세계를 느끼는 것 중 하나가 interface에 메소드 하나 정의 했는데 쿼리가 완성된다는 점이 아닐까 싶습니다.
+xml에 죽어라 SQL문 만들다가 이렇게 간단하게 해결되면 SpringData를 안쓸수가 없죠._(반대로 더 불편해지거나 힘든점도 있긴 합니다.)_
 
-그동안 사용해온 쿼리 메소드들에 대해 몇몇가지 정리해봅니다.   
-자세한 내용은 [Spring Data JPA - Reference Documentation(1.10.7)영문](http://docs.spring.io/spring-data/jpa/docs/1.10.7.RELEASE/reference/html/)이나 이쁘게 번역해놓은 [번역본](http://arahansa.github.io/docs_spring/jpa.html)을 참고하시기 바랍니다.   
+그동안 사용해온 쿼리 메소드들에 대해 몇몇가지 정리해봅니다.
+자세한 내용은 [Spring Data JPA - Reference Documentation(1.10.7)영문](http://docs.spring.io/spring-data/jpa/docs/1.10.7.RELEASE/reference/html/)이나 이쁘게 번역해놓은 [번역본](http://arahansa.github.io/docs_spring/jpa.html)을 참고하시기 바랍니다.
 
 
 메소드 이름 안에서 지원되는 키워드들
@@ -53,5 +53,5 @@ xml에 죽어라 SQL문 만들다가 이렇게 간단하게 해결되면 SpringD
 
 중복제거 Disctinct 사용하기
 ----
-    List<Person> findDistinctPeopleByLastnameOrFirstname(String lastname, String firstname);    
+    List<Person> findDistinctPeopleByLastnameOrFirstname(String lastname, String firstname);
     List<Person> findPeopleDistinctByLastnameOrFirstname(String lastname, String firstname);

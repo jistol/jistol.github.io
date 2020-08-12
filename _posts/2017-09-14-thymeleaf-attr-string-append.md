@@ -1,7 +1,7 @@
 ---
 layout: post
-title: (Thymeleaf) th:attr 사용시 변수와 문자열 섞어쓰는 방법 
-category : Java
+title: (Thymeleaf) th:attr 사용시 변수와 문자열 섞어쓰는 방법
+category : Spring
 tags : [springboot,attr,thymeleaf]
 ---
 `th:attr`사용시 변수와 문자열 섞어 쓰는 방법을 정리해봅니다.
@@ -20,4 +20,4 @@ base.url: http://localhost:8080
 <input type="text" th:attr="value=${@environment.getProperty('base.url') + '/demo/test'}"/>
 ```
 
-환경 설정 값에서 가져오기 위해 `@environment.getProperty`를 사용했고 문자열을 `${...}` 안에서 + 기호로 합치면 됩니다.    
+환경 설정 값에서 가져오기 위해 `@environment.getProperty`를 사용했고 문자열을 `${...}` 안에서 + 기호로 합치면 됩니다.

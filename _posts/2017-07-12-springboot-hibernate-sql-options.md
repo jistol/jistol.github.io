@@ -1,7 +1,7 @@
 ---
 layout: post
 title: (SpringBoot) Console에 Hibernate 실행 쿼리 노출하는 옵션 - show_sql, format_sql, use_sql_comments
-category : Java
+category : Spring
 tags : [springboot,jpa,hibernate]
 ---
 
@@ -30,19 +30,19 @@ spring.jpa.properties.hibernate.format_sql : true
 ```
 
 ```text
-Hibernate: 
+Hibernate:
     select
         sect0_.ad_sect_id as ad_sect_1_20_,
         sect0_.ad_sect_name as ad_sect_2_20_,
         sect0_.ad_type as ad_type3_20_,
         sect0_.apply_type as apply_ty4_20_,
         sect0_.platform_id as platform5_20_,
-        sect0_.use_yn as use_yn6_20_ 
+        sect0_.use_yn as use_yn6_20_
     from
-        sect_info sect0_ 
+        sect_info sect0_
     where
-        sect0_.platform_id='app' 
-        and sect0_.apply_type='12' 
+        sect0_.platform_id='app'
+        and sect0_.apply_type='12'
         and sect0_.use_yn='Y'
 ```
 
@@ -56,34 +56,34 @@ spring.jpa.properties.hibernate.use_sql_comments : true
 ```
 
 ```text
-Hibernate: 
+Hibernate:
     /* insert com.wemakeprice.ad.menu.common.domain.MenuVisitHistory
-        */ insert 
+        */ insert
         into
             menu_visit_history
-            (menu_id, partner_id) 
+            (menu_id, partner_id)
         values
             (?, ?)
-Hibernate: 
+Hibernate:
     /* select
-        s 
+        s
     from
-        Sect s 
+        Sect s
     where
-        s.platformId = 'app' 
-        and s.applyType = '12' 
+        s.platformId = 'app'
+        and s.applyType = '12'
         and s.useYn = 'Y' */ select
             sect0_.ad_sect_id as ad_sect_1_20_,
             sect0_.ad_sect_name as ad_sect_2_20_,
             sect0_.ad_type as ad_type3_20_,
             sect0_.apply_type as apply_ty4_20_,
             sect0_.platform_id as platform5_20_,
-            sect0_.use_yn as use_yn6_20_ 
+            sect0_.use_yn as use_yn6_20_
         from
-            sect_info sect0_ 
+            sect_info sect0_
         where
-            sect0_.platform_id='app' 
-            and sect0_.apply_type='12' 
+            sect0_.platform_id='app'
+            and sect0_.apply_type='12'
             and sect0_.use_yn='Y'
 ```
 

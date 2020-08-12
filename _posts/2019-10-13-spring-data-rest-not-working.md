@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "[Spring] Spring Data Rest Repository Not Working"
-category : Java
+title: "(SpringData) Spring Data Rest Repository Not Working"
+category : Spring
 tags : [spring,springboot,jpa,springdata,rest,troubleshooting]
 ---
 
 이슈
-----    
+----
 
 오랜만에 SpringBoot로 간단한 REST API 서버를 만들어 볼 일이 생겨서 [Spring Initializr](https://start.spring.io/)를 통해 아래 모듈을 추가하여 작업했습니다.
 
@@ -23,7 +23,7 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 ```
-    
+
 ```yaml
 spring :
     datasource :
@@ -44,7 +44,7 @@ spring :
     data:
         rest:
             base-path: /api
-```    
+```
 
 ```java
 @Data
@@ -54,14 +54,14 @@ public class Article implements Serializable {
     @Id
     @GeneratedValue
     private long articleNo;
-    
+
     @NotNull
     private String title;
-    
+
     @Lob
     @NotNull
     private String content;
-    
+
     ...
 }
 
@@ -73,7 +73,7 @@ public interface ArticleDao extends CrudRepository<Article, Long> {
 @Configuration
 @EnableJpaRepositories
 public class JpaConfig {
-    
+
 }
 
 @SpringBootApplication
@@ -84,7 +84,7 @@ public class DemoApplication {
 }
 ```
 
-워낙에 spring-data-rest는 별도 설정할게 없는지라 잘 되겠지 하고 bootRun!! 1.5.X 버전때는 맵핑되는 Request 주소들이 기동시 로그에 다 찍혔는데 2.x 버전에서는 기본적으로 찍히지가 않았습니다. (그냥 그려려니...)       
+워낙에 spring-data-rest는 별도 설정할게 없는지라 잘 되겠지 하고 bootRun!! 1.5.X 버전때는 맵핑되는 Request 주소들이 기동시 로그에 다 찍혔는데 2.x 버전에서는 기본적으로 찍히지가 않았습니다. (그냥 그려려니...)
 
 ```text
   .   ____          _            __ _ _
@@ -131,33 +131,33 @@ Hibernate: create table post (post_no bigint not null, title varchar(255) not nu
 2019-10-13 23:54:54.584  INFO 9085 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8099 (http) with context path ''
 2019-10-13 23:54:54.589  INFO 9085 --- [  restartedMain] com.example.demo.DemoApplication         : Started DemoApplication in 6.029 seconds (JVM running for 7.371)
 ```
-        
-그래도 H2 DB에 알아서 테이블이 잘 생성됬길래 Entity랑 Repository 설정은 다 잘 붙었나보다 하며 만들어진 API를 보기 위해 Hal-Browser로 접속했는데 profile 외에 아무것도 생성되지 않았습니다.           
 
-![not working REST Repository](/assets/img/java/spring-data-rest-not-working/1.png)    
+그래도 H2 DB에 알아서 테이블이 잘 생성됬길래 Entity랑 Repository 설정은 다 잘 붙었나보다 하며 만들어진 API를 보기 위해 Hal-Browser로 접속했는데 profile 외에 아무것도 생성되지 않았습니다.
+
+![not working REST Repository](/assets/img/java/spring-data-rest-not-working/1.png)
 
 해결
-----    
-원인은 패키지 구조에서 찾았는데 Configuration을 선언해둔 JpaConfig의 위치가 이슈였습니다.    
+----
+원인은 패키지 구조에서 찾았는데 Configuration을 선언해둔 JpaConfig의 위치가 이슈였습니다.
 
-![wrong position](/assets/img/java/spring-data-rest-not-working/2.png)    
+![wrong position](/assets/img/java/spring-data-rest-not-working/2.png)
 
-Entity 클래스는 com.example.demo.entity 하위에 위치하는데 `@EnableJpaRepositories`을 선언한 설정 클래스는 com.example.demo.config 하위에 위치해 있었던 거죠.    
-JPA 설정은 알아서 잘 찾길래 딱히 basePackage 위치도 지정하지 않았는데 Rest Repository 설정엔 영향을 끼치는 것 같습니다. 사실 위 설정 클래스 자체가 없어도 `@SpringBootApplication`가 설정된 클래스 하위에 위치하면 알아서 스캔하기 때문에 JPA가 잘 동작하는데 말이죠. 
+Entity 클래스는 com.example.demo.entity 하위에 위치하는데 `@EnableJpaRepositories`을 선언한 설정 클래스는 com.example.demo.config 하위에 위치해 있었던 거죠.
+JPA 설정은 알아서 잘 찾길래 딱히 basePackage 위치도 지정하지 않았는데 Rest Repository 설정엔 영향을 끼치는 것 같습니다. 사실 위 설정 클래스 자체가 없어도 `@SpringBootApplication`가 설정된 클래스 하위에 위치하면 알아서 스캔하기 때문에 JPA가 잘 동작하는데 말이죠.
 
 ```java
 /*  그냥 날려 버리거나 basePackages 설정을 추가합니다.
 @Configuration
 @EnableJpaRepositories(basePackages = "com.example.demo")
 public class JpaConfig {
-    
+
 }
 */
-```    
+```
 
-![resolve issue](/assets/img/java/spring-data-rest-not-working/3.png)      
+![resolve issue](/assets/img/java/spring-data-rest-not-working/3.png)
 
-위와 같이 Entity들의 CRUD Request Path가 잘 생성 된 것을 확인 할 수 있습니다.    
+위와 같이 Entity들의 CRUD Request Path가 잘 생성 된 것을 확인 할 수 있습니다.
 
 
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: (SpringBoot) bootRun 실행중 멈춤 현상
-category : Java
+category : Spring
 tags : [springboot,bootrun,gradle]
 ---
 gradle bootRun을 통해 SpringBoot를 실행하던 도중 아래와 같이 로그가 찍히고 멈춰서 더이상 동작하지 않는 현상이 발생하였습니다.

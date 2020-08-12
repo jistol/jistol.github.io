@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "(Thymeleaf) 파라메터 모두 출력하는 샘플 코드 (th:each, ${param})"
-category : Java
+category : Spring
 tags : [springboot,each,thymeleaf,param]
 ---
-`${param}`변수를 `th:each`를 태워 Request의 모든 파라메터를 출력하는 예제 소스 입니다.    
+`${param}`변수를 `th:each`를 태워 Request의 모든 파라메터를 출력하는 예제 소스 입니다.
 
 ```html
 <!DOCTYPE html>

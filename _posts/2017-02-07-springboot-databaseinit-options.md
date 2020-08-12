@@ -1,7 +1,7 @@
 ---
 layout: post
 title: (SpringBoot) 데이터베이스 초기화 (spring.jpa.hibernate.ddl-auto, import.sql, spring.datasource.data)
-category : Java
+category : Spring
 tags : [springboot,jpa,springdata,spring]
 ---
 
@@ -23,8 +23,8 @@ import.sql
 
 spring.datasource.data
 ----
-- 이 옵션에 지정한 파일을 테이블 생성시 자동으로 실행시켜줍니다.    
-- 파일은 ,(쉼표)로 여러개를 지정하거나 *기호를 이용하여 패턴 지정가능합니다.    
-- 파일 경로는 클래스패스, 절대경로, 상대경로 모두 지정가능합니다.   
+- 이 옵션에 지정한 파일을 테이블 생성시 자동으로 실행시켜줍니다.
+- 파일은 ,(쉼표)로 여러개를 지정하거나 *기호를 이용하여 패턴 지정가능합니다.
+- 파일 경로는 클래스패스, 절대경로, 상대경로 모두 지정가능합니다.
 
 예시 : classpath:/sql/test/init-*.sql,file:/home/jistol/sql/test.sql,/META-INF/sql/initScript.sql

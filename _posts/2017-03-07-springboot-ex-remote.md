@@ -1,15 +1,15 @@
 ---
 layout: post
 title: (SpringBoot) Remoting 예제 (RMI, HTTP)
-category : Java
+category : Spring
 tags : [springboot,rmi,remoting,remote,http]
 ---
-Spring에서 RMI사용 예제는 많은데 SpringBoot에서 XML없이 사용하는 예제는 찾기 힘들더군요.   
-[Annotation을 Customizing해서 사용하는 예제](https://earldouglas.com/posts/spring-remoting-annotation.html)를 찾았는데 조금 쓰기 편하게 고쳐봤습니다.   
+Spring에서 RMI사용 예제는 많은데 SpringBoot에서 XML없이 사용하는 예제는 찾기 힘들더군요.
+[Annotation을 Customizing해서 사용하는 예제](https://earldouglas.com/posts/spring-remoting-annotation.html)를 찾았는데 조금 쓰기 편하게 고쳐봤습니다.
 
 구조
 ----
-Spring에서 지원하는 Remoting 중 HTTP/RMI 통신 예제만 작성하였습니다    
+Spring에서 지원하는 Remoting 중 HTTP/RMI 통신 예제만 작성하였습니다
 Bean등록방식은 `@Bean`어노테이션을 사용하는 방법과 `@Service`로 등록한 Bean 객체를 커스텀 어노테이션을 적용하여 등록하는 방식으로 구현하였습니다.
 
 
@@ -40,7 +40,7 @@ RMI의 경우 ServiceName과 Port정보를 직접등록하나 HTTP는 Bean이름
 아래 예제의 경우 다음과 같은 주소로 lookup됩니다.
 
 - RMI : rmi://127.0.0.1:1099/DefaultServiceRmiRemoteBean
-- HTTP : http://127.0.0.1:{server.port}/DefaultServiceHttpRemoteBean    
+- HTTP : http://127.0.0.1:{server.port}/DefaultServiceHttpRemoteBean
 
 
     {% highlight java %}
@@ -153,7 +153,7 @@ RMI의 경우 ServiceName과 Port정보를 직접등록하나 HTTP는 Bean이름
 
 서비스하는 객체인 `DefaultServiceImpl`이나 `DefaultService`인터페이스에 정의하지 않고 상속받은 객체를 만드는 이유는 SpringBoot에서 해당 서비스를 직접 사용할 수 있도록 하기 위함입니다.
 
-Bean생성시 `BeanPostProcessor`를 이용하여 위 두 Remoting객체를 ServiceExporter객체로 변경해줍니다.    
+Bean생성시 `BeanPostProcessor`를 이용하여 위 두 Remoting객체를 ServiceExporter객체로 변경해줍니다.
 
     {% highlight java %}
     @Configuration
@@ -176,7 +176,7 @@ Bean생성시 `BeanPostProcessor`를 이용하여 위 두 Remoting객체를 Serv
 ----
 동작 확인을 위해 호출 가능한 Controller를 아래와 같이 구현해 두었습니다.
 
-`io.jistol.sample.remote.controller.HttpController`    
+`io.jistol.sample.remote.controller.HttpController`
 `io.jistol.sample.remote.controller.RmiController`
 - http://127.0.0.1:{server.port}/{protocol}/service : DefaultServiceImpl을 직접 호출
 - http://127.0.0.1:{server.port}/{protocol}/bean : @Bean 어노테이션으로 구현한 객체를 이용하여 통신
@@ -192,4 +192,4 @@ Bean생성시 `BeanPostProcessor`를 이용하여 위 두 Remoting객체를 Serv
 
 참고
 ----
-[Custom annotation configuration for Spring Remoting](https://earldouglas.com/posts/spring-remoting-annotation.html)    
+[Custom annotation configuration for Spring Remoting](https://earldouglas.com/posts/spring-remoting-annotation.html)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: (JPA,SpringData) ORM 기본 개념 정리
-category : Java
+category : Spring
 tags : [jpa,orm]
 ---
 여러 게시글들을 기반으로 정리해 보았습니다.
@@ -38,5 +38,5 @@ ORM에 적합하지 않은 모델
 
 참고
 ----
-[ORM (Object Relation Mapping)](http://lilymate.tistory.com/235)    
-[ORM 의 장점과 단점](https://gs.saro.me/#!m=elec&jn=718)    
+[ORM (Object Relation Mapping)](http://lilymate.tistory.com/235)
+[ORM 의 장점과 단점](https://gs.saro.me/#!m=elec&jn=718)

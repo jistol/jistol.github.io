@@ -3,9 +3,9 @@ layout: post
 title: "IT 용어 모음"
 category : IT
 tags : [terminology]
-description : "IT업계에 있다보면 한번씩 마주하게 되는 기술 용어입니다."
+description : "IT업계에 있다보면 한번씩 마주하게 되는 기술 용어를 모으고 있습니다."
 ---
-IT업계에 있다보면 한번씩 마주하게 되는 기술 용어입니다.
+IT업계에 있다보면 한번씩 마주하게 되는 기술 용어를 모으고 있습니다.
 
 latency
 ----

@@ -1,12 +1,12 @@
 ---
 layout: post
 title: (SpringBoot) Enum 사용하기 - `@Enumerated`
-category : Java
+category : Spring
 tags : [springboot,jpa,enum,enumrated]
 ---
-[OKKY-enum 활용에서 enum 공통모듈까지](http://okky.kr/article/374496) 글을 보고 괜찮다 싶어서 제가 만들어 놨던 프로젝트에 적용해 보았습니다.     
+[OKKY-enum 활용에서 enum 공통모듈까지](http://okky.kr/article/374496) 글을 보고 괜찮다 싶어서 제가 만들어 놨던 프로젝트에 적용해 보았습니다.
 
-우선 아래와 같이 `enum`을 선언했습니다.    
+우선 아래와 같이 `enum`을 선언했습니다.
 
     {% highlight java %}
     public enum EnumCode
@@ -103,5 +103,5 @@ Controller에서도 자동 맵핑이 가능한데 `@InitBinder`를 이용할 수
 
 참고
 ----
-[OKKY-enum 활용에서 enum 공통모듈까지](http://okky.kr/article/374496)    
-[JPA and Enums via @Enumerated](http://tomee.apache.org/examples-trunk/jpa-enumerated/README.html)    
+[OKKY-enum 활용에서 enum 공통모듈까지](http://okky.kr/article/374496)
+[JPA and Enums via @Enumerated](http://tomee.apache.org/examples-trunk/jpa-enumerated/README.html)
