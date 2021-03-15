@@ -23,9 +23,9 @@
 
   const highlightSource = function(src) {
     let useHighlight = document.getElementById('highlight');
-    if (useHighlight.value === 'on') {
+    if (useHighlight.checked) {
       let regex = new RegExp(document.getElementById('highlightRegex').value);
-      let color = document.getElementById('highlightColor');
+      let color = document.getElementById('highlightColor').value;
       src = src.replace(regex, `<font color="${color}">\$&</font>`);
     }
 
