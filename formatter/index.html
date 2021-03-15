@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Text Converter (new line, remove text)"
+category : tools
+tags : [converter]
+---
+<form name="frm" class="border p-4 rounded bg-light mb-4 shadow">
+  <div class="form-group">
+    <label for="source">Source : </label>
+    <textarea id="source" class="form-control" rows="10"></textarea>
+  </div>
+  <div class="row">
+    <label for="newLine">New Line Text : </label>
+    <input type="text" class="form-control" placeholder="new line" id="newLine">
+  </div>
+  <div class="row">
+    <button type="button" id="btnConvert">Convert</button>
+    <button type="reset" id="btnReset">Reset</button>
+  </div>
+  <div class="row">
+    <label for="destination">Destination : </label>
+    <textarea id="destination" class="form-control" rows="10"></textarea>
+  </div>
+</form>
+<script type="text/javascript" src="/formatter/formatter.js"></script>
