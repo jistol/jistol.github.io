@@ -17,12 +17,14 @@ tags : [converter]
     <label for="newLine">New Line Text : </label>
     <input type="text" class="form-control" placeholder="new line" name="replaceTarget" id="newLine" to="<br/>">
   </div>
-  <div class="row mb-4">
-    <label for="highlight">Use Highlight : </label>
-    <input type="checkbox" class="form-control" id="highlight">
-    <label for="highlightRegex">Highlight Regex : </label>
+  <div class="row mb-4 form-inline">
+    <div class="form-check">
+      <label class="form-check-label" for="highlight">Use Highlight : </label>
+      <input type="checkbox" class="form-check-input" id="highlight">
+    </div>
+    <label for="highlightRegex">Regex : </label>
     <input type="text" class="form-control" id="highlightRegex" value="(\\()\\w+(\\))">
-    <label for="highlightColor">Highlight Color : </label>
+    <label for="highlightColor">Color : </label>
     <input type="text" class="form-control" id="highlightColor" value="red">
   </div>
   <div class="row mb-4">
