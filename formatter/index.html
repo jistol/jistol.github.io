@@ -9,23 +9,29 @@ tags : [converter]
     <label for="source">Source : </label>
     <textarea id="source" class="form-control" rows="10"></textarea>
   </div>
-  <div class="row">
-    <label for="removeText">Remove Text : </label>
-    <input type="text" class="form-control" placeholder="remove text" name="replaceTarget" id="removeText" to="">
-  </div>
-  <div class="row mb-4">
-    <label for="newLine">New Line Text : </label>
-    <input type="text" class="form-control" placeholder="new line" name="replaceTarget" id="newLine" to="<br/>">
+  <div class="row mb-4 form-inline">
+    <div class="mr-2">
+      <label for="removeText" class="mr-1">Remove Text : </label>
+      <input type="text" class="form-control" placeholder="remove text" name="replaceTarget" id="removeText" to="">
+    </div>
+    <div class="mr-2">
+      <label for="newLine" class="mr-1">New Line Text : </label>
+      <input type="text" class="form-control" placeholder="new line" name="replaceTarget" id="newLine" to="<br/>">
+    </div>
   </div>
   <div class="row mb-4 form-inline">
-    <div class="form-check mr-1">
-      <label class="form-check-label" for="highlight">Use Highlight : </label>
+    <div class="form-check mr-2">
+      <label class="form-check-label" for="highlight" class="mr-1">Use Highlight : </label>
       <input type="checkbox" class="form-check-input" id="highlight">
     </div>
-    <label class="mr-1" for="highlightRegex">Regex : </label>
-    <input type="text" class="form-control mr-1" id="highlightRegex" value="(\()[^\)]+(\))">
-    <label class="mr-1" for="highlightColor">Color : </label>
-    <input type="text" class="form-control mr-1" id="highlightColor" value="red">
+    <div class="mr-2">
+      <label class="mr-1" for="highlightRegex">Regex : </label>
+      <input type="text" class="form-control" id="highlightRegex" value="(\()[^\)]+(\))">
+    </div>
+    <div class="mr-2">
+      <label class="mr-1" for="highlightColor">Color : </label>
+      <input type="text" class="form-control" id="highlightColor" value="red">
+    </div>
   </div>
   <div class="row mb-4">
     <button type="button" id="btnConvert" class="btn btn-success mr-2">Convert</button>
