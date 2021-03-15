@@ -1,15 +1,12 @@
 'use strict';
 (function() {
   const doConvert = function() {
-    let newLine = document.getElementById('newLine');
-    let source = document.getElementById('source');
-    let destination = document.getElementById('destination');
-
-    console.log(`src : ${source.value}, newLine : ${newLine.value}`);
-
-    let src = source.value;
-    src = replaceSource(src, newLine.value, '<br/>');
-    destination.innerHTML = src;
+    let src = document.getElementById('source').value;
+    let targets = document.getElementsByName("replaceTarget");
+    for (let t in targets) {
+      src = replaceSource(src, t.value, t.getAttribute('to'));
+    }
+    document.getElementById('destination').innerHTML = src;
   };
 
   const replaceSource = function(src, from, to) {

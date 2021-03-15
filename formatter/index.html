@@ -10,8 +10,12 @@ tags : [converter]
     <textarea id="source" class="form-control" rows="10"></textarea>
   </div>
   <div class="row">
+    <label for="removeText">Remove Text : </label>
+    <input type="text" class="form-control" placeholder="remove text" name="replaceTarget" id="removeText" to="">
+  </div>
+  <div class="row">
     <label for="newLine">New Line Text : </label>
-    <input type="text" class="form-control" placeholder="new line" id="newLine">
+    <input type="text" class="form-control" placeholder="new line" name="replaceTarget" id="newLine" to="<br/>">
   </div>
   <div class="row">
     <button type="button" id="btnConvert">Convert</button>
@@ -19,7 +23,7 @@ tags : [converter]
   </div>
   <div class="row">
     <label for="destination">Destination : </label>
-    <div id="destination" class="form-control"></div>
+    <div id="destination" class="form-control" style="resize:both; overflow: auto"></div>
   </div>
 </form>
 <script type="text/javascript" src="/formatter/formatter.js"></script>
