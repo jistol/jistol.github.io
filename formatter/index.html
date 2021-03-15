@@ -18,6 +18,14 @@ tags : [converter]
     <input type="text" class="form-control" placeholder="new line" name="replaceTarget" id="newLine" to="<br/>">
   </div>
   <div class="row mb-4">
+    <label for="highlight">Use Highlight : </label>
+    <input type="checkbox" class="form-control" id="highlight">
+    <label for="highlightRegex">Highlight Regex : </label>
+    <input type="text" class="form-control" id="highlightRegex" value="(\\()\\w+(\\))">
+    <label for="highlightColor">Highlight Color : </label>
+    <input type="text" class="form-control" id="highlightColor" value="red">
+  </div>
+  <div class="row mb-4">
     <button type="button" id="btnConvert" class="btn btn-success mr-2">Convert</button>
     <button type="reset" id="btnReset" class="btn btn-warning">Reset</button>
   </div>
