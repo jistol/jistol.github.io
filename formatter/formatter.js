@@ -3,7 +3,7 @@
   const doConvert = function() {
     let src = document.getElementById('source').value;
     let targets = document.getElementsByName("replaceTarget");
-    for (let t in targets) {
+    for (let t of targets) {
       src = replaceSource(src, t.value, t.getAttribute('to'));
     }
     document.getElementById('destination').innerHTML = src;
