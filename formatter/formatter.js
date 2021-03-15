@@ -10,7 +10,7 @@
   };
 
   const replaceSource = function(src, from, to) {
-    return src.replaceAll(from, to);
+    return (from && from.length > 0) ? src.replaceAll(from, to) : src;
   }
 
   let btnConvert = document.getElementById('btnConvert');
