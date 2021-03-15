@@ -7,39 +7,39 @@ tags : [converter]
 <form name="frm" class="border p-4 rounded bg-light mb-4 mt-2 shadow">
   <div class="form-group">
     <label for="source">Source : </label>
-    <textarea id="source" class="form-control" rows="10"></textarea>
+    <textarea id="source" class="form-control" rows="8"></textarea>
   </div>
   <div class="row mb-4 form-inline">
-    <div class="mr-2">
+    <div class="mr-3 form-inline">
       <label for="removeText" class="mr-1">Remove Text : </label>
       <input type="text" class="form-control" placeholder="remove text" name="replaceTarget" id="removeText" to="">
     </div>
-    <div class="mr-2">
+    <div class="mr-3 form-inline">
       <label for="newLine" class="mr-1">New Line Text : </label>
       <input type="text" class="form-control" placeholder="new line" name="replaceTarget" id="newLine" to="<br/>">
     </div>
   </div>
   <div class="row mb-4 form-inline">
-    <div class="form-check mr-2">
-      <label class="form-check-label" for="highlight" class="mr-1">Use Highlight : </label>
+    <div class="form-check mr-3">
+      <label class="form-check-label mr-1" for="highlight" class="mr-1">Use Highlight : </label>
       <input type="checkbox" class="form-check-input" id="highlight">
     </div>
-    <div class="mr-2">
+    <div class="mr-3 form-inline">
       <label class="mr-1" for="highlightRegex">Regex : </label>
       <input type="text" class="form-control" id="highlightRegex" value="(\()[^\)]+(\))">
     </div>
-    <div class="mr-2">
+    <div class="mr-3 form-inline">
       <label class="mr-1" for="highlightColor">Color : </label>
       <input type="text" class="form-control" id="highlightColor" value="red">
     </div>
   </div>
   <div class="row mb-4">
-    <button type="button" id="btnConvert" class="btn btn-success mr-2">Convert</button>
+    <button type="button" id="btnConvert" class="btn btn-success mr-3">Convert</button>
     <button type="reset" id="btnReset" class="btn btn-warning">Reset</button>
   </div>
   <div class="row">
     <label for="destination">Destination : </label>
-    <div id="destination" class="form-control" style="resize:both; overflow: auto; min-height:450px;"></div>
+    <div id="destination" class="form-control" style="resize:both; overflow: auto; min-height:350px;"></div>
   </div>
 </form>
 <script type="text/javascript" src="/formatter/formatter.js"></script>
