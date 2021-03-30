@@ -15,6 +15,7 @@
   };
 
   const toJson = function() {
+    $('#destination').html('');
     $('#destination').jsonView(convertSource());
   }
 
