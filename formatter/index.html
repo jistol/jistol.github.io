@@ -4,6 +4,10 @@ title: "Text Converter (new line, remove text)"
 category : tools
 tags : [converter]
 ---
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- jquery.json-view-->
+<script type="application/javascript" src="/lib/jsonview/jquery.json-view.min.js"></script>
+<link rel="stylesheet" href="/lib/jsonview/jquery.json-view.min.css" />
 <form name="frm" class="border p-4 rounded bg-light mb-4 mt-2 shadow">
   <div class="form-group">
     <label for="source">Source : </label>
@@ -35,6 +39,7 @@ tags : [converter]
   </div>
   <div class="row mb-4">
     <button type="button" id="btnConvert" class="btn btn-success mr-3">Convert</button>
+    <button type="button" id="btnToJson" class="btn btn-success mr-3">ToJson</button>
     <button type="reset" id="btnReset" class="btn btn-warning">Reset</button>
   </div>
   <div class="row">
