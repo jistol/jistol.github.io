@@ -21,8 +21,13 @@ tags : [kotlin]
 ```kotlin
     // kotlin
     fun safetyUpperCase(str:String?) = str?.uppercase()
+    // str이 null일 경우 let 이하 구문은 실행되지 않는다
+    fun combinePrefixIfNotNull(str:String?, prefix:String) = str?.let { prefix + str }
 
-    fun String?.appendPrefixIfNotNull(prefix:String) = this?.let { this = prefix + this }
+    val s1:String? = null
+    val s2:String? = "A"
+    combinePrefixIfNotNull(s1, "PREFIX-") // null
+    combinePrefixIfNotNull(s2, "PREFIX-") // PREFIX-A
 ```
 
 ?: - 엘비스연산자 ([Elvis operator](https://kotlinlang.org/docs/null-safety.html#elvis-operator))
@@ -72,4 +77,3 @@ as? - 안전한 캐스트 ([Safe casts](https://kotlinlang.org/docs/null-safety.
     notNullAssert(s1)
     notNullAssert(s2)  // NullPointerException
 ```
-
