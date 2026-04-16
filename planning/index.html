@@ -1,0 +1,101 @@
+---
+layout: post
+title: "일정계획 알림"
+category : tools
+tags : [planning, alram, timer]
+---
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+<script src="/planning/moment.js"></script>
+<form name="frm" class="border p-4 rounded bg-light mb-4 mt-2 shadow">
+  <div id="preset" class="form-group">
+    <input type="time" id="preset_1_begin" name="begin" required/>
+    <input type="time" id="preset_1_end" name="end" required/>
+    <input type="button" id="test" value="test"/>
+  </div>
+  <div id="log">
+
+  </div>
+
+  <div id="tab" class="nav nav-tabs">
+    <div class="nav-item">
+      <a class="nav-link" id="preset_one">preset 1</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" id="preset_two">preset 2</a>
+    </div>
+  </div>
+  <div class="body"></div>
+  <div class="preset_one hide">
+    <ul class="list-group">
+      <li class="list-group-item">1</li>
+      <li class="list-group-item">2</li>
+      <li class="list-group-item">3</li>
+      <li class="list-group-item">4</li>
+    </ul>
+  </div>
+
+</form>
+<script type="text/javascript" src="/planning/planning.js"></script>
+<script type="text/javascript">
+  class Planning {
+    constructor(name = "preset", planList = []) {
+      this.name = name
+      this.planList = planList
+    }
+
+    renderBody() {
+      let body = document.createElement('div')
+      body.classList.add(this.name, 'hide')
+
+      let list = document.createElement('ul')
+      list.classList.add('list-group')
+
+      this.planList.forEach(plan => {
+        
+      })
+    }
+  }
+
+
+  const navClick = function() {
+    if (this.classList.contains('active')) return
+
+    document.querySelectorAll('div.nav a.nav-link').forEach(e => {
+      e.classList.remove('active')
+    })
+
+    this.classList.add('active')
+    console.log(`nav click ${this.id}`)
+  }
+
+  document.querySelectorAll('div#tab a.nav-link').forEach(e => {
+    e.onclick = navClick
+  })
+
+  var begin = document.getElementById("preset_1_begin")
+  var end = document.getElementById("preset_1_end")
+
+  document.getElementById("test").onclick = function() {
+    begin.value = "11:22"
+    end.value = "11:50"
+  }
+
+  var onchange = function() {
+    let b = moment(begin.value, 'HH:mm')
+    let e = moment(end.value, 'HH:mm')
+    let compare = e.diff(b, 'minutes')
+
+    let time = `${begin.value} ~ ${end.value} (${compare})`
+    console.log(time)
+    console.log(moment(begin.value, 'HH:mm').format('a hh:mm'))
+    document.getElementById("log").innerText = time
+  }
+
+  begin.onchange = onchange
+  end.onchange = onchange
+
+
+</script>
