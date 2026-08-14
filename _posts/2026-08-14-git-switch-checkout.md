@@ -1,13 +1,8 @@
 ---
+layout: post
 title: "Git checkout이 switch로 바뀐 이유"
-date: 2026-08-14
-categories:
-  - Git
-tags:
-  - Git
-  - checkout
-  - switch
-  - restore
+category : VCS
+tags : [git,checkout,switch,restore]
 ---
 
 # Git checkout이 switch로 바뀐 이유
